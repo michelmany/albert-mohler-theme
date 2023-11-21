@@ -1,0 +1,35 @@
+.sec_title {
+    margin-bottom: 30px;
+    h5 {
+        font-size: 14px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        line-height: 1.714;
+        margin-bottom: 8px;
+    }
+    .btn {
+        color: currentColor;
+        font-style: italic;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid currentColor;
+    }
+}
+@media (max-width: 768px) {
+    .sec_title {
+        .flex {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+    }
+}

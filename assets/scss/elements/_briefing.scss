@@ -1,0 +1,110 @@
+.briefing {
+    padding: 40px 0;
+    .title {
+        margin: 30px 0;
+        line-height: 1;
+    }
+    .bottom {
+        .btn {
+            padding: 0;
+            color: var(--brick-red);
+        }
+    }
+    .past_episodes {
+        padding-top: 100px;
+        .sec_title {
+            margin-bottom: 0;
+        }
+        .blog_items {
+            .blog_item {
+                display: flex;
+                align-items: center;
+                padding: 50px 0;
+                border-bottom: 1px solid var(--navy-05);
+                &:last-child {
+                    border-bottom: unset;
+                }
+                .image {
+                    width: 100%;
+                    max-width: 470px;
+                    flex-shrink: 0;
+                    margin-right: 40px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .date {
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    line-height: 1.07;
+                    margin-bottom: 20px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .tag {
+                    color: var(--navy-05);
+                }
+            }
+        }
+
+        > .pagination {
+            float: right;
+        }
+    }
+}
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    ul {
+        display: flex;
+        gap: 4px;
+        
+        li {
+            &.active {
+                span {
+                    border-color: var(--brick-red);
+                }
+            }
+        }
+    }
+    .arrow,
+    span {
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: freight-sans-pro, sans-serif;
+    }
+    span {
+        border: 1px solid var(--grey-300);
+    }
+    .next_arrow {
+        border: 1px solid var(--grey-300);
+    }
+    .prev_arrow {
+        background-color: var(--grey-400);
+    }
+}
+@media (max-width: 991px) {
+    .briefing {
+        .past_episodes {
+            .blog_items {
+                .blog_item {
+                    flex-direction: column;
+                    .image {
+                        max-width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

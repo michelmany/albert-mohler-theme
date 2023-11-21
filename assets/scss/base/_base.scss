@@ -1,0 +1,113 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+}
+
+body {
+    font-family: freight-text-pro, serif;
+    color: var(--base-color);
+}
+
+body.overflow_hidden {
+    overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+u {
+    text-decoration: underline;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: currentColor;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
+    border: unset;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.12;
+    font-family: "bookmania", serif;
+}
+h2 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: freight-sans-pro, sans-serif;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: italic;
+}
+h5 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: freight-sans-pro, sans-serif;
+}
+h6 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: freight-sans-pro, sans-serif;
+}
+
+p {
+    font-size: 22px;
+    font-weight: 400;
+}
+@media (max-width:768px) {
+    h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 18px;
+    }
+}

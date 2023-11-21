@@ -1,0 +1,112 @@
+.last_articles {
+    margin: 200px 0;
+    overflow: hidden;
+
+    .sec_title {
+        .flex {
+            border-color: #022a4266;
+        }
+    }
+    .article_item {
+        .image {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: var(--box-shadow-4);
+            img {
+                transition: 0.1s;
+                aspect-ratio: 52/27;
+                object-fit: cover;
+            }
+        }
+        .details {
+            .country {
+                color: var(--navy-05);
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: var(--navy-05);
+                margin-bottom: 20px;
+            }
+        }
+        &.single {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #022a4266;
+            padding-bottom: 60px;
+            .image {
+                margin-right: 40px;
+                margin-bottom: 0;
+                max-width: 640px;
+            }
+        }
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .items_list {
+        display: flex;
+        padding-top: 60px;
+        margin: 0 -60px;
+        .article_item {
+            padding: 0 60px;
+            position: relative;
+            &:not(:last-child) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 1px;
+                    background-color: var(--navy-05);
+                }
+            }
+        }
+    }
+}
+@media (max-width: map.get($grid-breakpoints, "lg")){
+    .last_articles {
+        margin: 100px 0;
+        .article_item {
+            &.single {
+                flex-direction: column;
+                .image {
+                    margin-right: 0;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        .items_list {
+            flex-wrap: wrap;
+            margin: 0 -20px;
+            .article_item {
+                padding: 0 20px;
+                width: 50%;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .last_articles {
+        .items_list {
+            .article_item {
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 34px;
+                }
+            }
+        }
+    }
+}

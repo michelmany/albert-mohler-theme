@@ -1,0 +1,41 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.18;
+    padding: 6px 16px;
+    gap: 5px;
+    width: fit-content;
+    &.gold {
+        background-color: var(--gold);
+        color: white;
+        &:hover {
+            background-color: #C39948;
+        }
+    }
+    &.red {
+        background-color: var(--brick-red);
+        color: white;
+        &:hover {
+            background-color: #942e15;
+        }
+    }
+    &.dark_border {
+        outline: 1px solid var(--base-color);
+        &:hover{
+            background-color: rgb(235, 235, 235);
+        }
+    }
+    &.btn_sm {
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+// @media (max-width: map.get($grid-breakpoints, "lg")){
+//     .btn {
+//         padding: 7px 20px;
+//         width: map-get($grid-breakpoints, md);
+//     }
+// }

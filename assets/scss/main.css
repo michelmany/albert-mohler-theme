@@ -1814,6 +1814,9 @@ iframe {
 .blogs_list .audio_box .timeslieder {
   border-color: var(--olive-green);
 }
+.blogs_list.thinking-in-public {
+  margin-top: 100px;
+}
 .blogs_list.thinking-in-public .playhead {
   background: var(--olive-green);
 }
@@ -2476,5 +2479,3 @@ iframe {
     margin-bottom: 24px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

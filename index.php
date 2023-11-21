@@ -59,7 +59,7 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                                <a href="<?php echo get_term_link($the_briefing_id); ?>" class="btn archive_btn">Archives <svg width="7" viewBox="0 0 268 468"
+                                <a href="<?php echo get_term_link($the_briefing_id); ?>" class="btn archive_btn">The Briefing Archives <svg width="7" viewBox="0 0 268 468"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M34 34L234 234L34 434" stroke="currentColor" stroke-width="66.6667"
                                             stroke-linecap="round" stroke-linejoin="round" />

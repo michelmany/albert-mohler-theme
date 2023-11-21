@@ -1521,6 +1521,7 @@ button.swiper-pagination-bullet {
 .hero .left .article_item .image img {
   border-bottom: 20px solid #9B3B2B;
   max-height: 422px;
+  object-fit: cover;
 }
 .hero .left .article_item .image .icon {
   left: 40px;
@@ -1573,6 +1574,14 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (min-width: 1400px) {
+  .hero .bottom {
+    justify-content: left;
+    gap: 70px;
+  }
 }
 .hero .bottom .btn {
   padding: 0;
@@ -1711,6 +1720,8 @@ iframe {
 }
 .article_item .image img {
   width: 100%;
+  min-height: 354px;
+  object-fit: cover;
 }
 .article_item .image iframe {
   aspect-ratio: 56/31;

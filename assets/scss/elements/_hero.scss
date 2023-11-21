@@ -18,6 +18,7 @@
                 img {
                     border-bottom: 20px solid #9B3B2B;
                     max-height: 422px;
+                    object-fit: cover;
                 }
                 .icon {
                     left: 40px;
@@ -86,6 +87,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        @media (min-width: 1400px) {
+            justify-content: left;
+            gap: 70px;
+        }
 
         .btn {
             padding: 0;
@@ -246,6 +254,8 @@ iframe {
 
         img {
             width: 100%;
+            min-height: 354px;
+            object-fit: cover;
         }
         iframe {
             aspect-ratio: 56/31;

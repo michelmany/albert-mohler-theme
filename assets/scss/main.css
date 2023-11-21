@@ -1100,6 +1100,7 @@ button.swiper-pagination-bullet {
   font-size: 26px;
   font-weight: 400;
   padding: 10px 0;
+  text-transform: uppercase;
 }
 .header_nav .navbar .nav_item.active .nav_link {
   color: var(--brick-red);

@@ -10,8 +10,7 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="robots" content="ALL">
     <meta name="Copyright" content="Domain">
-	  <meta name="author" content="Domain">
-    <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/scss/main.css">
+    <meta name="author" content="Domain">
     <?php wp_head(); ?>
 
   </head>

@@ -16,6 +16,7 @@
     z-index: 10;
     padding: 20px 0 10px;
     background-color: white;
+    margin-bottom: 25px;
     .wrapper {
         width: 100%;
         align-items: center;
@@ -26,6 +27,12 @@
         display: block;
         width: 100%;
         max-width: 400px;
+
+        @media (min-width: 1400px) {
+            position: relative;
+            top: 10px;
+            left: 15px;
+        }
     }
     .menu {
         display: flex;
@@ -105,7 +112,8 @@
     left: 0;
     z-index: 99;
     background-color: white;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+
     .navbar {
         display: flex;
         align-items: center;
@@ -115,7 +123,11 @@
             display: block;
             font-size: 26px;
             font-weight: 400;
-            padding: 10px 0;
+            padding: 10px 0 6px;
+            text-transform: uppercase;
+            &:hover {
+                color: var(--brick-red);
+            }
         }
         .nav_item {
             &.active {

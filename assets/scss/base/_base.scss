@@ -9,6 +9,8 @@
 body {
     font-family: freight-text-pro, serif;
     color: var(--base-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.overflow_hidden {

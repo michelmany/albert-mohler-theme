@@ -41,6 +41,13 @@
             border-color: var(--olive-green);
         }
     }
+
+    &.thinking-in-public {
+        .playhead {
+            background: var(--olive-green);
+        }
+    }
+
     .article_item {
         .details {
             color: var(--olive-green);

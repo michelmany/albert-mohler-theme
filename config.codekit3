@@ -329,6 +329,17 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/assets\/js\/app-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/app-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/js\/app.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -340,6 +351,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/js\/jquery.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/jquery.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/js\/jquery.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -347,6 +369,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/js\/jquery.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/swiper-bundle.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/swiper-bundle.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -690,6 +723,14 @@
       "oAP" : "\/briefing.html",
       "oF" : 0
     },
+    "\/build\/.gitignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/.gitignore",
+      "oF" : 0
+    },
     "\/categories\/articles_category.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -838,6 +879,18 @@
       "oA" : 0,
       "oAP" : "\/single.php",
       "oF" : 0
+    },
+    "\/style-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/style-min-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/style.css" : {
       "aP" : 1,

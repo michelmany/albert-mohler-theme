@@ -123,7 +123,7 @@
 					<?php if($book_query->have_posts()) : while($book_query->have_posts()) : $book_query->the_post(); ?>	
                     <div class="book_item">
                         <div class="image">
-                            <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>" alt="<?php the_title(); ?>">
                         </div>
                         <div class="details">
                             <h3>BOOKS</h3>
@@ -142,7 +142,7 @@
     <div class="googleAds">
         <img src="<?php bloginfo('template_url') ?>/assets/images/800x100.svg" alt="">
     </div>
- 	<section class="blogs_list">
+ 	<section class="blogs_list thinking-in-public">
         <div class="container">
             <div class="sec_title">
                 <div class="flex">

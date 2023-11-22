@@ -106,7 +106,7 @@
                         </a>
                         <div class="details">
                             <h3><?php echo get_term( $thinking_in_public_id )->name;?></h3>
-                            <h1><?php the_title(); ?></h1>
+                            <h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
                         </div>
                     </div>
                     <div class="article_info">
@@ -401,7 +401,7 @@
         	<?php if($about_query->have_posts()) : while($about_query->have_posts()) : $about_query->the_post(); ?>								
             <div class="sec_title">
                 <div class="flex">
-                    <h1><?php the_title(); ?> R. Albert Mohler, Jr</h1>
+                    <h1><?php the_title(); ?> R. Albert Mohler, Jr.</h1>
                     <a href="<?php the_permalink(); ?>" class="btn">Read more <svg width="24" viewBox="0 0 700 400" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -423,7 +423,7 @@
                 </div>
                 <div class="col">
                     <div class="content">
-                        <h4><?php the_title(); ?> R. Albert Mohler, Jr</h4>
+                        <h4>R. Albert Mohler, Jr.</h4>
                         <p><?php echo mb_substr(wp_strip_all_tags(get_post_field('post_content', get_the_ID())), 0, 350, 'UTF-8'); ?>...</p>
                     </div>
                 </div>

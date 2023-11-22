@@ -45,7 +45,7 @@
         &.single {
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #022a4266;
+            border-bottom: 1px solid #022a42;
             padding-bottom: 60px;
             .image {
                 margin-right: 40px;
@@ -78,13 +78,13 @@
                     top: 0;
                     height: 100%;
                     width: 1px;
-                    background-color: var(--navy-05);
+                    background-color: #022a42;
                 }
             }
 
             .image {
                 margin-bottom: 22px;
-                
+
                 img {
                     min-height: 272px;
                 }

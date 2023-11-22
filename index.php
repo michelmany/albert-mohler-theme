@@ -214,7 +214,7 @@
                         </a>
                     </div>
                 </div>
-				<?php if($articles_query->have_posts()) : while($articles_query->have_posts()) : $articles_query->the_post(); ?>					
+				<?php if($articles_query->have_posts()) : while($articles_query->have_posts()) : $articles_query->the_post(); ?>
                 <div class="article_item single">
                     <a href="<?php the_permalink(); ?>" class="image">
                        <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">

@@ -1,0 +1,70 @@
+.thinking-in-public {
+    &.blogs_list {
+        margin-top: 100px;
+
+        .sec_title {
+            margin-bottom: 34px;
+
+            h1 {
+                color: var(--olive-green);
+                line-height: 1;
+            }
+        }
+
+        .left {
+            width: calc(50% - 30px);
+        }
+
+        .right {
+            flex-wrap: wrap;
+        }
+
+        .blog_items {
+            padding: 70px 0;
+            max-width: 686px;
+
+            .item {
+                h4 {
+                    margin-bottom: 0;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 54px;
+                }
+            }
+        }
+
+        .article_item {
+            .image {
+                margin-bottom: 19px;
+
+                img {
+                    width: 100%;
+                    max-width: 97.5%;
+                    min-height: 477px;
+                    object-fit: cover;
+                }
+            }
+
+            .details {
+                padding-bottom: 0;
+
+                h2 {
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        .audio_box {
+            @media (min-width: 1400px) {
+                margin-top: 15px;
+            }
+
+            .audio-player {
+                .playhead {
+                    background: var(--olive-green);
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,16 @@
 .last_articles {
-    margin: 200px 0;
+    margin: 160px 0;
     overflow: hidden;
 
     .sec_title {
+        margin-bottom: 34px;
+
         .flex {
-            border-color: #022a4266;
+            border-color: #022a42;
+        }
+
+        h1 {
+            line-height: 1;
         }
     }
     .article_item {
@@ -13,9 +19,11 @@
             width: 100%;
             overflow: hidden;
             box-shadow: var(--box-shadow-4);
+
             img {
                 transition: 0.1s;
-                aspect-ratio: 52/27;
+                width: 100%;
+                min-height: 335px;
                 object-fit: cover;
             }
         }
@@ -27,9 +35,10 @@
             h2 {
                 font-size: 26px;
                 margin-bottom: 20px;
+                line-height: 100%;
             }
             p {
-                color: var(--navy-05);
+                color: #585A5D;
                 margin-bottom: 20px;
             }
         }
@@ -52,10 +61,12 @@
             }
         }
     }
+
     .items_list {
         display: flex;
         padding-top: 60px;
         margin: 0 -60px;
+
         .article_item {
             padding: 0 60px;
             position: relative;
@@ -68,6 +79,14 @@
                     height: 100%;
                     width: 1px;
                     background-color: var(--navy-05);
+                }
+            }
+
+            .image {
+                margin-bottom: 22px;
+                
+                img {
+                    min-height: 272px;
                 }
             }
         }

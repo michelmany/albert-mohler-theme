@@ -1814,12 +1814,6 @@ iframe {
 .blogs_list .audio_box .timeslieder {
   border-color: var(--olive-green);
 }
-.blogs_list.thinking-in-public {
-  margin-top: 100px;
-}
-.blogs_list.thinking-in-public .playhead {
-  background: var(--olive-green);
-}
 .blogs_list .article_item .details {
   color: var(--olive-green);
 }
@@ -1907,100 +1901,6 @@ iframe {
   }
   .speaking_teaching .blog_items .item .image {
     width: 100%;
-  }
-}
-.last_articles {
-  margin: 200px 0;
-  overflow: hidden;
-}
-.last_articles .sec_title .flex {
-  border-color: rgba(2, 42, 66, 0.4);
-}
-.last_articles .article_item .image {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: var(--box-shadow-4);
-}
-.last_articles .article_item .image img {
-  transition: 0.1s;
-  aspect-ratio: 52/27;
-  object-fit: cover;
-}
-.last_articles .article_item .details .country {
-  color: var(--navy-05);
-  margin-bottom: 20px;
-}
-.last_articles .article_item .details h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-.last_articles .article_item .details p {
-  color: var(--navy-05);
-  margin-bottom: 20px;
-}
-.last_articles .article_item.single {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(2, 42, 66, 0.4);
-  padding-bottom: 60px;
-}
-.last_articles .article_item.single .image {
-  margin-right: 40px;
-  margin-bottom: 0;
-  max-width: 640px;
-}
-.last_articles .article_item:hover .image img {
-  transform: scale(1.05);
-}
-.last_articles .items_list {
-  display: flex;
-  padding-top: 60px;
-  margin: 0 -60px;
-}
-.last_articles .items_list .article_item {
-  padding: 0 60px;
-  position: relative;
-}
-.last_articles .items_list .article_item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: var(--navy-05);
-}
-
-@media (max-width: 992px) {
-  .last_articles {
-    margin: 100px 0;
-  }
-  .last_articles .article_item.single {
-    flex-direction: column;
-  }
-  .last_articles .article_item.single .image {
-    margin-right: 0;
-    margin-bottom: 24px;
-  }
-  .last_articles .items_list {
-    flex-wrap: wrap;
-    margin: 0 -20px;
-  }
-  .last_articles .items_list .article_item {
-    padding: 0 20px;
-    width: 50%;
-  }
-  .last_articles .items_list .article_item::after {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  .last_articles .items_list .article_item {
-    width: 100%;
-  }
-  .last_articles .items_list .article_item:not(:last-child) {
-    margin-bottom: 34px;
   }
 }
 .top_article .wrapper {
@@ -2479,3 +2379,163 @@ iframe {
     margin-bottom: 24px;
   }
 }
+.thinking-in-public.blogs_list {
+  margin-top: 100px;
+}
+.thinking-in-public.blogs_list .sec_title {
+  margin-bottom: 34px;
+}
+.thinking-in-public.blogs_list .sec_title h1 {
+  color: var(--olive-green);
+  line-height: 1;
+}
+.thinking-in-public.blogs_list .left {
+  width: calc(50% - 30px);
+}
+.thinking-in-public.blogs_list .right {
+  flex-wrap: wrap;
+}
+.thinking-in-public.blogs_list .blog_items {
+  padding: 70px 0;
+  max-width: 686px;
+}
+.thinking-in-public.blogs_list .blog_items .item h4 {
+  margin-bottom: 0;
+}
+.thinking-in-public.blogs_list .blog_items .item:not(:last-child) {
+  margin-bottom: 54px;
+}
+.thinking-in-public.blogs_list .article_item .image {
+  margin-bottom: 19px;
+}
+.thinking-in-public.blogs_list .article_item .image img {
+  width: 100%;
+  max-width: 97.5%;
+  min-height: 477px;
+  object-fit: cover;
+}
+.thinking-in-public.blogs_list .article_item .details {
+  padding-bottom: 0;
+}
+.thinking-in-public.blogs_list .article_item .details h2 {
+  line-height: 1.1;
+}
+@media (min-width: 1400px) {
+  .thinking-in-public.blogs_list .audio_box {
+    margin-top: 15px;
+  }
+}
+.thinking-in-public.blogs_list .audio_box .audio-player .playhead {
+  background: var(--olive-green);
+}
+
+.last_articles {
+  margin: 160px 0;
+  overflow: hidden;
+}
+.last_articles .sec_title {
+  margin-bottom: 34px;
+}
+.last_articles .sec_title .flex {
+  border-color: #022a42;
+}
+.last_articles .sec_title h1 {
+  line-height: 1;
+}
+.last_articles .article_item .image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-4);
+}
+.last_articles .article_item .image img {
+  transition: 0.1s;
+  width: 100%;
+  min-height: 335px;
+  object-fit: cover;
+}
+.last_articles .article_item .details .country {
+  color: var(--navy-05);
+  margin-bottom: 20px;
+}
+.last_articles .article_item .details h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+.last_articles .article_item .details p {
+  color: #585A5D;
+  margin-bottom: 20px;
+}
+.last_articles .article_item.single {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(2, 42, 66, 0.4);
+  padding-bottom: 60px;
+}
+.last_articles .article_item.single .image {
+  margin-right: 40px;
+  margin-bottom: 0;
+  max-width: 640px;
+}
+.last_articles .article_item:hover .image img {
+  transform: scale(1.05);
+}
+.last_articles .items_list {
+  display: flex;
+  padding-top: 60px;
+  margin: 0 -60px;
+}
+.last_articles .items_list .article_item {
+  padding: 0 60px;
+  position: relative;
+}
+.last_articles .items_list .article_item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: var(--navy-05);
+}
+.last_articles .items_list .article_item .image {
+  margin-bottom: 22px;
+}
+.last_articles .items_list .article_item .image img {
+  min-height: 272px;
+}
+
+@media (max-width: 992px) {
+  .last_articles {
+    margin: 100px 0;
+  }
+  .last_articles .article_item.single {
+    flex-direction: column;
+  }
+  .last_articles .article_item.single .image {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .last_articles .items_list {
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  .last_articles .items_list .article_item {
+    padding: 0 20px;
+    width: 50%;
+  }
+  .last_articles .items_list .article_item::after {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .last_articles .items_list .article_item {
+    width: 100%;
+  }
+  .last_articles .items_list .article_item:not(:last-child) {
+    margin-bottom: 34px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

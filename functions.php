@@ -51,7 +51,7 @@ $articles_query = new WP_Query($articles_public);
 
 // Article Section - Right
 $articles_public_4 = array(
-  'posts_per_page' => 4,
+  'posts_per_page' => 3,
   'offset' => 1,
   'cat' => $articles_id,
 );

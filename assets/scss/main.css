@@ -219,6 +219,7 @@ p {
 .btn.btn_sm {
   font-size: 12px;
   font-weight: 700;
+  padding: 10px 15px;
 }
 
 @font-face {
@@ -963,6 +964,7 @@ button.swiper-pagination-bullet {
 .sec_title .btn {
   color: currentColor;
   font-style: italic;
+  font-size: 20px;
 }
 .sec_title p {
   font-size: 18px;
@@ -2147,7 +2149,7 @@ iframe {
 }
 .ask_anything {
   overflow: hidden;
-  margin: 160px 0;
+  margin: 160px 0 120px;
 }
 .ask_anything .wrapper {
   margin: 0 -60px;
@@ -2164,14 +2166,39 @@ iframe {
   content: "";
   height: 100%;
   width: 1px;
-  background-color: var(--olive-green);
+  background-color: var(--base-color);
+}
+.ask_anything .sec_title {
+  color: var(--base-color);
+}
+.ask_anything .article_item .image {
+  margin-bottom: 19px;
+  box-shadow: var(--box-shadow-4);
+}
+.ask_anything .article_item .details {
+  padding-bottom: 0;
+  color: var(--base-color);
+}
+.ask_anything .article_item .details h2 {
+  line-height: 1.1;
+  margin-bottom: 0;
 }
 .ask_anything .audio_box {
   border: unset;
   padding: 0;
+  color: var(--base-color);
 }
-.ask_anything .article_item .image {
-  box-shadow: var(--box-shadow-4);
+@media (min-width: 1400px) {
+  .ask_anything .audio_box {
+    margin-top: 15px;
+  }
+}
+.ask_anything .audio_box .audio-player .playhead {
+  background: var(--base-color);
+}
+.ask_anything .view-more-btn {
+  margin-top: 20px;
+  text-align: right;
 }
 .ask_anything .book_item {
   align-items: center;

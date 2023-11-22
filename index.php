@@ -326,7 +326,7 @@
                             <h1>Ask Anything</h1>
                         </div>
                     </div>
-                    <?php if($sermons_and_speeches_query->have_posts()) : while($sermons_and_speeches_query->have_posts()) : $sermons_and_speeches_query->the_post(); ?>
+                    <?php if($ask_anything_query->have_posts()) : while($ask_anything_query->have_posts()) : $ask_anything_query->the_post(); ?>
                     <div class="article_item">
                         <a href="" class="image">
                             <iframe width="560" height="315"
@@ -339,7 +339,7 @@
                             <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
                             	<h2><?php the_title(); ?></h2>
                         	</a>
-                            <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                         </div>
                     </div>
                     <div class="audio_box">
@@ -347,13 +347,16 @@
                             data-file="<?php echo get_field('enclosure', get_the_ID())?>">
                         </div>
                     </div>
+                    <div class="view-more-btn">
+                        <a href="/category/ask-anything/" class="btn gold btn_sm">View More</a>
+                    </div>
                     <?php endwhile ?>
 					<?php endif ?>
                 </div>
                 <div class="col">                    	
                     <div class="sec_title">
                         <div class="flex">
-                            <h1>Featured <?php echo get_term($book_id)->name;?></h1>
+                            <h1>Featured Book</h1>
                             <a href="<?php echo get_term_link($book_id)?>" class="btn">Explore All Books <svg width="24" viewBox="0 0 700 400"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -369,11 +372,11 @@
                     <div class="book_item">
                         <div class="image">
 							<a href="<?php the_permalink(); ?>" class="image">
-								<img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+								<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>" alt="<?php the_title(); ?>">
 							</a>
                         </div>
                         <div class="details">
-                            <h3><?php the_title(); ?></h3>
+                            <h3>Tell Me the Stories of Jesus</h3>
                             <p> The explosive power of Jesus’ parables</p>
                             <a href="<?php the_permalink(); ?>" class="btn red">Purchase
                                 <svg width="16" viewBox="0 0 468 268" fill="none"

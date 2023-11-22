@@ -5,6 +5,7 @@ $book_id = 4; // books-topics ID
 $articles_id = 1; //articles ID
 $sermons_and_speeches_id = 31; // sermons-and-speeches ID
 $aboutPage_id = 4586; // About Page ID
+$ask_anything_id = 162;
 
 $video_id = 90;
 $audio_id = 11;
@@ -71,6 +72,14 @@ $sermons_and_speeches_public_4 = array(
   'cat' => $sermons_and_speeches_id,
 );
 $sermons_and_speeches_query_4 = new WP_Query($sermons_and_speeches_public_4);
+
+// Speaking & Teaching - Left
+$ask_anything = array(
+  'posts_per_page' => 1,
+  'cat' => $ask_anything_id,
+);
+$ask_anything_query = new WP_Query($ask_anything);
+
 
 // About Page
 $about_public = array(

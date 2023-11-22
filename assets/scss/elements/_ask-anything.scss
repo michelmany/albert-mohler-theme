@@ -1,6 +1,7 @@
 .ask_anything {
     overflow: hidden;
-    margin: 160px 0;
+    margin: 160px 0 120px;
+
     .wrapper {
         margin: 0 -60px;
     }
@@ -16,19 +17,54 @@
                 content: "";
                 height: 100%;
                 width: 1px;
-                background-color: var(--olive-green);
+                background-color: var(--base-color);
             }
         }
     }
+
+    .sec_title {
+        color: var(--base-color);
+    }
+
+    .article_item {
+        .image {
+            margin-bottom: 19px;
+            box-shadow: var(--box-shadow-4);
+        }
+
+        .details {
+            padding-bottom: 0;
+            color: var(--base-color);
+
+            h2 {
+                line-height: 1.1;
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .audio_box {
         border: unset;
         padding: 0;
-    }
-    .article_item {
-        .image {
-            box-shadow: var(--box-shadow-4);
+
+        color: var(--base-color);
+
+        @media (min-width: 1400px) {
+            margin-top: 15px;
+        }
+
+        .audio-player {
+            .playhead {
+                background: var(--base-color);
+            }
         }
     }
+
+    .view-more-btn {
+        margin-top: 20px;
+        text-align: right;
+    }
+
     .book_item {
         align-items: center;
         padding: 0;

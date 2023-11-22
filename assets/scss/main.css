@@ -2381,14 +2381,30 @@ iframe {
   line-height: 1;
 }
 .thinking-in-public.blogs_list .left {
-  width: calc(50% - 30px);
+  width: 45%;
+}
+@media (min-width: 1400px) {
+  .thinking-in-public.blogs_list .left {
+    width: calc(50% - 30px);
+  }
 }
 .thinking-in-public.blogs_list .right {
   flex-wrap: wrap;
+  width: 55%;
+}
+@media (min-width: 1400px) {
+  .thinking-in-public.blogs_list .right {
+    width: 50%;
+  }
 }
 .thinking-in-public.blogs_list .blog_items {
   padding: 70px 0;
-  max-width: 686px;
+  max-width: calc(100% - 122px);
+}
+@media (min-width: 1400px) {
+  .thinking-in-public.blogs_list .blog_items {
+    max-width: calc(100% - 122px);
+  }
 }
 .thinking-in-public.blogs_list .blog_items .item h4 {
   margin-bottom: 0;

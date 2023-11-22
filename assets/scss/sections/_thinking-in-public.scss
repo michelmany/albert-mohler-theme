@@ -12,16 +12,33 @@
         }
 
         .left {
-            width: calc(50% - 30px);
+            width: calc(45%);
+
+            @media (min-width: 1400px) {
+                width: calc(50% - 30px);
+            }
         }
 
         .right {
             flex-wrap: wrap;
+            width: 55%;
+
+            @media (min-width: 1400px) {
+                width: 50%;
+            }
         }
 
         .blog_items {
             padding: 70px 0;
-            max-width: 686px;
+            max-width: calc(100% - 122px);
+
+            @media (min-width: 992px) {
+                //max-width: 200px;
+            }
+
+            @media (min-width: 1400px) {
+                max-width: calc(100% - 122px);
+            }
 
             .item {
                 h4 {

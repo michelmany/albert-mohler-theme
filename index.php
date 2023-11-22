@@ -417,7 +417,7 @@
                 <div class="col">
                     <div class="image">
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/mohler-about.jpg'; ?>" alt="<?php the_title(); ?>">
                         </a>
                     </div>
                 </div>

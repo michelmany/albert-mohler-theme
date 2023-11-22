@@ -169,7 +169,7 @@
                             <a href="<?php the_permalink();?>" class="<?php the_title();?>">
                                 <h2><?php the_title();?></h2>
                             </a>
-                            <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                         </div>
                     </div>
                     <div class="audio_box">
@@ -250,11 +250,11 @@
                 </ul>
             </div>
         </section>
-         <section class="blogs_list speaking_teaching">
+         <section class="blogs_list speaking-teaching">
         <div class="container">
             <div class="sec_title">
                 <div class="flex">
-                    <h1><?php echo get_term($articles_id)->name;?></h1>
+                    <h1>Speaking & Teaching</h1>
                     <a href="<?php echo get_term_link($articles_id)?>" class="btn">
                         <span>View All</span>
                         <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -281,7 +281,7 @@
                             <a href="<?php the_permalink(); ?>" class="title">
                                 <h2><?php the_title(); ?></h2>
                             </a>
-                            <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                         </div>
                     </div>
                     <div class="audio_box">

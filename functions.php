@@ -89,13 +89,9 @@ $about_query = new WP_Query($about_public);
 
 function gorselImage($id)
 {
-  $image = has_post_thumbnail($id);
-  if ($image !== null) {
-    $image = get_bloginfo('stylesheet_directory') . '/assets/images/brief-image.png';
-  } else {
-    $image = the_post_thumbnail_url($id);
-  }
-  return $image;
+    return has_post_thumbnail($id)
+        ? get_the_post_thumbnail_url($id)
+        : get_bloginfo('stylesheet_directory') . '/assets/images/brief-image.png';
 }
 
 function ConverToRoman($num)

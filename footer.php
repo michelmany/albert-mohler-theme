@@ -30,7 +30,7 @@
         </div>
         <div class="foot_bottom">
             <div class="container">
-                <p>copyright <?php echo date("Y");?>, <?php bloginfo('description') ?>. All rights reserved.</p>
+                <p>© <?php echo date("Y");?>, <?php bloginfo('description') ?>. All rights reserved.</p>
             </div>
         </div>
     </footer>

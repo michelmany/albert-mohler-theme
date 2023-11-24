@@ -1,7 +1,18 @@
 .site_footer {
     background-color: var(--navy-02);
     color: white;
-    padding: 100px 0;
+    padding: 80px 0 95px;
+
+    .container {
+        @media (min-width: 1600px) {
+            max-width: 1400px;
+        }
+    }
+
+    .newsletter-widget-copy {
+        font-size: 16px;
+    }
+
     h5 {
         font-family: Gotham;
         font-size: 16px;
@@ -24,7 +35,8 @@
         align-items: center;
         row-gap: 60px;
         column-gap: 20px;
-        padding-bottom: 60px;
+        margin-bottom: 42px;
+
         a {
             display: flex;
             align-items: center;
@@ -63,9 +75,6 @@
     }
     .foot_top {
         text-align: center;
-        .container {
-            border-bottom: 1px solid var(--navy-05);
-        }
     }
     h6 {
         margin-bottom: 10px;
@@ -128,6 +137,7 @@
         margin-bottom: 60px;
         .wrapper {
             padding: 60px 0;
+            border-top: 1px solid var(--navy-05);
             border-bottom: 1px solid var(--navy-05);
         }
     }

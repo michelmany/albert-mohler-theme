@@ -154,11 +154,6 @@ the_content();
                                     <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                                 </div>
                             </div>
-                            <div class="audio_box">
-                                <div class="audio-player"
-                                     data-file="<?php echo get_field( 'enclosure', get_the_ID() ) ?>">
-                                </div>
-                            </div>
 						<?php endwhile ?>
 						<?php endif ?>
                     </div>
@@ -192,11 +187,20 @@ the_content();
             <div class="container">
                 <div class="wrapper">
                     <div class="col">
-                        <div class="sec_title">
-                            <div class="flex">
-                                <h1>Ask Anything</h1>
-                            </div>
+                    <div class="sec_title">
+                        <div class="flex">
+                            <h1>Ask Anything</h1>
+                            <a href="/category/ask-anything/" class="btn">
+                                <span>View All</span>
+                                <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
+                                          stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M33.3333 200H590" stroke="currentColor" stroke-width="66.6667"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
+                    </div>
 						<?php if ( $ask_anything_query->have_posts() ) : while ( $ask_anything_query->have_posts() ) : $ask_anything_query->the_post(); ?>
                             <div class="article_item">
                                 <a href="" class="image">
@@ -214,11 +218,7 @@ the_content();
                                     <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                                 </div>
                             </div>
-                            <div class="audio_box">
-                                <div class="audio-player"
-                                     data-file="<?php echo get_field( 'enclosure', get_the_ID() ) ?>">
-                                </div>
-                            </div>
+
                             <div class="view-more-btn">
                                 <a href="/category/ask-anything/" class="btn gold btn_sm">View More</a>
                             </div>
@@ -229,7 +229,7 @@ the_content();
                         <div class="sec_title">
                             <div class="flex">
                                 <h1>Featured Book</h1>
-                                <a href="<?php echo get_term_link( $book_id ) ?>" class="btn">Explore All Books
+                                <a href="<?php echo get_term_link( $book_id ) ?>" class="btn">View All
                                     <svg width="24" viewBox="0 0 700 400"
                                          fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -300,8 +300,7 @@ the_content();
                         <div class="col">
                             <div class="content">
                                 <h4>R. Albert Mohler, Jr.</h4>
-                                <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-										get_the_ID() ) ), 0, 350, 'UTF-8' ); ?>...</p>
+                                <p>Dr. Mohler serves as president of The Southern Baptist Theological Seminary — the flagship school of the Southern Baptist Convention and one of the largest seminaries in the world. He has written nine books and authored thousands of articles on a wide range of topics.</p>
                             </div>
                         </div>
                     </div>

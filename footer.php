@@ -178,13 +178,18 @@
 
                             $elapsedSpan.text(m + ':' + s);
                         });
-                        // 
 
 
+                        // Using the reset btn to playback 10 seconds:
                         $this.find(".reset_btn").click(function () {
-                            audioFile.load();
-                            $(this).parent().find('div[data-playhead]').css( { "margin-left" : "0"} )
+                            audioFile.currentTime = audioFile.currentTime - 10
                         });
+
+                        // $this.find(".reset_btn").click(function () {
+                        //     audioFile.load();
+                        //     $(this).parent().find('div[data-playhead]').css( { "margin-left" : "0"} )
+                        // });
+
                         //Clicking indicator-bar moves playhead and updates current time
                         $this.find('.indicator-container').on('click', function (event) {
                             var clickLocation = (event.pageX - $(this).offset().left) / (this).offsetWidth;

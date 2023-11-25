@@ -152,7 +152,7 @@
                     "name": "article_id",
                     "aria-label": "",
                     "type": "post_object",
-                    "instructions": "If not selected the Hero will display the latest article from the briefing category.",
+                    "instructions": "If not selected the Hero will display the latest article from the Articles category.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -197,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700925086
+    "modified": 1700928839
 }

@@ -84,7 +84,7 @@ $audio_id = 11;
                             </a>
                             <div class="audio_box">
                                 <div class="audio-player audio_<?php echo get_the_ID(); ?>"
-                                     data-file="<?php echo get_field( 'enclosure', get_the_ID() ); ?>">
+                                     data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
                                 </div>
                             </div>
                             <div class="article_parts tm_audio_<?php echo get_the_ID(); ?>">
@@ -171,7 +171,11 @@ $audio_id = 11;
 					<?php if ( $hero_article_query->have_posts() ) : while ( $hero_article_query->have_posts() ) :
 						$hero_article_query->the_post();
 						?>
-                        <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p>
+                            <a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+                            </a>
+                        </p>
 					<?php endwhile; ?>
 					<?php endif;
 					wp_reset_query(); ?>

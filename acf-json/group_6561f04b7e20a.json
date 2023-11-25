@@ -3,34 +3,180 @@
     "title": "Hero Home Block",
     "fields": [
         {
-            "key": "field_6561fd862f111",
-            "label": "Select Briefing Article",
-            "name": "select_briefing_article",
+            "key": "field_656204946d75d",
+            "label": "Main Featured Post",
+            "name": "main_featured_post",
             "aria-label": "",
-            "type": "post_object",
-            "instructions": "If not selected the Hero will display the latest article from the briefing category.",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "post"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": [
-                "category:the-briefing"
-            ],
-            "return_format": "id",
-            "multiple": 0,
-            "allow_null": 1,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_656205a40b269",
+                    "label": "Category",
+                    "name": "category_id",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": []
+                },
+                {
+                    "key": "field_6561fd862f111",
+                    "label": "Select Featured Briefing Article",
+                    "name": "featured_briefing_article_id",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "If not selected the Hero will display the latest article from the briefing category.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": [
+                        "category:the-briefing"
+                    ],
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": []
+                }
+            ]
+        },
+        {
+            "key": "field_656209daed11f",
+            "label": "Secondary Featured Post",
+            "name": "secondary_featured_post",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_656209daed125",
+                    "label": "Category",
+                    "name": "category_id",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": []
+                },
+                {
+                    "key": "field_656209daed126",
+                    "label": "Select Featured Thinking in Public Article",
+                    "name": "featured_tip_article_id",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "If not selected the Hero will display the latest article from the briefing category.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": [
+                        "category:thinking-in-public"
+                    ],
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": []
+                },
+                {
+                    "key": "field_65620db28e134",
+                    "label": "Select Article",
+                    "name": "article_id",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "If not selected the Hero will display the latest article from the briefing category.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": [
+                        "category:articles"
+                    ],
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": []
+                }
+            ]
         }
     ],
     "location": [
@@ -51,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700922346
+    "modified": 1700925086
 }

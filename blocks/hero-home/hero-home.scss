@@ -23,8 +23,9 @@
                 }
 
                 .icon {
-                    left: 40px;
-                    top: 40px;
+                    left: 32px;
+                    top: 35px;
+                    width: 96px;
                 }
             }
         }
@@ -40,6 +41,7 @@
                 .icon {
                     right: 10px;
                     top: 20px;
+                    width: 47px;
                 }
             }
 
@@ -163,10 +165,6 @@
     }
 }
 
-.d_none {
-    display: none;
-}
-
 .audio_box {
     color: var(--base-color);
     border-top: 1px solid #677f8e;
@@ -202,11 +200,6 @@
             }
         }
     }
-
-    //
-    //
-    //
-    //
 
     .audio-player {
         display: flex;

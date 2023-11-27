@@ -1484,12 +1484,34 @@ button.swiper-pagination-bullet {
   width: 100%;
   margin-bottom: 36px;
 }
+.sub_footer .items ul {
+  columns: 1;
+}
+@media (min-width: 768px) {
+  .sub_footer .items ul {
+    columns: 2;
+    width: 50em;
+  }
+}
+@media (min-width: 992px) {
+  .sub_footer .items ul {
+    columns: 3;
+    width: 60em;
+  }
+}
+@media (min-width: 1400px) {
+  .sub_footer .items ul {
+    columns: 5;
+    width: auto;
+  }
+}
 .sub_footer .items ul a {
   font-size: 18px;
   font-weight: 500;
   display: block;
   padding: 3px 0;
   font-family: freight-sans-pro, sans-serif;
+  text-transform: uppercase;
 }
 .sub_footer .items ul a:hover {
   opacity: 0.7;
@@ -1804,10 +1826,12 @@ button.swiper-pagination-bullet {
   margin-bottom: 12px;
 }
 .single_article .author .btn {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   background-color: white;
   color: var(--gold);
+  padding: 10px 16px;
+  margin-top: 6px;
 }
 
 @media (max-width: 991px) {

@@ -220,12 +220,30 @@
            
         }
         ul {
+            columns: 1;
+
+            @media (min-width: 768px) {
+                columns: 2;
+                width: 50em;
+            }
+
+            @media (min-width: 992px) {
+                columns: 3;
+                width: 60em;
+            }
+
+            @media (min-width: 1400px) {
+                columns: 5;
+                width: auto;
+            }
+
             a {
                 font-size: 18px;
                 font-weight: 500;
                 display: block;
                 padding: 3px 0;
                 font-family: freight-sans-pro, sans-serif;
+                text-transform: uppercase;
                 &:hover {
                     opacity: .7;
                 }

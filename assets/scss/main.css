@@ -1759,6 +1759,9 @@ button.swiper-pagination-bullet {
   padding-bottom: 40px;
   margin-bottom: 40px;
 }
+.single_article .article_content p {
+  margin-bottom: 1rem;
+}
 .single_article .main_content > .top {
   display: flex;
   align-items: center;

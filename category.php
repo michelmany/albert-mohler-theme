@@ -8,7 +8,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 if ($category->cat_ID == $the_briefing_id) {
    $offset = 1;
 } else {
-    $offset = 4;;
+    $offset = 4;
 }
 
 $ppp = 12;

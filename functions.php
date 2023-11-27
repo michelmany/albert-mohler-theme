@@ -276,6 +276,7 @@ function amt_register_acf_blocks(): void
 		'latest-articles-home',
 		'thinking-in-public-home',
 		'speaking-and-teaching-home',
+		'ask-anything-home',
 	);
 
 	/**

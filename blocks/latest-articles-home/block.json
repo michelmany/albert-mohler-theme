@@ -1,0 +1,16 @@
+{
+    "name": "acf/latest-articles-home",
+    "title": "Latest Articles Home",
+    "description": "Latest Articles Block for the Homepage",
+    "style": [ "file:./latest-articles-home.css" ],
+    "category": "albert-mohler-blocks-category",
+    "keywords": ["latest articles", "latest", "articles", "home"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "latest-articles-home.php"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": false
+    }
+}

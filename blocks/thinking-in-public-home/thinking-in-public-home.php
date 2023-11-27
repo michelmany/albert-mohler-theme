@@ -26,7 +26,7 @@ $thinking_in_public_query_4  = new WP_Query( $thinking_in_public_4 );
 
 ?>
 
-<section class="blogs_list thinking-in-public">
+<section class="thinking-in-public blogs_list">
     <div class="container">
         <div class="sec_title">
             <div class="flex">

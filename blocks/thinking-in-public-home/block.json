@@ -1,7 +1,7 @@
 {
     "name": "acf/thinking-in-public-home",
     "title": "Thinking in Public Home",
-    "description": "Latest Articles Block for the Homepage",
+    "description": "Thinking in Public Block for the Homepage",
     "style": [ "file:./thinking-in-public-home.css" ],
     "keywords": ["thinking in public", "thinking", "public", "home"],
     "acf": {

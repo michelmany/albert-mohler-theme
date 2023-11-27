@@ -1,0 +1,15 @@
+{
+    "name": "acf/ads-banner",
+    "title": "Ads Banner Block",
+    "description": "Ads Banner Block",
+    "style": [ "file:./ads-banner.css" ],
+    "keywords": ["ads", "ad", "banner"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "ads-banner.php"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": false
+    }
+}

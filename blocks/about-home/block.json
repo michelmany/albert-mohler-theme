@@ -1,0 +1,15 @@
+{
+    "name": "acf/about-home",
+    "title": "About Home Block",
+    "description": "About Block for the Homepage",
+    "style": [ "file:./about-home.css" ],
+    "keywords": ["about", "albert"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "about-home.php"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": false
+    }
+}

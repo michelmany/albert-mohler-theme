@@ -19,21 +19,6 @@ $book       = array(
 $book_query = new WP_Query( $book );
 
 
-
-
-$ask_anything       = array(
-	'posts_per_page' => 1,
-	'cat'            => $ask_anything_id,
-);
-$ask_anything_query = new WP_Query( $ask_anything );
-
-
-// About Page
-$about_public = array(
-	'page_id' => $aboutPage_id,
-);
-$about_query  = new WP_Query( $about_public );
-
 function gorselImage( $id )
 {
 	return has_post_thumbnail( $id )
@@ -277,6 +262,8 @@ function amt_register_acf_blocks(): void
 		'thinking-in-public-home',
 		'speaking-and-teaching-home',
 		'ask-anything-home',
+		'ads-banner',
+		'about-home',
 	);
 
 	/**

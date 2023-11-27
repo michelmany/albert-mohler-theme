@@ -1035,6 +1035,9 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-style: italic;
 }
+.site_header .menu .nav_link:hover {
+  color: var(--brick-red);
+}
 .site_header .search_bar > .btn {
   padding: 0;
   width: 24px;

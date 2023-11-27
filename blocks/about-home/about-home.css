@@ -1,0 +1,38 @@
+.about {
+  margin: 100px 0;
+  overflow: hidden;
+}
+.about .sec_title .flex {
+  border-color: #ccd4d9;
+}
+.about .wrapper {
+  margin: 0 -20px;
+  align-items: center;
+}
+.about .content h4 {
+  margin-bottom: 20px;
+}
+.about .content p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #585A5D;
+}
+.about .col {
+  width: 50%;
+  padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+  .about {
+    margin: 50px 0;
+  }
+  .about .col {
+    width: 100%;
+  }
+  .about .image {
+    margin-bottom: 24px;
+  }
+}
+
+/*# sourceMappingURL=about-home.css.map */

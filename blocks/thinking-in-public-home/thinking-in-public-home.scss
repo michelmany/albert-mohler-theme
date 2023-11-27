@@ -6,7 +6,7 @@
             margin-bottom: 34px;
 
             h1 {
-                color: var(--olive-green);
+                color: var(--base-color);
                 line-height: 1;
             }
         }
@@ -65,6 +65,7 @@
 
             .details {
                 padding-bottom: 0;
+                color: var(--base-color);
 
                 h2 {
                     line-height: 1.1;
@@ -73,13 +74,15 @@
         }
 
         .audio_box {
+            color: var(--base-color);
+
             @media (min-width: 1400px) {
                 margin-top: 15px;
             }
 
             .audio-player {
                 .playhead {
-                    background: var(--olive-green);
+                    background: var(--base-color);
                 }
             }
         }

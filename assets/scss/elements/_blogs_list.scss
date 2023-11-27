@@ -1,6 +1,6 @@
 .blogs_list {
     .sec_title {
-        color: var(--olive-green);
+        color: var(--base-color);
         margin-bottom: 30px;
     }
 
@@ -25,7 +25,7 @@
             width: 1px;
             display: block;
             margin: 0 60px;
-            background-color: var(--olive-green);
+            background-color: var(--base-color);
         }
     }
 
@@ -34,17 +34,17 @@
     }
 
     .audio_box {
-        color: var(--olive-green);
+        color: var(--base-color);
         border: unset;
         padding: 0;
         .timeslieder {
-            border-color: var(--olive-green);
+            border-color: var(--base-color);
         }
     }
 
     .article_item {
         .details {
-            color: var(--olive-green);
+            color: var(--base-color);
             h2 {
                 font-size: 26px;
                 margin-bottom: 14px;
@@ -55,7 +55,8 @@
         align-self: center;
 
         .item {
-            color: #575a5d;
+            color: var(--base-color);
+
             .image {
                 height: fit-content;
                 iframe {

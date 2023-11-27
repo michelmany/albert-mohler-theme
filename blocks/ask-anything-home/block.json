@@ -1,0 +1,15 @@
+{
+    "name": "acf/ask-anything-home",
+    "title": "Ask Anything Home",
+    "description": "Ask Anything Block for the Homepage",
+    "style": [ "file:./ask-anything-home.css" ],
+    "keywords": ["hero", "home"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "ask-anything-home.php"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": false
+    }
+}

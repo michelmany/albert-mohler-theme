@@ -1,0 +1,112 @@
+<?php
+/**
+ * Latest Articles Home Block template.
+ *
+ * @param  array  $block  The block settings and attributes.
+ */
+
+$ask_anything_category_id = get_field( 'show_latest_articles_from' );
+$section_title            = get_field( 'section_title' );
+$view_all_label           = get_field( 'view_all_button_label' );
+
+$book_id = 4;
+
+// Article Section - Left
+$ask_anything       = array(
+	'posts_per_page' => 1,
+	'cat'            => $ask_anything_category_id,
+);
+$ask_anything_query = new WP_Query( $ask_anything );
+
+$book       = array(
+	'posts_per_page' => 1,
+	'cat'            => $book_id,
+);
+$book_query = new WP_Query( $book );
+
+?>
+
+<section class="ask_anything">
+    <div class="container">
+        <div class="wrapper">
+            <div class="col">
+                <div class="sec_title">
+                    <div class="flex">
+                        <h1><?php echo $section_title; ?></h1>
+                        <a href="<?php echo get_term_link( $ask_anything_category_id ) ?>" class="btn">
+                            <span><?php echo $view_all_label; ?></span>
+                            <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
+                                      stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M33.3333 200H590" stroke="currentColor" stroke-width="66.6667"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+				<?php if ( $ask_anything_query->have_posts() ) : while ( $ask_anything_query->have_posts() ) : $ask_anything_query->the_post(); ?>
+                    <div class="article_item">
+                        <a href="" class="image">
+                            <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
+								        get_the_ID() ) ?>"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </a>
+                        <div class="details">
+                            <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
+                                <h2><?php the_title(); ?></h2>
+                            </a>
+                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
+                        </div>
+                    </div>
+
+                    <div class="view-more-btn">
+                        <a href="/category/ask-anything/" class="btn gold btn_sm">View More</a>
+                    </div>
+				<?php endwhile ?>
+				<?php endif ?>
+            </div>
+            <div class="col">
+                <div class="sec_title">
+                    <div class="flex">
+                        <h1>Featured Book</h1>
+                        <a href="<?php echo get_term_link( $book_id ) ?>" class="btn">View All
+                            <svg width="24" viewBox="0 0 700 400"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
+                                      stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M33.3333 200H590" stroke="currentColor" stroke-width="66.6667"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
+                    <div class="book_item">
+                        <div class="image">
+                            <a href="<?php the_permalink(); ?>" class="image">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
+                                     alt="<?php the_title(); ?>">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>Tell Me the Stories of Jesus</h3>
+                            <p> The explosive power of Jesus’ parables</p>
+                            <a href="<?php the_permalink(); ?>" class="btn red">Purchase
+                                <svg width="16" viewBox="0 0 468 268" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M434 34L234 234L34 34" stroke="white" stroke-width="66.6667"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+				<?php endwhile ?>
+				<?php endif ?>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+{
+    "name": "acf/speaking-and-teaching-home",
+    "title": "Speaking and Teaching Home",
+    "description": "Speaking and Teaching Block for the Homepage",
+    "style": [ "file:./speaking-and-teaching-home.css" ],
+    "keywords": ["thinking in public", "thinking", "public", "home"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "speaking-and-teaching-home.php"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": false
+    }
+}

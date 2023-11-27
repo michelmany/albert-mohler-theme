@@ -18,31 +18,9 @@ $book       = array(
 );
 $book_query = new WP_Query( $book );
 
-// Thinking in public Section 
-$thinking_in_public_4       = array(
-	'posts_per_page' => 4,
-	'offset'         => 1,
-	'cat'            => $thinking_in_public_id,
-);
-$thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
 
 
-// Speaking & Teaching - Left
-$sermons_and_speeches_public = array(
-	'posts_per_page' => 1,
-	'cat'            => $sermons_and_speeches_id,
-);
-$sermons_and_speeches_query  = new WP_Query( $sermons_and_speeches_public );
 
-// Speaking & Teaching - Right
-$sermons_and_speeches_public_4 = array(
-	'posts_per_page' => 4,
-	'offset'         => 1,
-	'cat'            => $sermons_and_speeches_id,
-);
-$sermons_and_speeches_query_4  = new WP_Query( $sermons_and_speeches_public_4 );
-
-// Speaking & Teaching - Left
 $ask_anything       = array(
 	'posts_per_page' => 1,
 	'cat'            => $ask_anything_id,
@@ -297,6 +275,7 @@ function amt_register_acf_blocks(): void
 		'hero-home',
 		'latest-articles-home',
 		'thinking-in-public-home',
+		'speaking-and-teaching-home',
 	);
 
 	/**
@@ -334,3 +313,5 @@ add_filter( 'block_categories_all', static function ( $categories ) {
 
 	return $categories;
 } );
+
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );

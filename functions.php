@@ -11,15 +11,6 @@ $video_id = 90;
 $audio_id = 11;
 
 
-
-
-// Hero Article - Right and Article Seciton Left
-$thinking_in_public       = array(
-	'posts_per_page' => 1,
-	'cat'            => $thinking_in_public_id,
-);
-$thinking_in_public_query = new WP_Query( $thinking_in_public );
-
 // Hero Article - Right Book
 $book       = array(
 	'posts_per_page' => 1,
@@ -34,7 +25,6 @@ $thinking_in_public_4       = array(
 	'cat'            => $thinking_in_public_id,
 );
 $thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
-
 
 
 // Speaking & Teaching - Left
@@ -306,6 +296,7 @@ function amt_register_acf_blocks(): void
 	$blocks = array(
 		'hero-home',
 		'latest-articles-home',
+		'thinking-in-public-home',
 	);
 
 	/**

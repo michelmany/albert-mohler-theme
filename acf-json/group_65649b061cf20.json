@@ -1,9 +1,9 @@
 {
-    "key": "group_65648f1a3b305",
-    "title": "Latest Articles Home Block",
+    "key": "group_65649b061cf20",
+    "title": "Thinking In Public Block",
     "fields": [
         {
-            "key": "field_65648f1a5f807",
+            "key": "field_65649b0624898",
             "label": "Section Title",
             "name": "section_title",
             "aria-label": "",
@@ -16,14 +16,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Latest Articles",
+            "default_value": "Thinking in Public",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_65648f375f808",
+            "key": "field_65649b062489e",
             "label": "View All Button Label",
             "name": "view_all_button_label",
             "aria-label": "",
@@ -43,7 +43,7 @@
             "append": ""
         },
         {
-            "key": "field_65648f9b8d180",
+            "key": "field_65649b06248c2",
             "label": "Show latest articles from category:",
             "name": "show_latest_articles_from",
             "aria-label": "",
@@ -73,7 +73,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/latest-articles-home"
+                "value": "acf\/thinking-in-public-home"
             }
         ]
     ],
@@ -86,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701092305
+    "modified": 1701092292
 }

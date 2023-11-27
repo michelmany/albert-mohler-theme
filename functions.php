@@ -1,5 +1,5 @@
 <?php
-$the_briefing_id         = 43; // the-briefing ID
+
 $thinking_in_public_id   = 71; // thinking-in-public ID
 $book_id                 = 4; // books-topics ID
 $articles_id             = 1; //articles ID
@@ -11,12 +11,7 @@ $video_id = 90;
 $audio_id = 11;
 
 
-// Hero Article - Left
-$home_article       = array(
-	'posts_per_page' => 1,
-	'cat'            => $the_briefing_id,
-);
-$home_article_query = new WP_Query( $home_article );
+
 
 // Hero Article - Right and Article Seciton Left
 $thinking_in_public       = array(
@@ -40,20 +35,7 @@ $thinking_in_public_4       = array(
 );
 $thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
 
-// Article Section - Left
-$articles_public = array(
-	'posts_per_page' => 1,
-	'cat'            => $articles_id,
-);
-$articles_query  = new WP_Query( $articles_public );
 
-// Article Section - Right
-$articles_public_4 = array(
-	'posts_per_page' => 3,
-	'offset'         => 1,
-	'cat'            => $articles_id,
-);
-$articles_query_4  = new WP_Query( $articles_public_4 );
 
 // Speaking & Teaching - Left
 $sermons_and_speeches_public = array(

@@ -3,7 +3,6 @@
     "title": "Latest Articles Home",
     "description": "Latest Articles Block for the Homepage",
     "style": [ "file:./latest-articles-home.css" ],
-    "category": "albert-mohler-blocks-category",
     "keywords": ["latest articles", "latest", "articles", "home"],
     "acf": {
         "mode": "edit",

@@ -320,13 +320,44 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
  */
 function amt_register_acf_blocks(): void
 {
-    /**
-     * We register our block's with WordPress's handy
-     * register_block_type();
-     *
-     * @link https://developer.wordpress.org/reference/functions/register_block_type/
-     */
-    register_block_type( __DIR__ . '/blocks/hero-home' );
+
+	$blocks = array(
+		'hero-home',
+		'latest-articles-home',
+	);
+
+	/**
+	 * We register our block's with WordPress's handy
+	 * register_block_type();
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/register_block_type/
+	 */
+
+	foreach ( $blocks as $block ) {
+		register_block_type(
+			__DIR__ . "/blocks/$block",
+			array(
+				'icon'     => file_get_contents( get_template_directory() . '/assets/images/am-mark-05.svg' ),
+				'category' => 'albert-mohler-blocks-category',
+			),
+		);
+	}
 }
+
 // Here we call our tt3child_register_acf_block() function on init.
 add_action( 'init', 'amt_register_acf_blocks' );
+
+
+/**
+ * Create Custom Gutenberg Blocks Categories.
+ */
+add_filter( 'block_categories_all', static function ( $categories ) {
+
+	// Adding a new category.
+	$categories[] = array(
+		'slug'  => 'albert-mohler-blocks-category',
+		'title' => 'Albert Mohler Blocks',
+	);
+
+	return $categories;
+} );

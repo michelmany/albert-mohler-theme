@@ -1,11 +1,12 @@
 <?php
 
-$thinking_in_public_id   = 71; // thinking-in-public ID
-$book_id                 = 4; // books-topics ID
-$articles_id             = 1; //articles ID
+$the_briefing_id = 43; // the-briefing ID
+$thinking_in_public_id = 71; // thinking-in-public ID
+$book_id = 4; // books-topics ID
+$articles_id = 1; //articles ID
 $sermons_and_speeches_id = 31; // sermons-and-speeches ID
-$aboutPage_id            = 4586; // About Page ID
-$ask_anything_id         = 162;
+$aboutPage_id = 4586; // About Page ID
+$ask_anything_id = 162;
 
 $video_id = 90;
 $audio_id = 11;

@@ -65,60 +65,8 @@ the_content();
                 </div>
             </div>
         </section>
-        <section class="last_articles">
-            <div class="container">
-                <div class="sec_title">
-                    <div class="flex">
-                        <h1>Latest <?php echo get_term( $articles_id )->name; ?></h1>
-                        <a href="<?php echo get_term_link( $articles_id ) ?>" class="btn">
-                            <span>View All</span>
-                            <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
-                                      stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M33.3333 200H590" stroke="currentColor" stroke-width="66.6667"
-                                      stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-				<?php if ( $articles_query->have_posts() ) : while ( $articles_query->have_posts() ) : $articles_query->the_post(); ?>
-                    <div class="article_item single">
-                        <a href="<?php the_permalink(); ?>" class="image">
-                            <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
-                        </a>
-                        <div class="details">
-                            <h4 class="country"> United States</h4>
-                            <a href="" class="title">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
-                            <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-									get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
-                            <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
-                        </div>
-                    </div>
-				<?php endwhile ?>
-				<?php endif ?>
-                <ul class="items_list">
-					<?php if ( $articles_query_4->have_posts() ) : while ( $articles_query_4->have_posts() ) : $articles_query_4->the_post(); ?>
-                        <li class="article_item">
-                            <a href="<?php the_permalink(); ?>" class="image">
-                                <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
-                            </a>
-                            <div class="details">
-                                <h4 class="country"> United States</h4>
-                                <a href="<?php the_permalink(); ?>" class="title">
-                                    <h2><?php the_title(); ?></h2>
-                                </a>
-                                <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-										get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
-                                <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
-                            </div>
-                        </li>
-					<?php endwhile ?>
-					<?php endif ?>
-                </ul>
-            </div>
-        </section>
+
+
         <section class="blogs_list speaking-teaching">
             <div class="container">
                 <div class="sec_title">

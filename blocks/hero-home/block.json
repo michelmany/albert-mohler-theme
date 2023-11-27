@@ -3,7 +3,6 @@
     "title": "Hero Home",
     "description": "Hero Block for the Homepage",
     "style": [ "file:./hero-home.css" ],
-    "category": "albert-mohler-blocks-category",
     "keywords": ["hero", "home"],
     "acf": {
         "mode": "edit",

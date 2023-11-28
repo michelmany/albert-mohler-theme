@@ -11,7 +11,7 @@
   width: calc(70% - 60px);
 }
 .speaking-teaching .right:before {
-  background-color: rgba(81, 102, 104, 0.3019607843);
+  background-color: var(--base-color);
 }
 .speaking-teaching .article_item .image {
   margin-bottom: 19px;

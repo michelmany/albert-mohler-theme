@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 .about .sec_title .flex {
-  border-color: #ccd4d9;
+  border-color: var(--base-color);
 }
 .about .wrapper {
   margin: 0 -20px;

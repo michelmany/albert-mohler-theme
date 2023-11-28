@@ -29,5 +29,6 @@ jobs:
           remote-protocol: "sftp"
           remote-host: "appserver.dev.fdb2f243-e5ff-4684-9771-be67956d8a9a.drush.in"
           remote-user: "dev.fdb2f243-e5ff-4684-9771-be67956d8a9a"
+          remote-password: "egvP6w^7cKkHqdRHBKadO#lX"
           remote-path: "/code/wp-content/themes/albertmohlertheme/"
           remote-port: "2222"

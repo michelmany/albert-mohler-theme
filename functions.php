@@ -1,12 +1,12 @@
 <?php
 
-$the_briefing_id = 43; // the-briefing ID
-$thinking_in_public_id = 71; // thinking-in-public ID
-$book_id = 4; // books-topics ID
-$articles_id = 1; //articles ID
+$the_briefing_id         = 43; // the-briefing ID
+$thinking_in_public_id   = 71; // thinking-in-public ID
+$book_id                 = 4; // books-topics ID
+$articles_id             = 1; //articles ID
 $sermons_and_speeches_id = 31; // sermons-and-speeches ID
-$aboutPage_id = 4586; // About Page ID
-$ask_anything_id = 162;
+$aboutPage_id            = 4586; // About Page ID
+$ask_anything_id         = 162;
 
 $video_id = 90;
 $audio_id = 11;
@@ -229,22 +229,48 @@ add_action( 'init', 'am_theme_options_page_func' );
  * Enqueue Styles properly
  * @return void
  */
-function my_theme_enqueue_styles(): void
+function am_theme_enqueue_styles(): void
 {
 
-	$parent_style = 'albert-mohler-style';
-
-//    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style(
-		$parent_style,
+		'albert-mohler-style',
 		get_template_directory_uri() . '/assets/scss/main.css',
 		array(),
 		wp_get_theme()->get( 'Version' ),
-
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_styles' );
+
+/**
+ * Enqueue Scripts properly
+ * @return void
+ */
+function am_theme_enqueue_scripts(): void
+{
+
+	wp_enqueue_script(
+		'swiper-bundle',
+		get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
+		array( 'jquery' ),
+		wp_get_theme()->get( 'Version' ),
+		array(
+			'footer' => true,
+		)
+	);
+
+	wp_enqueue_script(
+		'theme-app',
+		get_template_directory_uri() . '/assets/js/app-min.js',
+		array( 'jquery' ),
+		wp_get_theme()->get( 'Version' ),
+		array(
+			'footer' => true,
+		)
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_scripts' );
 
 
 /**
@@ -304,3 +330,4 @@ add_filter( 'block_categories_all', static function ( $categories ) {
 } );
 
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+

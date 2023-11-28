@@ -49,12 +49,12 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
                     <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                 </a>
                 <div class="details">
-                    <a href="" class="title">
+                    <a href="<?php the_permalink(); ?>" class="title">
                         <h2><?php the_title(); ?></h2>
                     </a>
                     <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
 							get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
-                    <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                    <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                 </div>
             </div>
 		<?php endwhile ?>
@@ -71,7 +71,7 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
                         </a>
                         <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
 								get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
-                        <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                        <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                     </div>
                 </li>
 			<?php endwhile ?>

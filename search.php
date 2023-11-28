@@ -210,7 +210,7 @@ error_reporting(0);
 				                                <h2><?php the_title(); ?></h2>
 				                            </a>
 				                            <p><?php echo mb_substr(wp_strip_all_tags(get_post_field('post_content', get_the_ID())), 0, 150, 'UTF-8'); ?>...</p>
-				                            <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
+				                            <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
 				                        </div>
 				                    </div>
 								<?php endwhile; ?>

@@ -56,7 +56,7 @@ $sermons_and_speeches_query_4  = new WP_Query( $sermons_and_speeches_public_4 );
                             <a href="<?php the_permalink(); ?>" class="title">
                                 <h2><?php the_title(); ?></h2>
                             </a>
-                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
+                            <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </div>
 				<?php endwhile ?>
@@ -75,7 +75,7 @@ $sermons_and_speeches_query_4  = new WP_Query( $sermons_and_speeches_public_4 );
                                         allowfullscreen></iframe>
                             </a>
                             <div class="details">
-                                <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                                <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                                 <a href="<?php the_permalink(); ?>" class="title">
                                     <h2><?php the_title(); ?></h2>
                                 </a>

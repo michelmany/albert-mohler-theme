@@ -21,7 +21,7 @@
         text-transform: uppercase;
         color: var(--primary-color);
     }
-    .menu {
+    .footer-navigation {
         ul {
             li {
                 a {
@@ -108,7 +108,7 @@
             }
         }
     }
-    .menu {
+    .footer-navigation {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
@@ -159,7 +159,7 @@
             .wrapper {
                 padding: 20px 0;
             }
-            .menu {
+            .footer-navigation {
                 width: 100%;
                 margin-bottom: 24px;
             }
@@ -183,7 +183,7 @@
 @media (max-width: 768px) {
     .site_footer {
         .foot_main {
-            .menu {
+            .footer-navigation {
                 flex-wrap: wrap;
                 > div {
                     width: 50%;

@@ -1813,6 +1813,7 @@ button.swiper-pagination-bullet {
   position: sticky;
   top: 70px;
   flex-shrink: 0;
+  margin-bottom: 30px;
 }
 .single_article .author h2 {
   font-size: 24px;
@@ -2218,6 +2219,41 @@ button.swiper-pagination-bullet {
     margin-right: 0;
     margin-bottom: 24px;
   }
+}
+.sidebar-widgets-wrapper {
+  max-width: 313px;
+  position: sticky;
+  top: 70px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.sidebar-widget {
+  background-color: var(--gold);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.sidebar-widget:last-child {
+  margin-bottom: 0;
+}
+.sidebar-widget h2 {
+  font-size: 24px;
+  font-family: freight-text-pro, serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--grey-400);
+}
+.sidebar-widget .menu-item a {
+  font-size: 20px;
+  text-decoration: underline;
+  line-height: 1.5;
+}
+.sidebar-widget .menu-item-description {
+  font-size: 16px;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -79,11 +79,11 @@ add_theme_support( 'custom-logo', array(
 ) );
 register_nav_menus(
 	array(
-		'primary'        => __( 'Main Menu', 'webwork' ),
-		'top_menu'       => __( 'Top Menu', 'webwork' ),
-		'donate_menu'    => __( 'Donate Menu', 'webwork' ),
-		'social_menu'    => __( 'Social Menu', 'webwork' ),
-		'copyright_menu' => __( 'Copyright Menu', 'webwork' ),
+		'primary'        => __( 'Main Menu', 'albert-mohler' ),
+		'top_menu'       => __( 'Top Menu', 'albert-mohler' ),
+		'donate_menu'    => __( 'Donate Menu', 'albert-mohler' ),
+		'social_menu'    => __( 'Social Menu', 'albert-mohler' ),
+		'copyright_menu' => __( 'Copyright Menu', 'albert-mohler' ),
 	)
 );
 add_filter( 'use_default_gallery_style', '__return_false' );
@@ -171,6 +171,28 @@ register_sidebar(
 		'after_widget'  => '</div>',
 		'before_title'  => '<h6>',
 		'after_title'   => '</h6>',
+	)
+);
+
+register_sidebar(
+	array(
+		'name'  => 'About Page Sidebar',
+		'id'    => 'about-page-widget',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget about-page-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	)
+);
+
+register_sidebar(
+	array(
+		'name'  => 'Internal Pages Left Sidebar',
+		'id'    => 'internal-pages-left-sidebar',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget internal-pages-left-sidebar %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
 	)
 );
 
@@ -331,3 +353,26 @@ add_filter( 'block_categories_all', static function ( $categories ) {
 
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
+
+/**
+ * Essential theme supports
+ * */
+function theme_setup(): void
+{
+	add_theme_support( 'block-templates' );
+}
+add_action( 'after_setup_theme', 'theme_setup' );
+
+
+function prefix_nav_description( $item_output, $item, $depth, $args ) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace(
+			$args->link_after . '</a>',
+			$args->link_after . '</a>' . '<p class="menu-item-description">' . $item->description . '</p>',
+			$item_output
+        );
+    }
+
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );

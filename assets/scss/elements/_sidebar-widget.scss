@@ -1,0 +1,41 @@
+.sidebar-widgets-wrapper {
+    max-width: 313px;
+    position: sticky;
+    top: 70px;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.sidebar-widget {
+    background-color: var(--gold);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-family: freight-text-pro, serif;
+        font-weight: 700;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--grey-400);
+    }
+
+    .menu-item {
+        a {
+            font-size: 20px;
+            text-decoration: underline;
+            line-height: 1.5;
+        }
+    }
+
+    .menu-item-description {
+        font-size: 16px;
+        font-style: italic;
+    }
+}

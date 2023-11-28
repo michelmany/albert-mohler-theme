@@ -8,12 +8,11 @@
             </div>
             <div class="breadcrump">Home / <?php the_title(); ?></div>
             <div class="article_content">
-                <div class="author">
-                    <h2>About the Author</h2>
-                    <h1>Dr. R. Albert Mohler Jr.</h1>
-                    <p>Dr. Mohler is a theologian and ordained minister, and serves as president of The Southern
-                        Baptist Theological Seminary.</p>
-                    <a href="" class="btn">Learn More</a>
+                <div class="sidebar-widgets-wrapper">
+                    <?php get_template_part('template-parts/about','the-author-widget'); ?>
+                    <?php if ( is_active_sidebar( 'internal-pages-left-sidebar' ) ) {
+                        dynamic_sidebar( 'internal-pages-left-sidebar' );
+                    } ?>
                 </div>
                 <div class="main_content">
                     <h1 class="title"><?php the_title(); ?></h1>

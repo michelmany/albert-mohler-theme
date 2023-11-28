@@ -15,7 +15,7 @@
                     <div class="content">
                         <h4><?php single_cat_title(); ?></h4>
                         <h1><a href="<?php the_permalink(); ?>" class="<?php the_title();?>"><?php the_title();?></a></h1>
-                        <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                        <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                          <div class="audio_box">
                         <div class="audio-player"
                             data-file="<?php echo get_field('enclosure', get_the_ID())?>">
@@ -49,7 +49,7 @@
                             <h2><?php the_title();?></h2>
                         </a>
                         <p><?php echo mb_substr(wp_strip_all_tags(get_post_field('post_content', get_the_ID())), 0, 150, 'UTF-8'); ?>...</p>
-                        <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                        <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                     </div>
                 </li>                
                 <?php endwhile ?>
@@ -80,7 +80,7 @@
                             </h2>
                         </a>
                         <p><?php echo mb_substr(wp_strip_all_tags(get_the_content()), 0, 250, 'UTF-8'); ?>...</p>
-                        <h4 class="date"><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                        <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                     </div>
                 </div>
                 <?php endwhile ?>

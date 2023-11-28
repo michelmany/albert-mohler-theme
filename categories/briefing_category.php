@@ -11,7 +11,7 @@
                 <h1 class="title"><?php the_title();?></h1>
                 <div class="audio_box">
                                 <div class="audio-player audio_<?php echo get_the_ID(); ?>"
-                                    data-file="<?php echo get_field('enclosure', get_the_ID()); ?>">
+                                    data-file="<?php echo get_field('media_file', get_the_ID()); ?>">
                                 </div>
                             </div>
 				<div class="article_parts" class="tm_audio_<?php echo get_the_ID(); ?>">

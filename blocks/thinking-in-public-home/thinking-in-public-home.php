@@ -53,7 +53,7 @@ $thinking_in_public_query_4  = new WP_Query( $thinking_in_public_4 );
                             <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
                                 <h2><?php the_title(); ?></h2>
                             </a>
-                            <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
+                            <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </div>
                     <div class="audio_box">
@@ -70,7 +70,7 @@ $thinking_in_public_query_4  = new WP_Query( $thinking_in_public_4 );
 					<?php if ( $thinking_in_public_query_4->have_posts() ) : while ( $thinking_in_public_query_4->have_posts() ) : $thinking_in_public_query_4->the_post(); ?>
                         <li class="item">
                             <a href="<?php the_permalink(); ?>" class="inner">
-                                <h4><?php echo get_the_date( 'M d, Y' ); ?></h4>
+                                <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                                 <p><?php the_title(); ?></p>
                             </a>
                         </li>

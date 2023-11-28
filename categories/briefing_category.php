@@ -58,8 +58,7 @@
                             <?php while( have_rows('briefing_segments') ): the_row(); ?>                               
                                <a href="<?php the_permalink();?>"><p style="margin-bottom: 10px"><?php the_sub_field('title'); ?></p></a>
                             <?php endwhile; ?>
-                            <?php endif; ?>                             
-                            <h4 class="tag" style="margin-top: 15px"><?php echo get_the_tag_list( '<ul><li>', '</li><li>', '</li></ul>' ); ?></h4>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php endwhile ?>

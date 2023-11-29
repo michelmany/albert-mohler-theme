@@ -18,7 +18,9 @@
                     </div>
 
                     <div class="main_content">
-                        <h1 class="title"><?php the_title(); ?></h1>
+                        <h1 class="title">
+                            <?php the_title(); ?>
+                        </h1>
                         <div class="top">
                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                             <div class="socialMeda">

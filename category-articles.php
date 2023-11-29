@@ -50,7 +50,7 @@ $post_all = new WP_Query($postar_all);
     <section class="top_article">
         <div class="container">
             <?php if ($post_1->have_posts()) : while ($post_1->have_posts()) : $post_1->the_post(); ?>
-            <div class="wrapper">
+            <div class="row">
                 <div class="col-6">
                     <div class="image">
                         <a href="<?php the_permalink(); ?>">
@@ -58,8 +58,8 @@ $post_all = new WP_Query($postar_all);
                         </a>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="content">
+                <div class="col-6 d-flex align-items-center">
+                    <div class="content p-xl-4">
                         <h4><?php single_cat_title(); ?></h4>
                         <h1><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
                         <p><?php echo mb_substr(wp_strip_all_tags(get_post_field('post_content', get_the_ID())), 0, 150, 'UTF-8'); ?>...</p>

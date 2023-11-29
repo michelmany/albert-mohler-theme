@@ -46,13 +46,13 @@ $post_all = new WP_Query($postar_all);
 ?> 
 
 <?php if (is_category($articles_id)): // articles ID ?>
-    <?php include 'categories/articles_category.php'; ?>    
+    <?php #include 'categories/articles_category.php'; ?>
 <?php elseif (is_category($the_briefing_id)): // the-briefing ID   ?>
     <?php include 'categories/briefing_category.php'; ?>
 <?php elseif (is_category(array($sermons_and_speeches_id, $thinking_in_public_id))): // the-briefing ID   ?>
     <?php include 'categories/sermons_and_speeches_category.php'; ?>
 <?php else: ?>
-    <?php include 'categories/articles_category.php'; ?>     
+    <?php include 'categories/articles_category.php'; ?>
 <?php endif ?>
 
 <?php get_footer() ?>

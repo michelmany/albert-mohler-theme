@@ -75,6 +75,10 @@
         p {
             margin-bottom: 1rem;
         }
+
+        a {
+            text-decoration: underline;
+        }
     }
     .main_content {
         > .top {
@@ -100,12 +104,10 @@
         color: white;
         width: 100%;
         max-width: 313px;
-        height: fit-content;
         padding: 20px;
-        position: sticky;
         top: 70px;
-        flex-shrink: 0;
         margin-bottom: 30px;
+
         h2 {
             font-size: 24px;
             font-weight: 700;

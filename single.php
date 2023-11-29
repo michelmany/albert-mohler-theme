@@ -9,7 +9,7 @@
             <div class="breadcrump">Home / <?php the_title(); ?></div>
             <div class="article_content">
                 <div class="sidebar-widgets-wrapper">
-                    <?php get_template_part('template-parts/about','the-author-widget'); ?>
+                    <?php get_template_part('template-parts/about-the-author-widget',''); ?>
                     <?php if ( is_active_sidebar( 'internal-pages-left-sidebar' ) ) {
                         dynamic_sidebar( 'internal-pages-left-sidebar' );
                     } ?>
@@ -107,7 +107,7 @@
     </section>
     <section class="sub_footer">
         <div class="container">
-            <div class="col_12">
+            <div class="col-12">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Topics</h1>

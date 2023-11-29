@@ -230,7 +230,7 @@ error_reporting(0);
     <?php include 'categories/pagination.php'; ?>
     <section class="sub_footer">
         <div class="container">
-            <div class="col_12">
+            <div class="col-12">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Topics</h1>

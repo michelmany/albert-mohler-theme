@@ -105,6 +105,7 @@
                 color: white;
                 width: auto;
                 height: 34.5px;
+                border: 0;
             }
         }
     }
@@ -193,96 +194,13 @@
     }
 }
 
-.sub_footer {
+.sub-footer {
     padding: 60px 0;
     overflow: hidden;
-    .sec_title {
-        .flex {
-            justify-content: center;
-        }
-    }
-    .col_12 {
-        width: 100%;
 
-    }
-    .wrapper {
-        margin: 0 -20px;
-    }
-    .col_6 {
-        width: 50%;
-        padding: 0 20px;
-    }
-    .items {
-        display: flex;
-        .block {
-            width: 100%;
-            margin-bottom: 36px;
-           
-        }
-        ul {
-            columns: 1;
-
-            @media (min-width: 768px) {
-                columns: 2;
-                width: 50em;
-            }
-
-            @media (min-width: 992px) {
-                columns: 3;
-                width: 60em;
-            }
-
-            @media (min-width: 1400px) {
-                columns: 5;
-                width: auto;
-            }
-
-            a {
-                font-size: 18px;
-                font-weight: 500;
-                display: block;
-                padding: 3px 0;
-                font-family: freight-sans-pro, sans-serif;
-                text-transform: uppercase;
-                &:hover {
-                    opacity: .7;
-                }
-            }
-        }
-    }
-}
-@media (max-width:991px) {
-    .sub_footer {
-        .items {
-            flex-wrap: wrap;
-            .block {
-                width: 33.333%;
-            }
-        }
-        .sec_title{
-            .flex{
-                justify-content: flex-start;
-            }
-            h1 {
-                font-size: 36px;
-            }
-        }
-        .col_6 {
-            width: 100%;
-        }
-        ul {
-            a {
-                font-size: 16px;
-            }
-        }
-    }
-}
-@media (max-width:576px) {
-    .sub_footer {
-        .items {
-            .block {
-                width: 50%;
-            }
+    .row {
+        &.mt-5 {
+            margin-top: 70px !important;
         }
     }
 }

@@ -77,6 +77,7 @@ add_theme_support( 'custom-logo', array(
 	//'flex-width'  => true,
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );
+
 register_nav_menus(
 	array(
 		'primary'        => __( 'Main Menu', 'albert-mohler' ),
@@ -86,6 +87,7 @@ register_nav_menus(
 		'copyright_menu' => __( 'Copyright Menu', 'albert-mohler' ),
 	)
 );
+
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 add_filter( 'the_content', 'remove_br_gallery' );
@@ -196,6 +198,39 @@ register_sidebar(
 	)
 );
 
+register_sidebar(
+	array(
+		'name'          => 'Topics Bottom Widget',
+		'id'            => 'topics-bottom-widget',
+		'before_widget' => '<div id="%1$s" class="internal-pages-bottom-widgets topics-bottom-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	)
+);
+
+register_sidebar(
+	array(
+		'name'          => 'Sermon Series Widget',
+		'id'            => 'sermon-series-widget',
+		'before_widget' => '<div id="%1$s" class="internal-pages-bottom-widgets sermon-series-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	)
+);
+
+register_sidebar(
+	array(
+		'name'          => 'Sermon and Speeches Widget',
+		'id'            => 'sermon-and-speeches-widget',
+		'before_widget' => '<div id="%1$s" class="internal-pages-bottom-widgets sermon-and-speeches-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	)
+);
+
 
 /*
   wd - 11/17/2023
@@ -255,9 +290,16 @@ function am_theme_enqueue_styles(): void
 {
 
 	wp_enqueue_style(
+		'bootstrap-style',
+		get_template_directory_uri() . '/assets/vendor/bootstrap.min.css',
+		array(),
+		'5.3.2',
+	);
+
+	wp_enqueue_style(
 		'albert-mohler-style',
 		get_template_directory_uri() . '/assets/scss/main.css',
-		array(),
+		array('bootstrap-style'),
 		wp_get_theme()->get( 'Version' ),
 	);
 }
@@ -355,16 +397,13 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 
 /**
- * Essential theme supports
- * */
-function theme_setup(): void
-{
-	add_theme_support( 'block-templates' );
-}
-
-add_action( 'after_setup_theme', 'theme_setup' );
-
-
+ * @param $item_output
+ * @param $item
+ * @param $depth
+ * @param $args
+ *
+ * @return array|mixed|string|string[]
+ */
 function prefix_nav_description( $item_output, $item, $depth, $args )
 {
 	if ( ! empty( $item->description ) ) {

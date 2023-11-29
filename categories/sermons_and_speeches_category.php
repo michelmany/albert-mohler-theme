@@ -3,7 +3,7 @@
         <div class="container">          
             <?php if ($post_1->have_posts()) : while ($post_1->have_posts()) : $post_1->the_post(); ?>                          
             <div class="wrapper">
-                <div class="col_6">
+                <div class="col-6">
                    <iframe width="100%" height="380"
                     src="https://www.youtube.com/embed/<?php echo get_field('media_youtube', get_the_ID())?>"
                     title="<?php the_title(); ?>" frameborder="0"
@@ -11,7 +11,7 @@
                     allowfullscreen></iframe>
 
                 </div>
-                <div class="col_6">
+                <div class="col-6">
                     <div class="content">
                         <h4><?php single_cat_title(); ?></h4>
                         <h1><a href="<?php the_permalink(); ?>" class="<?php the_title();?>"><?php the_title();?></a></h1>
@@ -91,7 +91,7 @@
     <?php include 'pagination.php'; ?>
     <section class="sub_footer">
         <div class="container">
-            <div class="col_12">
+            <div class="col-12">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Topics</h1>

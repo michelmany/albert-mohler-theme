@@ -3,14 +3,14 @@
         <div class="container">             
             <?php if ($post_1->have_posts()) : while ($post_1->have_posts()) : $post_1->the_post(); ?>                          
             <div class="wrapper">
-                <div class="col_6">
+                <div class="col-6">
                     <div class="image">
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
                         </a>
                     </div>
                 </div>
-                <div class="col_6">
+                <div class="col-6">
                     <div class="content">
                         <h4><?php single_cat_title(); ?></h4>
                         <h1> <a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
@@ -82,7 +82,7 @@
   <?php include 'pagination.php'; ?>
     <section class="sub_footer">
         <div class="container">
-            <div class="col_12">
+            <div class="col-12">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Topics</h1>

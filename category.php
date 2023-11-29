@@ -43,7 +43,13 @@ $postar_all = array(
 );
 $post_all = new WP_Query($postar_all);
 
-?> 
+?>
+
+<?php
+
+// TODO:
+// create category-briefing.php etc and remove the partials;
+?>
 
 <?php if (is_category($articles_id)): // articles ID ?>
     <?php #include 'categories/articles_category.php'; ?>

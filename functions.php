@@ -176,8 +176,8 @@ register_sidebar(
 
 register_sidebar(
 	array(
-		'name'  => 'About Page Sidebar',
-		'id'    => 'about-page-widget',
+		'name'          => 'About Page Sidebar',
+		'id'            => 'about-page-widget',
 		'before_widget' => '<div id="%1$s" class="sidebar-widget about-page-widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
@@ -187,8 +187,8 @@ register_sidebar(
 
 register_sidebar(
 	array(
-		'name'  => 'Internal Pages Left Sidebar',
-		'id'    => 'internal-pages-left-sidebar',
+		'name'          => 'Internal Pages Left Sidebar',
+		'id'            => 'internal-pages-left-sidebar',
 		'before_widget' => '<div id="%1$s" class="sidebar-widget internal-pages-left-sidebar %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
@@ -361,18 +361,21 @@ function theme_setup(): void
 {
 	add_theme_support( 'block-templates' );
 }
+
 add_action( 'after_setup_theme', 'theme_setup' );
 
 
-function prefix_nav_description( $item_output, $item, $depth, $args ) {
-    if ( !empty( $item->description ) ) {
-        $item_output = str_replace(
+function prefix_nav_description( $item_output, $item, $depth, $args )
+{
+	if ( ! empty( $item->description ) ) {
+		$item_output = str_replace(
 			$args->link_after . '</a>',
 			$args->link_after . '</a>' . '<p class="menu-item-description">' . $item->description . '</p>',
 			$item_output
-        );
-    }
+		);
+	}
 
-    return $item_output;
+	return $item_output;
 }
+
 add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );

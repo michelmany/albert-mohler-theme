@@ -418,3 +418,17 @@ function prefix_nav_description( $item_output, $item, $depth, $args )
 }
 
 add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
+
+
+/**
+ * Fix pagination on archive pages
+ */
+function remove_page_from_query_string($query_string)
+{
+    if ( isset($query_string['name']) && $query_string['name'] === 'page' && isset($query_string['page'])) {
+        unset($query_string['name']);
+        $query_string['paged'] = $query_string['page'];
+    }
+    return $query_string;
+}
+add_filter('request', 'remove_page_from_query_string');

@@ -1,9 +1,14 @@
 .sidebar-widgets-wrapper {
     max-width: 313px;
-    position: sticky;
-    top: 70px;
+    top: 100px;
     flex-shrink: 0;
     height: fit-content;
+    margin-bottom: 20px;
+
+    @media (min-width: 992px) {
+        position: sticky;
+        margin-bottom: 40px;
+    }
 }
 
 .sidebar-widget {

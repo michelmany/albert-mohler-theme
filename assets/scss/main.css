@@ -175,6 +175,7 @@ p {
   gap: 5px;
   width: fit-content;
   border-radius: 0;
+  text-decoration: none !important;
 }
 .btn.gold {
   background-color: var(--gold);
@@ -1689,6 +1690,9 @@ button.swiper-pagination-bullet {
 .single_article .article_content p {
   margin-bottom: 1rem;
 }
+.single_article .article_content a {
+  text-decoration: underline;
+}
 .single_article .main_content > .top {
   display: flex;
   align-items: center;
@@ -1711,11 +1715,8 @@ button.swiper-pagination-bullet {
   color: white;
   width: 100%;
   max-width: 313px;
-  height: fit-content;
   padding: 20px;
-  position: sticky;
   top: 70px;
-  flex-shrink: 0;
   margin-bottom: 30px;
 }
 .single_article .author h2 {
@@ -2125,10 +2126,16 @@ button.swiper-pagination-bullet {
 }
 .sidebar-widgets-wrapper {
   max-width: 313px;
-  position: sticky;
-  top: 70px;
+  top: 100px;
   flex-shrink: 0;
   height: fit-content;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .sidebar-widgets-wrapper {
+    position: sticky;
+    margin-bottom: 40px;
+  }
 }
 
 .sidebar-widget {

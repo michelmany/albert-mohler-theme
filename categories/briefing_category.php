@@ -67,30 +67,6 @@
             </div>
         </div>
     </section>
-     <?php include 'pagination.php'; ?>
-    <section class="sub_footer">
-        <div class="container">
-            <div class="col-12">
-                <div class="sec_title">
-                    <div class="flex">
-                        <h1>Topics</h1>
-                    </div>
-                </div>
-                <?php $terms = get_terms( array(
-                    'taxonomy'   => 'category',
-                    'hide_empty' => true,
-                ) );?>
-                <div class="items">
-                    <div class="block">
-                        <ul>
-                            <?php foreach ($terms as $term): ?>
-                            <li>
-                                <a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a>
-                            </li>                                    
-                            <?php endforeach ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>            
-    </section>
+	<?php get_template_part( 'template-parts/pagination' ) ?>
+	<?php get_template_part( 'template-parts/internal-pages-bottom-widgets' ) ?>
 </main>

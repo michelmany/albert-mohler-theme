@@ -1587,6 +1587,11 @@ button.swiper-pagination-bullet {
 }
 .audio_box .play_btn {
   cursor: pointer;
+  transition: 0.15s;
+}
+.audio_box .play_btn:hover {
+  transition: 0.15s;
+  transform: scale(1.05);
 }
 .audio_box .play_btn svg {
   display: block;
@@ -1599,6 +1604,17 @@ button.swiper-pagination-bullet {
 }
 .audio_box .play_btn.active .pause {
   display: block;
+}
+.audio_box .reset_btn {
+  padding: 0;
+}
+.audio_box .reset_btn:hover {
+  transition: 0.15s;
+  transform: scale(1.05);
+}
+.audio_box .reset_btn svg {
+  width: 34px;
+  height: 34px;
 }
 .audio_box .audio-player {
   display: flex;

@@ -1089,12 +1089,16 @@ button.swiper-pagination-bullet {
   width: 27%;
   opacity: 1;
 }
+.site_header .search_bar .bar.opened input {
+  visibility: visible;
+}
 .site_header .search_bar input {
   height: 60px;
   width: 100%;
   padding: 16px;
   font-size: 22px;
   border: 1px solid var(--navy-05);
+  visibility: hidden;
 }
 .site_header .action_list {
   display: inline-flex;

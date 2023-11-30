@@ -5,6 +5,11 @@
 .ask_anything .wrapper {
   margin: 0 -60px;
 }
+@media (min-width: 1400px) {
+  .ask_anything .col-lg--left {
+    width: 47.4%;
+  }
+}
 .ask_anything .col {
   width: 50%;
   padding: 0 60px;
@@ -18,6 +23,12 @@
   height: 100%;
   width: 1px;
   background-color: var(--base-color);
+  display: none;
+}
+@media (min-width: 992px) {
+  .ask_anything .col:first-child::after {
+    display: block;
+  }
 }
 .ask_anything .sec_title {
   color: var(--base-color);
@@ -82,6 +93,7 @@
   }
   .ask_anything .book_item > * {
     width: 100%;
+    max-width: 280px;
   }
 }
 

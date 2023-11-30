@@ -29,7 +29,7 @@ $book_query = new WP_Query( $book );
 <section class="ask_anything">
     <div class="container">
         <div class="wrapper">
-            <div class="col">
+            <div class="col col-12 col-lg-6">
                 <div class="sec_title">
                     <div class="flex">
                         <h1><?php echo $section_title; ?></h1>
@@ -70,7 +70,7 @@ $book_query = new WP_Query( $book );
 				<?php endwhile ?>
 				<?php endif ?>
             </div>
-            <div class="col">
+            <div class="col col-12 col-lg-6">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Featured Book</h1>

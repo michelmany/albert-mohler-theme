@@ -20,6 +20,12 @@
     background-color: white;
     margin-bottom: 25px;
 
+    .toggle {
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
     .wrapper {
         width: 100%;
         align-items: center;
@@ -155,13 +161,25 @@
 
                 a {
                     display: block;
-                    font-size: 26px;
+                    font-size: 17px;
                     font-weight: 400;
                     padding: 10px 0 6px;
                     text-transform: uppercase;
 
                     &:hover {
                         color: var(--brick-red);
+                    }
+
+                    @media (min-width: 1200px) {
+                        font-size: 21px;
+                    }
+
+                    @media (min-width: 1400px) {
+                        font-size: 24px;
+                    }
+
+                    @media (min-width: 1600px) {
+                        font-size: 26px;
                     }
                 }
             }
@@ -186,16 +204,6 @@
     }
 }
 
-@media (max-width: 1600px) {
-    .header_nav {
-        .navbar {
-            .nav_link {
-                font-size: 22px;
-            }
-        }
-    }
-}
-
 .mobile_menu {
     position: fixed;
     top: 0;
@@ -207,6 +215,10 @@
     transition: all 0.35s;
     opacity: 0;
     visibility: hidden;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
 
     &.opened {
         opacity: 1;
@@ -364,16 +376,6 @@
     }
 }
 
-@media (min-width: 991px) {
-    .mobile_menu {
-        display: none;
-    }
-    .site_header {
-        .toggle {
-            display: none;
-        }
-    }
-}
 
 @media (max-width: map.get($grid-breakpoints, "lg")) {
     .site_header {

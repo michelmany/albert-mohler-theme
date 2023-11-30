@@ -46,7 +46,8 @@
 .thinking-in-public.blogs_list .article_item .image img {
   width: 100%;
   max-width: 97.5%;
-  min-height: 477px;
+  max-height: 477px;
+  height: auto;
   object-fit: cover;
 }
 .thinking-in-public.blogs_list .article_item .details {

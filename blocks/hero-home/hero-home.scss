@@ -169,7 +169,8 @@ iframe {
 
         img {
             width: 100%;
-            min-height: 354px;
+            max-height: 354px;
+            height: auto;
             object-fit: cover;
         }
 

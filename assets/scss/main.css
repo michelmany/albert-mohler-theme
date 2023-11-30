@@ -1734,6 +1734,10 @@ button.swiper-pagination-bullet {
 .single_article .article_content a {
   text-decoration: underline;
 }
+.single_article .article_content a:hover {
+  text-decoration: underline;
+  color: var(--brick-red);
+}
 .single_article .main_content > .top {
   display: flex;
   align-items: center;
@@ -1780,6 +1784,12 @@ button.swiper-pagination-bullet {
   color: var(--gold);
   padding: 10px 16px;
   margin-top: 6px;
+  transition: 0.15s;
+}
+.single_article .author .btn:hover {
+  color: var(--gold);
+  transition: 0.15s;
+  opacity: 0.9;
 }
 
 @media (max-width: 991px) {

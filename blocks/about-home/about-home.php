@@ -5,12 +5,12 @@
  * @param  array  $block  The block settings and attributes.
  */
 
-$section_title  = get_field( 'section_title' );
+$section_title   = get_field( 'section_title' );
 $read_more_label = get_field( 'read_more_button_label' );
-$read_more_link = get_field( 'read_more_link' );
-$image = get_field( 'image' );
-$heading = get_field( 'heading' );
-$copy = get_field( 'copy' );
+$read_more_link  = get_field( 'read_more_link' );
+$image           = get_field( 'image' );
+$heading         = get_field( 'heading' );
+$copy            = get_field( 'copy' );
 
 ?>
 
@@ -20,8 +20,8 @@ $copy = get_field( 'copy' );
         <div class="sec_title">
             <div class="flex">
                 <h1><?php echo $section_title; ?></h1>
-                <a href="<?php echo $read_more_link; ?>" class="btn">
-                    <?php echo $read_more_label; ?>
+                <a href="<?php echo $read_more_link; ?>" class="btn view-all-btn">
+                    <span><?php echo $read_more_label; ?></span>
                     <svg width="24" viewBox="0 0 700 400" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -43,7 +43,7 @@ $copy = get_field( 'copy' );
             </div>
             <div class="col">
                 <div class="content">
-                    <h4><?php echo $heading;?></h4>
+                    <h4><?php echo $heading; ?></h4>
                     <p><?php echo $copy; ?></p>
                 </div>
             </div>

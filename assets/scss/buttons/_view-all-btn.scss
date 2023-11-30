@@ -1,0 +1,18 @@
+.view-all-btn {
+    svg {
+        width: 21px;
+        height: auto;
+    }
+
+    span {
+        color: var(--base-color) !important;
+        font-style: italic !important;
+        font-size: 20px !important;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        &:hover {
+            color: var(--brick-red) !important;
+        }
+    }
+}

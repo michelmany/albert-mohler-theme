@@ -16,7 +16,7 @@
         color: white;
 
         &:hover {
-            background-color: #C39948;
+            background-color: var(--gold-hover);
         }
     }
 
@@ -25,7 +25,7 @@
         color: white;
 
         &:hover {
-            background-color: #942e15;
+            background-color: var(--brick-red-hover);
         }
     }
 

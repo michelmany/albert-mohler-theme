@@ -1,11 +1,11 @@
-.googleAds {
+.google-ads {
   padding: 30px 0;
 }
-.googleAds img {
+.google-ads img {
   margin: 0 auto;
 }
 @media (min-width: 992px) {
-  .googleAds {
+  .google-ads {
     padding: 65px 0;
   }
 }

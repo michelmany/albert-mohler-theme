@@ -78,6 +78,10 @@
 
         a {
             text-decoration: underline;
+            &:hover {
+                text-decoration: underline;
+                color: var(--brick-red);
+            }
         }
     }
     .main_content {
@@ -128,6 +132,13 @@
             color: var(--gold);
             padding: 10px 16px;
             margin-top: 6px;
+            transition: 0.15s;
+
+            &:hover {
+                color: var(--gold);
+                transition: 0.15s;
+                opacity: 0.9;
+            }
         }
     }
 }

@@ -107,6 +107,10 @@
             &.opened {
                 width: 27%;
                 opacity: 1;
+
+                input {
+                    visibility: visible;
+                }
             }
         }
 
@@ -116,6 +120,7 @@
             padding: 16px;
             font-size: 22px;
             border: 1px solid var(--navy-05);
+            visibility: hidden;
         }
     }
 

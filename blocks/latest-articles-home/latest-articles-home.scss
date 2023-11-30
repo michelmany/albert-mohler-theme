@@ -23,7 +23,8 @@
             img {
                 transition: 0.1s;
                 width: 100%;
-                min-height: 335px;
+                max-height: 335px;
+                height: auto;
                 object-fit: cover;
             }
         }
@@ -83,10 +84,12 @@
             }
 
             .image {
-                margin-bottom: 22px;
+                margin-bottom: 26px;
 
                 img {
-                    min-height: 272px;
+                    @media (min-width: 1900px) {
+                        min-height: 272px;
+                    }
                 }
             }
         }

@@ -116,7 +116,7 @@ p {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1399px) {
   h1 {
     font-size: 36px;
   }
@@ -967,6 +967,19 @@ button.swiper-pagination-bullet {
 .sec_title {
   margin-bottom: 30px;
 }
+.sec_title h1 {
+  font-size: 28px;
+}
+@media (min-width: 575px) {
+  .sec_title h1 {
+    font-size: 34px;
+  }
+}
+@media (min-width: 768px) {
+  .sec_title h1 {
+    font-size: 50px;
+  }
+}
 .sec_title h5 {
   font-size: 14px;
   color: var(--primary-color);
@@ -990,9 +1003,6 @@ button.swiper-pagination-bullet {
     flex-wrap: wrap;
     gap: 12px;
   }
-  .sec_title h1 {
-    font-size: 36px;
-  }
 }
 .top_header {
   background-color: var(--base-color);
@@ -1013,6 +1023,11 @@ button.swiper-pagination-bullet {
   padding: 20px 0 10px;
   background-color: white;
   margin-bottom: 25px;
+}
+@media (min-width: 992px) {
+  .site_header .toggle {
+    display: none;
+  }
 }
 .site_header .wrapper {
   width: 100%;
@@ -1125,13 +1140,28 @@ button.swiper-pagination-bullet {
 }
 .header_nav .navbar.menus li.menu-item a {
   display: block;
-  font-size: 26px;
+  font-size: 17px;
   font-weight: 400;
   padding: 10px 0 6px;
   text-transform: uppercase;
 }
 .header_nav .navbar.menus li.menu-item a:hover {
   color: var(--brick-red);
+}
+@media (min-width: 1200px) {
+  .header_nav .navbar.menus li.menu-item a {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1400px) {
+  .header_nav .navbar.menus li.menu-item a {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1600px) {
+  .header_nav .navbar.menus li.menu-item a {
+    font-size: 26px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1147,11 +1177,6 @@ button.swiper-pagination-bullet {
     display: none;
   }
 }
-@media (max-width: 1600px) {
-  .header_nav .navbar .nav_link {
-    font-size: 22px;
-  }
-}
 .mobile_menu {
   position: fixed;
   top: 0;
@@ -1163,6 +1188,11 @@ button.swiper-pagination-bullet {
   transition: all 0.35s;
   opacity: 0;
   visibility: hidden;
+}
+@media (min-width: 992px) {
+  .mobile_menu {
+    display: none;
+  }
 }
 .mobile_menu.opened {
   opacity: 1;
@@ -1293,14 +1323,6 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-@media (min-width: 991px) {
-  .mobile_menu {
-    display: none;
-  }
-  .site_header .toggle {
-    display: none;
-  }
-}
 @media (max-width: 992px) {
   .site_header .site_logo {
     margin-right: auto;
@@ -1555,6 +1577,9 @@ button.swiper-pagination-bullet {
 .blogs_list .blog_items .item p {
   font-size: 26px;
 }
+.blogs_list .blog_items .item p:last-of-type {
+  margin-bottom: 0;
+}
 
 @media (max-width: 991px) {
   .blogs_list .wrapper {
@@ -1730,7 +1755,17 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-weight: 700;
   color: var(--navy-05);
-  margin: 60px 0 30px;
+  margin: 30px 0 30px;
+}
+@media (min-width: 1400px) {
+  .single_article .breadcrump {
+    margin: 40px 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .single_article .breadcrump {
+    margin: 60px 0 30px;
+  }
 }
 .single_article .article_content {
   display: flex;
@@ -1745,7 +1780,7 @@ button.swiper-pagination-bullet {
 }
 .single_article .article_content .title {
   border-bottom: 1px solid var(--navy-05);
-  padding-bottom: 40px;
+  padding-bottom: 32px;
   margin-bottom: 40px;
 }
 .single_article .article_content p {
@@ -2017,7 +2052,8 @@ button.swiper-pagination-bullet {
 .last_articles .article_item .image img {
   transition: 0.1s;
   width: 100%;
-  min-height: 335px;
+  max-height: 335px;
+  height: auto;
   object-fit: cover;
 }
 .last_articles .article_item .details .country {
@@ -2032,6 +2068,7 @@ button.swiper-pagination-bullet {
 .last_articles .article_item .details p {
   color: var(--base-color);
   margin-bottom: 20px;
+  line-height: 26px;
 }
 .last_articles .article_item.single {
   display: flex;
@@ -2068,8 +2105,10 @@ button.swiper-pagination-bullet {
 .last_articles .items_list .article_item .image {
   margin-bottom: 26px;
 }
-.last_articles .items_list .article_item .image img {
-  min-height: 272px;
+@media (min-width: 1900px) {
+  .last_articles .items_list .article_item .image img {
+    min-height: 272px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2109,6 +2148,12 @@ button.swiper-pagination-bullet {
 .briefing .title {
   margin: 40px 0 30px;
   line-height: 1;
+}
+.briefing .main_image img {
+  width: 100%;
+  aspect-ratio: 18/6;
+  object-fit: cover;
+  object-position: top;
 }
 .briefing .bottom .btn {
   padding: 0;

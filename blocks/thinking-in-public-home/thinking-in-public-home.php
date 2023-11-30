@@ -31,7 +31,7 @@ $thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
         <div class="sec_title">
             <div class="flex">
                 <h1><?php echo $section_title; ?></h1>
-                <a href="<?php echo get_term_link( $thinking_in_public_category_id ) ?>" class="btn">
+                <a href="<?php echo get_term_link( $thinking_in_public_category_id ) ?>" class="btn view-all-btn">
                     <span><?php echo $view_all_label; ?></span>
                     <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"

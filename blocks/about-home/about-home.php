@@ -33,15 +33,15 @@ $copy            = get_field( 'copy' );
                 </a>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="col">
+        <div class="row">
+            <div class="col-12 col-lg-6">
                 <div class="image">
                     <a href="<?php the_permalink(); ?>">
                         <img src="<?php echo $image; ?>" alt="<?php echo $section_title; ?>">
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <div class="content">
                     <h4><?php echo $heading; ?></h4>
                     <p><?php echo $copy; ?></p>

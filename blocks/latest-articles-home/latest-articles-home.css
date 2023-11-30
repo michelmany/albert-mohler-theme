@@ -20,7 +20,8 @@
 .last_articles .article_item .image img {
   transition: 0.1s;
   width: 100%;
-  min-height: 335px;
+  max-height: 335px;
+  height: auto;
   object-fit: cover;
 }
 .last_articles .article_item .details .country {
@@ -69,10 +70,12 @@
   background-color: #022a42;
 }
 .last_articles .items_list .article_item .image {
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
-.last_articles .items_list .article_item .image img {
-  min-height: 272px;
+@media (min-width: 1900px) {
+  .last_articles .items_list .article_item .image img {
+    min-height: 272px;
+  }
 }
 
 @media (max-width: 991px) {

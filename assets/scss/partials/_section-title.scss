@@ -1,6 +1,18 @@
 .sec_title {
     margin-bottom: 30px;
 
+    h1 {
+        font-size: 28px;
+
+        @media (min-width: 575px) {
+            font-size: 34px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 50px;
+        }
+    }
+
     h5 {
         font-size: 14px;
         color: var(--primary-color);
@@ -27,10 +39,6 @@
         .flex {
             flex-wrap: wrap;
             gap: 12px;
-        }
-
-        h1 {
-            font-size: 36px;
         }
     }
 }

@@ -1,4 +1,4 @@
-<section class="sub-footer">
+<section class="sub-footer mt-4">
     <div class="container">
         <div class="row">
             <div class="col-12">

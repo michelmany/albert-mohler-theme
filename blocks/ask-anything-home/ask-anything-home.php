@@ -33,7 +33,7 @@ $book_query = new WP_Query( $book );
                 <div class="sec_title">
                     <div class="flex">
                         <h1><?php echo $section_title; ?></h1>
-                        <a href="<?php echo get_term_link( $ask_anything_category_id ) ?>" class="btn">
+                        <a href="<?php echo get_term_link( $ask_anything_category_id ) ?>" class="btn view-all-btn">
                             <span><?php echo $view_all_label; ?></span>
                             <svg width="24" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -55,9 +55,11 @@ $book_query = new WP_Query( $book );
                                     allowfullscreen></iframe>
                         </a>
                         <div class="details">
-                            <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
+                            <h2>
+                                <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
+									<?php the_title(); ?>
+                                </a>
+                            </h2>
                             <h4><?php echo get_the_date( 'l, F j, Y' ); ?></h4>
                         </div>
                     </div>
@@ -72,7 +74,8 @@ $book_query = new WP_Query( $book );
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Featured Book</h1>
-                        <a href="<?php echo get_term_link( $book_id ) ?>" class="btn">View All
+                        <a href="<?php echo get_term_link( $book_id ) ?>" class="btn view-all-btn">
+                            <span>View All</span>
                             <svg width="24" viewBox="0 0 700 400"
                                  fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M496.667 33.3334L666.667 200L496.667 366.667" stroke="currentColor"
@@ -93,7 +96,11 @@ $book_query = new WP_Query( $book );
                             </a>
                         </div>
                         <div class="details">
-                            <h3>Tell Me the Stories of Jesus</h3>
+                            <h3>
+                                <a href="#">
+                                    Tell Me the Stories of Jesus
+                                </a>
+                            </h3>
                             <p> The explosive power of Jesus’ parables</p>
                             <a href="<?php the_permalink(); ?>" class="btn red">Purchase
                                 <svg width="16" viewBox="0 0 468 268" fill="none"

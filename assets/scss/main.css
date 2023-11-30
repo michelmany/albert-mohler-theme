@@ -124,6 +124,21 @@ p {
     font-size: 18px;
   }
 }
+h1 a, h2 a, h3 a {
+  transition: 0.15s;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: var(--brick-red);
+}
+
+a span:hover {
+  color: var(--brick-red);
+}
+
+.blog_items a p:hover {
+  color: var(--brick-red);
+}
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
@@ -155,7 +170,9 @@ p {
   --navy-02: #011928;
   --navy-05: #677F8E;
   --gold: #C39948;
+  --gold-hover: #b18b41;
   --brick-red: #9f3a22;
+  --brick-red-hover: #942e15;
   --olive-green: #606036;
   --grey-100: #0f1318;
   --grey-200: #575A5D;
@@ -182,14 +199,14 @@ p {
   color: white;
 }
 .btn.gold:hover {
-  background-color: #C39948;
+  background-color: var(--gold-hover);
 }
 .btn.red {
   background-color: var(--brick-red);
   color: white;
 }
 .btn.red:hover {
-  background-color: #942e15;
+  background-color: var(--brick-red-hover);
 }
 .btn.dark_border {
   outline: 1px solid var(--base-color);
@@ -201,6 +218,21 @@ p {
   font-size: 12px;
   font-weight: 700;
   padding: 10px 15px;
+}
+
+.view-all-btn svg {
+  width: 21px;
+  height: auto;
+}
+.view-all-btn span {
+  color: var(--base-color) !important;
+  font-style: italic !important;
+  font-size: 20px !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.view-all-btn span:hover {
+  color: var(--brick-red) !important;
 }
 
 @font-face {
@@ -942,11 +974,6 @@ button.swiper-pagination-bullet {
   line-height: 1.714;
   margin-bottom: 8px;
 }
-.sec_title .btn {
-  color: currentColor;
-  font-style: italic;
-  font-size: 20px;
-}
 .sec_title p {
   font-size: 18px;
   font-weight: 400;
@@ -1315,10 +1342,15 @@ button.swiper-pagination-bullet {
   height: 59px;
   border-radius: 50%;
   border: 1px solid var(--primary-color);
-  transition: 0.13s;
+  transition: 0.15s;
 }
-.site_footer .socialMedia a:hover svg {
+.site_footer .socialMedia a img {
+  transition: 0.15s;
+}
+.site_footer .socialMedia a:hover img {
+  transition: 0.15s;
   transform: scale(1.09);
+  opacity: 0.9;
 }
 .site_footer .socialMedia ul {
   display: flex;
@@ -1371,6 +1403,9 @@ button.swiper-pagination-bullet {
   width: auto;
   height: 34.5px;
   border: 0;
+}
+.site_footer .newsletter .form_wrap .btn:hover {
+  background-color: var(--gold-hover);
 }
 .site_footer .footer-navigation {
   display: flex;
@@ -1623,8 +1658,14 @@ button.swiper-pagination-bullet {
   color: var(--brick-red);
   text-decoration: underline;
 }
+.article_parts .item h3:hover {
+  color: var(--base-color);
+}
 .article_parts .item p {
   font-size: 26px;
+}
+.article_parts .item p:hover {
+  color: var(--brick-red);
 }
 
 .top_article .wrapper {
@@ -1991,7 +2032,7 @@ button.swiper-pagination-bullet {
   background-color: #022a42;
 }
 .last_articles .items_list .article_item .image {
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 .last_articles .items_list .article_item .image img {
   min-height: 272px;
@@ -2029,15 +2070,18 @@ button.swiper-pagination-bullet {
   }
 }
 .briefing {
-  padding: 40px 0;
+  margin-bottom: 40px;
 }
 .briefing .title {
-  margin: 30px 0;
+  margin: 40px 0 30px;
   line-height: 1;
 }
 .briefing .bottom .btn {
   padding: 0;
   color: var(--brick-red);
+}
+.briefing .bottom .btn:hover {
+  color: var(--base-color);
 }
 .briefing .past_episodes {
   padding-top: 100px;
@@ -2066,12 +2110,27 @@ button.swiper-pagination-bullet {
 .briefing .past_episodes .blog_items .blog_item .date {
   margin-bottom: 20px;
 }
-.briefing .past_episodes .blog_items .blog_item h2 {
-  line-height: 1.07;
+.briefing .past_episodes .blog_items .blog_item .breafing-post-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 600;
   margin-bottom: 20px;
 }
-.briefing .past_episodes .blog_items .blog_item h2:hover {
-  text-decoration: underline;
+.briefing .past_episodes .blog_items .blog_item .breafing-post-title a {
+  color: var(--base-color);
+}
+.briefing .past_episodes .blog_items .blog_item .breafing-post-title a:hover {
+  color: var(--brick-red);
+}
+.briefing .past_episodes .blog_items .blog_item p {
+  font-size: 26px;
+  line-height: 28px;
+  margin-bottom: 26px;
+}
+.briefing .past_episodes .blog_items .blog_item p:last-of-type {
+  margin-bottom: 0;
 }
 .briefing .past_episodes .blog_items .blog_item .tag {
   color: var(--navy-05);

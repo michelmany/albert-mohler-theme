@@ -6,23 +6,23 @@
  */
 
 $thinking_in_public_category_id = get_field( 'show_latest_articles_from' );
-$section_title        = get_field( 'section_title' );
-$view_all_label       = get_field( 'view_all_button_label' );
+$section_title                  = get_field( 'section_title' );
+$view_all_label                 = get_field( 'view_all_button_label' );
 
 // Article Section - Left
-$thinking_in_public = array(
+$thinking_in_public       = array(
 	'posts_per_page' => 1,
 	'cat'            => $thinking_in_public_category_id,
 );
-$thinking_in_public_query  = new WP_Query( $thinking_in_public );
+$thinking_in_public_query = new WP_Query( $thinking_in_public );
 
 // Article Section - Right
-$thinking_in_public_4 = array(
+$thinking_in_public_4       = array(
 	'posts_per_page' => 4,
 	'offset'         => 1,
 	'cat'            => $thinking_in_public_category_id,
 );
-$thinking_in_public_query_4  = new WP_Query( $thinking_in_public_4 );
+$thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
 
 ?>
 
@@ -50,9 +50,11 @@ $thinking_in_public_query_4  = new WP_Query( $thinking_in_public_4 );
                             <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                         <div class="details">
-                            <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
+                            <h2>
+                                <a href="<?php the_permalink(); ?>" class="<?php the_title(); ?>">
+									<?php the_title(); ?>
+                                </a>
+                            </h2>
                             <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </div>

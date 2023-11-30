@@ -72,7 +72,9 @@
         }
     }
 
-    .article_info {
+    .article-info {
+        font-size: 26px;
+        font-weight: 400;
         padding: 30px 0;
         border-bottom: 1px solid #677f8e;
         border-top: 1px solid #677f8e;
@@ -88,6 +90,10 @@
             font-size: 26px;
             font-weight: 400;
             line-height: 1.07;
+
+            &:hover {
+                color: var(--brick-red);
+            }
         }
     }
 
@@ -106,6 +112,10 @@
         .btn {
             padding: 0;
             color: var(--brick-red);
+
+            &:hover {
+                color: var(--base-color);
+            }
         }
 
         .archive_btn {
@@ -119,6 +129,11 @@
     padding: 30px 0;
     display: flex;
     gap: 20px;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 
     .image {
         width: 150px;
@@ -175,14 +190,6 @@ iframe {
     }
 }
 
-.googleAds {
-    padding: 65px 0;
-
-    img {
-        margin: 0 auto;
-    }
-}
-
 @media (max-width: 992px) {
     .hero {
         .left {
@@ -211,25 +218,5 @@ iframe {
             font-size: 36px;
         }
     }
-    .googleAds {
-        padding: 30px 0;
-    }
 }
 
-@media (max-width: 768px) {
-    .book_item {
-        flex-direction: column;
-    }
-    .hero {
-        .left {
-            .article_item {
-                .image {
-                    img {
-                        aspect-ratio: 1/1;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-    }
-}

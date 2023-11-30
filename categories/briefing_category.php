@@ -53,10 +53,14 @@
                     <?php if ($post_brif->have_posts()) : while ($post_brif->have_posts()) : $post_brif->the_post(); ?> 
                     <div class="blog_item">
                         <div class="details">
-                            <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                            <h2 class="breafing-post-title">
+                                <a href="<?php the_permalink();?>">
+                                    <?php the_title();?>
+                                </a>
+                            </h2>
                             <?php if( have_rows('briefing_segments') ): ?>
                             <?php while( have_rows('briefing_segments') ): the_row(); ?>                               
-                               <a href="<?php the_permalink();?>"><p style="margin-bottom: 10px"><?php the_sub_field('title'); ?></p></a>
+                               <p><?php the_sub_field('title'); ?></p>
                             <?php endwhile; ?>
                             <?php endif; ?>
                         </div>

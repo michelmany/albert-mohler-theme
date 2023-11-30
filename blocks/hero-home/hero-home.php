@@ -79,9 +79,12 @@ $audio_id = 11;
                             </div>
                         </a>
                         <div class="details">
-                            <a href="<?php the_permalink(); ?>" class="title">
-                                <h1><?php the_title(); ?></h1>
-                            </a>
+
+                            <h1>
+                                <a href="<?php the_permalink(); ?>" class="title">
+									<?php the_title(); ?>
+                                </a>
+                            </h1>
                             <div class="audio_box">
                                 <div class="audio-player audio_<?php echo get_the_ID(); ?>"
                                      data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
@@ -163,7 +166,7 @@ $audio_id = 11;
 				<?php endif;
 				wp_reset_query(); ?>
 
-                <div class="article_info">
+                <div class="article-info">
                     <div>
                         <h3>ARTICLES</h3>
                         <h4>History</h4>
@@ -185,8 +188,11 @@ $audio_id = 11;
 				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
                     <div class="book_item">
                         <div class="image">
-                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
-                                 alt="<?php the_title(); ?>">
+                            <a href="#">
+                                <img
+                                        src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
+                                        alt="<?php the_title(); ?>">
+                            </a>
                         </div>
                         <div class="details">
                             <h3>BOOKS</h3>

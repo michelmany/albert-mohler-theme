@@ -38,10 +38,11 @@
                             <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                         <div class="details">
-                            <h4 class="country">United States</h4>
-                            <a href="" class="title">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
+                            <h2>
+                                <a href="<?php the_permalink(); ?>" class="title">
+									<?php the_title(); ?>
+                                </a>
+                            </h2>
                             <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
 									get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
@@ -69,11 +70,11 @@
                         </div>
 
                         <div class="details">
-                            <h4 class="country">United States</h4>
-                            <a href="<?php the_permalink(); ?>" class=" <?php the_title(); ?> ">
-                                <h2> <?php the_title(); ?>
-                                </h2>
-                            </a>
+                            <h2>
+                                <a href="<?php the_permalink(); ?>" class=" <?php the_title(); ?> ">
+									<?php the_title(); ?>
+                                </a>
+                            </h2>
                             <p><?php echo mb_substr( wp_strip_all_tags( get_the_content() ), 0, 250, 'UTF-8' ); ?>
                                 ...</p>
                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>

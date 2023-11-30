@@ -45,10 +45,17 @@
             height: 59px;
             border-radius: 50%;
             border: 1px solid var(--primary-color);
-            transition: 0.13s;
+            transition: 0.15s;
+
+            img {
+                transition: 0.15s;
+            }
+
             &:hover {
-                svg {
+                img {
+                    transition: 0.15s;
                     transform: scale(1.09);
+                    opacity: 0.9;
                 }
             }
         }
@@ -106,6 +113,10 @@
                 width: auto;
                 height: 34.5px;
                 border: 0;
+
+                &:hover {
+                    background-color: var(--gold-hover);
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
   <footer class="site_footer">
         <div class="foot_top">
             <div class="container">
-                <div class="socialMedia">
+                <div class="social-media">
                     <?php 
                     wp_nav_menu(
                       array(

@@ -28,9 +28,8 @@ get_header();
                     <div class="main_content">
                         <h1 class="title"><?php the_title(); ?></h1>
                         <div class="top">
-                            <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
-                            <div class="socialMeda">
-                                <a href="">
+                            <div class="socialMeda ms-auto">
+                                <a href="#">
                                     <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -38,7 +37,7 @@ get_header();
                                                 fill="#022A42"/>
                                     </svg>
                                 </a>
-                                <a href="">
+                                <a href="#">
                                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -63,33 +62,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="sub_footer">
-            <div class="container">
-                <div class="col-12">
-                    <div class="sec_title">
-                        <div class="flex">
-                            <h1>Topics</h1>
-                        </div>
-                    </div>
-					<?php $terms = get_terms( array(
-						'taxonomy'   => 'category',
-						'hide_empty' => false,
-					) ); ?>
-                    <div class="items">
-                        <div class="block">
-                            <ul>
-								<?php foreach ( $terms as $term ): ?>
-                                    <li>
-                                        <a href="<?php echo get_term_link( $term->term_id ); ?>"><?php echo $term->name; ?></a>
-                                    </li>
-								<?php endforeach ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section
+	    <?php get_template_part( 'template-parts/internal-pages-bottom-widgets' ) ?>
     </main>
 <?php endwhile ?>
 <?php endif ?>

@@ -1750,6 +1750,7 @@ button.swiper-pagination-bullet {
 }
 .single_article .article_content p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 .single_article .article_content a {
   text-decoration: underline;
@@ -1769,6 +1770,9 @@ button.swiper-pagination-bullet {
 }
 .single_article .main_content > .bottom {
   margin-top: 40px;
+}
+.single_article .main_content > .bottom p {
+  text-align: left;
 }
 .single_article .socialMeda {
   display: inline-flex;

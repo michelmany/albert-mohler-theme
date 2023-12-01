@@ -22,7 +22,7 @@ error_reporting(0);
                 		
 	                    <div class="block">
 	                        <div class="head" style="display: flex; align-items: center; justify-content: space-between;">
-	                            <h4>TOPICS</h4>	                             
+	                            <h4>RESOURCES</h4>	                             
 	                        </div>
 	                        <div class="body">
 	                                <div class="form_wrap">
@@ -46,7 +46,7 @@ error_reporting(0);
 	                    </div>
 	                    <div class="block">
 	                        <div class="head">
-	                            <h4>TOPICS</h4>
+	                            <h4>FORMAT</h4>
 	                        </div>
 	                        <div class="body">
 	                              <div class="form_wrap">
@@ -71,14 +71,14 @@ error_reporting(0);
 
 	                    <div class="block">
 	                        <div class="head">
-	                            <h4>TOPICS</h4>
+	                            <h4>BIBLE</h4>
 	                        </div>
 	                        <div class="body">
                               <div class="form_wrap">
 									<?php $terms = get_terms( array(
 									'taxonomy'   => 'category',		
 									'exclude' => array($the_briefing_id, $thinking_in_public_id, $articles_id, $sermons_and_speeches_id),		                    
-				                    'hide_empty' => false,
+				                    'hide_empty' => true,
 									) );?>
 									<?php foreach ($terms as $term): ?>
                                     <label for="<?php echo $term->term_id; ?>" class="checkbox">
@@ -228,32 +228,7 @@ error_reporting(0);
         </div>
     </section>
     <?php include 'categories/pagination.php'; ?>
-    <section class="sub_footer">
-        <div class="container">
-            <div class="col-12">
-                <div class="sec_title">
-                    <div class="flex">
-                        <h1>Topics</h1>
-                    </div>
-                </div>
-                <?php $terms = get_terms( array(
-                    'taxonomy'   => 'category',
-                    'hide_empty' => true,
-                ) );?>
-                <div class="items">
-                    <div class="block">
-                        <ul>
-                            <?php foreach ($terms as $term): ?>
-                            <li>
-                                <a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a>
-                            </li>                                    
-                            <?php endforeach ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-    </section>
+    <?php get_template_part( 'template-parts/internal-pages-bottom-widgets' ) ?>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">

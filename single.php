@@ -22,7 +22,7 @@
                             <?php the_title(); ?>
                         </h1>
                         <div class="top">
-                            <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
+                            <h4 class="date"></h4>
                             <div class="socialMeda">
                                 <a href="">
                                     <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
@@ -101,11 +101,7 @@
 
 						<?php the_content(); ?>
                         <div class="bottom">
-                            <div class="sign">
-                                <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/sign.png" width="376"
-                                     alt="">
-                            </div>
-                            <p><?php echo get_field( 'transcript_footer', get_the_ID() ) ?></p>
+                            <div class="sign"></div>
                         </div>
                     </div>
 

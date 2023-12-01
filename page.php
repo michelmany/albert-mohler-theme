@@ -8,7 +8,7 @@
                 </div>
                 <div class="breadcrump">Home / <?php the_title(); ?></div>
                 <div class="article_content">
-                    <div class="row">
+                    <div class="row w-100">
                         <div class="col-lg-4 col-xl-3 pe-lg-3 pe-xxl-0">
                             <div class="sidebar-widgets-wrapper">
 								<?php get_template_part( 'template-parts/about', 'the-author-widget' ); ?>

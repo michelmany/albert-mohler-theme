@@ -99,7 +99,7 @@
 								<?php echo get_field( 'transcript', get_the_ID() ) ?>
                             </div>
 						<?php endif ?>
-                        
+
 						<?php the_content(); ?>
                         <div class="bottom">
                             <div class="sign"></div>

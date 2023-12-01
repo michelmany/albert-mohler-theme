@@ -2321,6 +2321,10 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   font-style: italic;
 }
+.sidebar-widget.about-page-widget li a:hover {
+  color: currentColor;
+  opacity: 0.8;
+}
 
 .internal-pages-bottom-widgets h1, .internal-pages-bottom-widgets h2 {
   display: flex;

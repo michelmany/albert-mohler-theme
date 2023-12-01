@@ -43,4 +43,13 @@
         font-size: 16px;
         font-style: italic;
     }
+
+    &.about-page-widget {
+        li a {
+            &:hover {
+                color: currentColor;
+                opacity: 0.8;
+            }
+        }
+    }
 }

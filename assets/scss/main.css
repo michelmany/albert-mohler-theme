@@ -1798,7 +1798,7 @@ button.swiper-pagination-bullet {
 }
 .single_article .article_content .title {
   border-bottom: 1px solid var(--navy-05);
-  padding-bottom: 32px;
+  padding-bottom: 8px;
   margin-bottom: 40px;
 }
 .single_article .article_content p {

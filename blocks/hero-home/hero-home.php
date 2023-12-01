@@ -5,30 +5,38 @@
  * @param  array  $block  The block settings and attributes.
  */
 
-$featured_post_id          = get_field( 'main_featured_post_category_id' );
-$selected_briefing_article = get_field( 'main_featured_post_featured_briefing_article_id' );
+$featured_post_id             = get_field( 'main_featured_post_category_id' );
+$selected_briefing_article_id = get_field( 'main_featured_post_featured_briefing_article_id' );
 
-$secondary_post_id         = get_field( 'secondary_featured_post_category_id' );
-$selected_briefing_article = get_field( 'secondary_featured_post_featured_tip_article_id' );
+$secondary_post_id       = get_field( 'secondary_featured_post_category_id' );
+$selected_tip_article_id = get_field( 'secondary_featured_post_featured_tip_article_id' );
 
 $selected_hero_article_id = get_field( 'secondary_featured_post_article_id' );
 
 $book_id = 4; // books-topics ID
 
-$home_article       = array(
-	'p'              => $selected_briefing_article,
+$home_article = array(
+	'post_type'      => 'post',
+	'post_status'    => 'publish',
+	'p'              => $selected_briefing_article_id,
 	'posts_per_page' => 1,
-	'cat'            => $featured_post_id,
+	'cat'            => $selected_briefing_article_id ? null : $featured_post_id,
 );
+
 $home_article_query = new WP_Query( $home_article );
 
 $thinking_in_public       = array(
+	'post_type'      => 'post',
+	'post_status'    => 'publish',
+	'p'              => $selected_tip_article_id,
 	'posts_per_page' => 1,
-	'cat'            => $secondary_post_id,
+	'cat'            => $selected_tip_article_id ? null : $secondary_post_id,
 );
 $thinking_in_public_query = new WP_Query( $thinking_in_public );
 
 $hero_article       = array(
+	'post_type'      => 'post',
+	'post_status'    => 'publish',
 	'p'              => $selected_hero_article_id,
 	'posts_per_page' => 1,
 	'cat'            => 1,
@@ -130,9 +138,9 @@ $audio_id = 11;
                             </div>
                         </div>
                     </div>
-				<?php endwhile; ?>
-				<?php endif;
-				wp_reset_query(); ?>
+				<?php endwhile;
+					wp_reset_query(); ?>
+				<?php endif; ?>
             </div>
             <div class="right">
 				<?php if ( $thinking_in_public_query->have_posts() ) : while ( $thinking_in_public_query->have_posts() ) : $thinking_in_public_query->the_post();

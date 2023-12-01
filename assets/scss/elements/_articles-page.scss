@@ -55,6 +55,14 @@
             border-bottom: 1px solid #022a42;
             padding-bottom: 60px;
 
+            &:last-of-type {
+                border-bottom: 0;
+                @media (max-width: 991px) {
+                    padding-bottom: 0;
+                }
+            }
+
+
             .row {
                 width: 100%;
             }
@@ -69,10 +77,6 @@
                         min-width: 600px;
                     }
                 }
-            }
-
-            &:last-of-type {
-                border-bottom: 0;
             }
 
             .image {

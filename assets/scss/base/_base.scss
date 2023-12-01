@@ -154,7 +154,7 @@ a {
 }
 
 .gform_button {
-    button {
+    &.button {
         font-weight: 700;
         background-color: var(--gold);
         color: white;

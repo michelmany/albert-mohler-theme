@@ -144,7 +144,7 @@ a span:hover {
   width: 100%;
 }
 
-.gform_button button {
+.gform_button.button {
   font-weight: 700;
   background-color: var(--gold);
   color: white;
@@ -153,7 +153,7 @@ a span:hover {
   border: 0;
   border-radius: 0;
 }
-.gform_button button:hover {
+.gform_button.button:hover {
   background: var(--gold-hover);
 }
 

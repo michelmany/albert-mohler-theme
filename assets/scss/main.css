@@ -2123,8 +2123,16 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #022a42;
   padding-bottom: 60px;
 }
+.last_articles .article_item.single .row {
+  width: 100%;
+}
 @media (min-width: 1600px) {
   .last_articles .article_item.single .col-lg-5 {
+    min-width: 600px;
+  }
+}
+@media (min-width: 1600px) {
+  .last_articles .article_item.single .col-lg-5 .video {
     min-width: 600px;
   }
 }
@@ -2159,7 +2167,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 992px) {
   .last_articles .items_list .article_item {
-    max-width: 33.3333333333%;
+    min-width: 33.3333333333%;
   }
 }
 .last_articles .items_list .article_item:not(:last-child)::after {

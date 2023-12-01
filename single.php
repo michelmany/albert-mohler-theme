@@ -19,7 +19,7 @@
 
                     <div class="main_content">
                         <h1 class="title">
-                            <?php the_title(); ?>
+							<?php the_title(); ?>
                         </h1>
                         <div class="top">
                             <h4 class="date"></h4>
@@ -73,9 +73,9 @@
                                 </div>
                             </div>
 						<?php endif; ?>
-						<?php if ( get_field( 'show_transcript_link', get_the_ID() ) == true ): ?>
-                            <div class="article_parts">
-								<?php if ( have_rows( 'briefing_segments' ) ): ?>
+						<?php if ( ! empty( get_field( 'show_transcript_link', get_the_ID() ) ) ): ?>
+							<?php if ( have_rows( 'briefing_segments' ) ): ?>
+                                <div class="article_parts">
 									<?php
 									$x = 1;
 									while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
@@ -90,15 +90,16 @@
                                         </div>
                                         <br><br>
 										<?php $x ++; endwhile; ?>
-								<?php endif; ?>
+                                </div>
+							<?php endif; ?>
+						<?php endif ?>
+
+						<?php if ( ! empty( get_field( 'transcript', get_the_ID() ) ) ): ?>
+                            <div class="py-5">
+								<?php echo get_field( 'transcript', get_the_ID() ) ?>
                             </div>
 						<?php endif ?>
-
-						<?php if ( get_field( 'transcript', get_the_ID() ) ): ?>
-                            <p style="padding: 15px 0;"><?php echo get_field( 'transcript', get_the_ID() ) ?></p>
-						<?php endif ?>
-
-
+                        
 						<?php the_content(); ?>
                         <div class="bottom">
                             <div class="sign"></div>

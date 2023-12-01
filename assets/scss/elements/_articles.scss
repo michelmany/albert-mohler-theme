@@ -104,8 +104,10 @@
     }
 
     .main_content {
-        flex-shrink: 0;
-        flex-grow: 1;
+
+        @media (min-width: 1400px) and (max-width: 1599px) {
+            padding-left: 30px;
+        }
 
         > .top {
             display: flex;

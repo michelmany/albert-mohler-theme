@@ -139,6 +139,11 @@ a span:hover {
   color: var(--brick-red);
 }
 
+.video {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .container {
     padding-left: 20px !important;
@@ -1812,9 +1817,10 @@ button.swiper-pagination-bullet {
   text-decoration: underline;
   color: var(--brick-red);
 }
-.single_article .main_content {
-  flex-shrink: 0;
-  flex-grow: 1;
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .single_article .main_content {
+    padding-left: 30px;
+  }
 }
 .single_article .main_content > .top {
   display: flex;

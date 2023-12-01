@@ -18,7 +18,7 @@
                     <h1 class="title"><?php the_title(); ?></h1>
                     <div class="top">
                         <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
-                        <div class="socialMeda">
+                        <div class="social-media-pages">
                             <a href="">
                                 <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

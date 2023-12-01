@@ -23,7 +23,7 @@
                         </h1>
                         <div class="top">
                             <h4 class="date"></h4>
-                            <div class="socialMeda">
+                            <div class="social-media-pages">
                                 <a href="">
                                     <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -43,13 +43,15 @@
                             </div>
                         </div>
 						<?php if ( get_field( 'media_youtube', get_the_ID() ) ): ?>
+                        <div class="mb-4">
                             <iframe width="100%" height="550"
                                     src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
 								        get_the_ID() ) ?>"
                                     title="<?php the_title(); ?>" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen></iframe>
-                            <br>
+                        </div>
+
 						<?php endif ?>
 						<?php if ( get_field( 'enclosure', get_the_ID() ) ): ?>
                             <div class="audio_box">

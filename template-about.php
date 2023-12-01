@@ -28,7 +28,7 @@ get_header();
                     <div class="main_content">
                         <h1 class="title"><?php the_title(); ?></h1>
                         <div class="top">
-                            <div class="socialMeda ms-auto">
+                            <div class="social-media-pages ms-auto">
                                 <a href="#">
                                     <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">

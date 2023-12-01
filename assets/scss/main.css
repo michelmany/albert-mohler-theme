@@ -1798,7 +1798,7 @@ button.swiper-pagination-bullet {
 }
 .single_article .article_content .title {
   border-bottom: 1px solid var(--navy-05);
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   margin-bottom: 40px;
 }
 .single_article .article_content p {
@@ -1811,6 +1811,10 @@ button.swiper-pagination-bullet {
 .single_article .article_content a:hover {
   text-decoration: underline;
   color: var(--brick-red);
+}
+.single_article .main_content {
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 .single_article .main_content > .top {
   display: flex;
@@ -1827,7 +1831,7 @@ button.swiper-pagination-bullet {
 .single_article .main_content > .bottom p {
   text-align: left;
 }
-.single_article .socialMeda {
+.single_article .social-media-pages {
   display: inline-flex;
   align-items: center;
   gap: 10px;

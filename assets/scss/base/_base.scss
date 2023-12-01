@@ -152,3 +152,19 @@ a {
     aspect-ratio: 16 / 9;
     width: 100%;
 }
+
+.gform_button {
+    button {
+        font-weight: 700;
+        background-color: var(--gold);
+        color: white;
+        width: auto;
+        height: 34.5px;
+        border: 0;
+        border-radius: 0;
+
+        &:hover {
+            background: var(--gold-hover);
+        }
+    }
+}

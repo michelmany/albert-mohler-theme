@@ -107,11 +107,18 @@
 								<?php endif ?>
 
 								<?php the_content(); ?>
+
                                 <div class="bottom">
-                                    <div class="sign"></div>
+                                    <div class="sign">
+                                        <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/sign.png"
+                                             width="376" alt="">
+                                    </div>
+                                    <p>I am always glad to hear from readers. Write me using the contact form.
+                                        Follow regular updates on Twitter at @albertmohler.
+                                        Subscribe via email for daily Briefings and more (unsubscribe at any time).
+                                    </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 

@@ -150,8 +150,8 @@ a span:hover {
   color: white;
   width: auto;
   height: 34.5px;
-  border: 0;
-  border-radius: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
 }
 .gform_button.button:hover {
   background: var(--gold-hover);

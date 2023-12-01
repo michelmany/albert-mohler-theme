@@ -47,4 +47,13 @@
         display: table !important;
         margin: 0 auto 55px;
     }
+
+    @media (max-width: 767px) {
+        .page-numbers {
+            width: 42px !important;
+            height: 42px !important;
+            text-align: center;
+            line-height: 42px;
+        }
+    }
 </style>

@@ -64,9 +64,6 @@ $book_query = new WP_Query( $book );
                         </div>
                     </div>
 
-                    <div class="view-more-btn">
-                        <a href="/category/ask-anything/" class="btn gold btn_sm">View More</a>
-                    </div>
 				<?php endwhile ?>
 				<?php endif ?>
             </div>

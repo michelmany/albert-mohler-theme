@@ -2,32 +2,26 @@
 get_header();
 
 $category = get_category( get_query_var( 'cat' ) );
-$cat_id   = $category->cat_ID;
-
+$cat_id = $category->cat_ID;
 $sticky = get_option( 'sticky_posts' );
-
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-if ( $category->cat_ID == $the_briefing_id ) {
-	$offset = 1;
-} else {
-	$offset = 4;
-}
-
-$ppp         = 10;
+$paged = ( get_query_var( 'paged' ) ) ?: 1;
+$offset = 4;
+$archives_posts_per_page = (int) get_field( 'pagination_archives_posts_per_page', 'option' );
+$ppp = $archives_posts_per_page;
 $page_offset = $offset + ( ( $paged - 1 ) * $ppp );
 
 $postar_1 = array(
 	'posts_per_page' => 1,
 	'cat'            => $cat_id,
 );
-$post_1   = new WP_Query( $postar_1 );
+$post_1 = new WP_Query( $postar_1 );
 
 $postar_3 = array(
 	'posts_per_page' => 3,
 	'cat'            => $cat_id,
 	'offset'         => 1,
 );
-$post_3   = new WP_Query( $postar_3 );
+$post_3 = new WP_Query( $postar_3 );
 
 $postar_brif = array(
 	'cat'            => $cat_id,
@@ -35,7 +29,7 @@ $postar_brif = array(
 	'posts_per_page' => $ppp,
 	'paged'          => $paged,
 );
-$post_brif   = new WP_Query( $postar_brif );
+$post_brif = new WP_Query( $postar_brif );
 
 $postar_all = array(
 	'cat'            => $cat_id,
@@ -43,7 +37,7 @@ $postar_all = array(
 	'posts_per_page' => $ppp,
 	'paged'          => $paged,
 );
-$post_all   = new WP_Query( $postar_all );
+$post_all = new WP_Query( $postar_all );
 ?>
 
 <main>
@@ -146,7 +140,7 @@ $post_all   = new WP_Query( $postar_all );
                             </div>
                             <div class="col-lg-7 px-lg-4">
                                 <div class="details">
-<!--                                    <h4 class="country">United States</h4>-->
+                                    <!--                                    <h4 class="country">United States</h4>-->
                                     <h2 class="mt-4 mt-lg-0">
                                         <a href="<?php the_permalink(); ?>">
 											<?php the_title(); ?>

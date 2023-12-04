@@ -432,3 +432,10 @@ function remove_page_from_query_string($query_string)
     return $query_string;
 }
 add_filter('request', 'remove_page_from_query_string');
+
+
+if ( wp_get_environment_type() === 'production' ) {
+
+    // Only allow fields to be edited on development
+    add_filter( 'acf/settings/show_admin', '__return_false' );
+}

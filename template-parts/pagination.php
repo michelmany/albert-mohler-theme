@@ -13,7 +13,7 @@
 
 <style>
     .pagi {
-        padding: 35px 0;
+        padding: 0;
         margin: auto;
         display: table;
     }
@@ -54,6 +54,14 @@
             height: 42px !important;
             text-align: center;
             line-height: 42px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .pagi {
+            padding: 35px 0;
+            margin: auto;
+            display: table;
         }
     }
 </style>

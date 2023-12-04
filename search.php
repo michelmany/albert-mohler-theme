@@ -2,6 +2,7 @@
 /*
  * Template Name: Search Page
  */
+
 get_header();
 
 $args = [
@@ -22,8 +23,6 @@ $my_query = new WP_Query( $args );
             <div class="container">
                 <div class="wrapper">
                     <div class="aside">
-
-
                         <div class="block filter-head">
                             <div class="head"
                                  style="display: flex; align-items: center; justify-content: space-between;">
@@ -34,7 +33,6 @@ $my_query = new WP_Query( $args );
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="block">
 							<?php echo do_shortcode( '[facetwp facet="resources"]' ); ?>
@@ -98,6 +96,14 @@ $my_query = new WP_Query( $args );
                 </div>
             </div>
         </section>
+        <section>
+            <div class="container">
+                <div class="pagi">
+                    <?php echo do_shortcode('[facetwp facet="pager_"]') ?>
+                </div>
+            </div>
+        </section>
+
 		<?php get_template_part( 'template-parts/pagination' ) ?>
 		<?php get_template_part( 'template-parts/internal-pages-bottom-widgets' ) ?>
     </main>

@@ -30,10 +30,10 @@
 
         .blog_items {
             padding: 70px 0;
-            max-width: calc(100% - 122px);
+            max-width: 100%;
 
-            @media (min-width: 992px) {
-                //max-width: 200px;
+            @media (min-width: 768px) {
+                max-width: calc(100% - 122px);
             }
 
             @media (min-width: 1400px) {
@@ -43,6 +43,14 @@
             .item {
                 h4 {
                     margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 20px;
+
+                    @media (min-width: 576px) {
+                        font-size: 26px;
+                    }
                 }
 
                 &:not(:last-child) {

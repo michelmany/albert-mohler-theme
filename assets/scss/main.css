@@ -1754,7 +1754,12 @@ button.swiper-pagination-bullet {
   color: var(--base-color);
 }
 .article_parts .item p {
-  font-size: 26px;
+  font-size: 20px;
+}
+@media (min-width: 576px) {
+  .article_parts .item p {
+    font-size: 26px;
+  }
 }
 .article_parts .item p:hover {
   color: var(--brick-red);

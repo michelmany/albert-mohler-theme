@@ -27,7 +27,12 @@
 }
 .thinking-in-public.blogs_list .blog_items {
   padding: 70px 0;
-  max-width: calc(100% - 122px);
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .thinking-in-public.blogs_list .blog_items {
+    max-width: calc(100% - 122px);
+  }
 }
 @media (min-width: 1400px) {
   .thinking-in-public.blogs_list .blog_items {
@@ -36,6 +41,14 @@
 }
 .thinking-in-public.blogs_list .blog_items .item h4 {
   margin-bottom: 0;
+}
+.thinking-in-public.blogs_list .blog_items .item p {
+  font-size: 20px;
+}
+@media (min-width: 576px) {
+  .thinking-in-public.blogs_list .blog_items .item p {
+    font-size: 26px;
+  }
 }
 .thinking-in-public.blogs_list .blog_items .item:not(:last-child) {
   margin-bottom: 54px;

@@ -45,6 +45,16 @@
   line-height: 1.1;
   margin-bottom: 0;
 }
+@media (max-width: 767px) {
+  .ask_anything .article_item .details h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .ask_anything .article_item .details h4 {
+    font-size: 16px;
+  }
+}
 .ask_anything .audio_box {
   border: unset;
   padding: 0;

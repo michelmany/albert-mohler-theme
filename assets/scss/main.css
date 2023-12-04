@@ -258,9 +258,14 @@ a span:hover {
 .view-all-btn span {
   color: var(--base-color) !important;
   font-style: italic !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
   padding-left: 5px;
   padding-right: 5px;
+}
+@media (min-width: 768px) {
+  .view-all-btn span {
+    font-size: 20px !important;
+  }
 }
 .view-all-btn span:hover {
   color: var(--brick-red) !important;
@@ -1632,7 +1637,13 @@ button.swiper-pagination-bullet {
   margin-bottom: 60px;
 }
 .blogs_list .blog_items .item h4 {
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .blogs_list .blog_items .item h4 {
+    font-size: 20px;
+  }
 }
 .blogs_list .blog_items .item p {
   font-size: 26px;

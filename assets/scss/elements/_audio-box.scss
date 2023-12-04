@@ -132,7 +132,11 @@
         }
 
         p {
-            font-size: 26px;
+            font-size: 20px;
+
+            @media (min-width: 576px) {
+                font-size: 26px;
+            }
 
             &:hover {
                  color: var(--brick-red);

@@ -157,6 +157,16 @@ a span:hover {
   background: var(--gold-hover);
 }
 
+.search_text .facet-label {
+  display: none;
+}
+.search_text .facetwp-facet {
+  margin-bottom: 0;
+}
+.search_text .facetwp-search {
+  border: 0;
+}
+
 @media (max-width: 767px) {
   .container {
     padding-left: 20px !important;

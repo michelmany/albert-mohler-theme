@@ -62,8 +62,12 @@
     }
 
     .audio-player .audio-time {
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 400;
+
+        @media (min-width: 768px) {
+            font-size: 26px;
+        }
 
         &[data-elapsed] {
             min-width: 63px;

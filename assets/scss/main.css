@@ -1829,10 +1829,6 @@ button.swiper-pagination-bullet {
   margin-bottom: 1rem;
   text-align: justify;
 }
-.menu-about-page-sidebar-container p.menu-item-description {
-  margin-bottom: 1rem;
-  text-align: left;
-}
 .single_article .article_content a {
   text-decoration: underline;
 }
@@ -2392,6 +2388,11 @@ button.swiper-pagination-bullet {
 .sidebar-widget.about-page-widget li a:hover {
   color: currentColor;
   opacity: 0.8;
+}
+
+.menu-about-page-sidebar-container p.menu-item-description {
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .internal-pages-bottom-widgets h1, .internal-pages-bottom-widgets h2 {

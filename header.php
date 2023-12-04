@@ -65,8 +65,8 @@
                                 </div>
                             </button>
                             <div class="bar">
-                              <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                                <input type="text" name="s" id="s" placeholder="Search..." required>
+                              <form role="search" method="get" id="searchform" class="searchform" action="/site-search/" >
+                                <input type="search" name="_keywords" id="s" placeholder="Search..." required>
                               </form>
                             </div>
                         </div>

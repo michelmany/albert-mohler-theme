@@ -168,3 +168,17 @@ a {
         }
     }
 }
+
+.search_text {
+    .facet-label {
+        display: none;
+    }
+
+    .facetwp-facet {
+        margin-bottom: 0;
+    }
+
+    .facetwp-search {
+        border: 0;
+    }
+}

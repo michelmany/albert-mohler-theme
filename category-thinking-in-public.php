@@ -1,12 +1,14 @@
 <?php
 get_header();
 
+
 $category = get_category( get_query_var( 'cat' ) );
 $cat_id = $category->cat_ID;
 $sticky = get_option( 'sticky_posts' );
 $paged = ( get_query_var( 'paged' ) ) ?: 1;
 $offset = 4;
-$ppp = 10;
+$archives_posts_per_page = (int)get_field('pagination_archives_posts_per_page', 'option');
+$ppp = $archives_posts_per_page;
 $page_offset = $offset + ( ( $paged - 1 ) * $ppp );
 
 $postar_1 = array(

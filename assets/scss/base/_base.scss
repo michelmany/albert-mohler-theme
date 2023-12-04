@@ -181,4 +181,16 @@ a {
     .facetwp-search {
         border: 0;
     }
+
+
 }
+
+.result {
+    .block {
+        .facetwp-checkbox {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+

@@ -507,3 +507,23 @@ add_action( 'wp_footer', function() {
   <?php
 }, 100 );
 
+add_action( 'wp_head', function() { ?>
+  <script>
+    (function($) {
+        $(document).on('facetwp-refresh', function() {
+            if ( FWP.soft_refresh === true )  {
+                FWP.enable_scroll = true;
+            } else {
+                FWP.enable_scroll = false;
+            }
+        });
+        $(document).on('facetwp-loaded', function() {
+            if (FWP.enable_scroll === true) {
+                $('html, body').animate({
+                    scrollTop: 0 // Scroll to the top of the page
+                }, 500);
+            }
+        });
+    })(jQuery);
+  </script>
+<?php } );

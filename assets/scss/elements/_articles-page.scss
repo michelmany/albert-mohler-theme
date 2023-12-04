@@ -1,6 +1,15 @@
 .last_articles {
-    margin: 160px 0 0;
+    margin: 40px 0;
     overflow: hidden;
+
+    @media (min-width: 992px) {
+        margin: 100px 0 0;
+    }
+
+    @media (min-width: 1920px) {
+        margin: 160px 0 0;
+    }
+
 
     .sec_title {
         margin-bottom: 34px;
@@ -142,7 +151,6 @@
 
 @media (max-width: 991px) {
     .last_articles {
-        margin: 100px 0;
 
         .article_item {
             &.single {

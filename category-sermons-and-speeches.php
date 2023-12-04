@@ -86,7 +86,7 @@ $post_all   = new WP_Query( $postar_all );
         </div>
     </section>
 
-    <section class="last_articles" style="margin-top: 100px;">
+    <section class="last_articles">
         <div class="container">
             <div class="sec_title">
                 <div class="flex">

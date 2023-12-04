@@ -29,14 +29,14 @@
         }
 
         .blog_items {
-            padding: 70px 0;
+            padding: 30px 0;
             max-width: 100%;
 
             @media (min-width: 768px) {
-                max-width: calc(100% - 122px);
+                padding: 70px 0;
             }
 
-            @media (min-width: 1400px) {
+            @media (min-width: 992px) {
                 max-width: calc(100% - 122px);
             }
 
@@ -78,6 +78,16 @@
 
                 h2 {
                     line-height: 1.1;
+
+                    @media (max-width: 767px) {
+                        font-size: 20px;
+                    }
+                }
+
+                h4 {
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
                 }
             }
         }

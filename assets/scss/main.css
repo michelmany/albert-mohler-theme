@@ -1000,9 +1000,11 @@ button.swiper-pagination-bullet {
 }
 .sec_title h1 {
   font-size: 28px;
+  margin-bottom: 0;
 }
-@media (min-width: 575px) {
+@media (min-width: 576px) {
   .sec_title h1 {
+    margin-bottom: initial;
     font-size: 34px;
   }
 }
@@ -1024,17 +1026,28 @@ button.swiper-pagination-bullet {
 }
 .sec_title .flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid currentColor;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-@media (max-width: 768px) {
+@media (min-width: 576px) {
   .sec_title .flex {
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 12px;
   }
 }
+@media (max-width: 575px) {
+  .sec_title .flex a.view-all-btn {
+    padding: 6px 0;
+  }
+  .sec_title .flex a.view-all-btn span {
+    padding: 0;
+  }
+}
+
 .top_header {
   background-color: var(--base-color);
   padding: 16px 0;
@@ -1694,8 +1707,13 @@ button.swiper-pagination-bullet {
   gap: 12px;
 }
 .audio_box .audio-player .audio-time {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .audio_box .audio-player .audio-time {
+    font-size: 26px;
+  }
 }
 .audio_box .audio-player .audio-time[data-elapsed] {
   min-width: 63px;

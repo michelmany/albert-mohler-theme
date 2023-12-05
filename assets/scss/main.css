@@ -1851,19 +1851,19 @@ html .opened, body .opened {
   object-fit: cover;
   object-position: top;
 }
-.single_article .breadcrump {
+.single_article .breadcrumb {
   font-size: 14px;
   font-weight: 700;
   color: var(--navy-05);
   margin: 30px 0 30px;
 }
 @media (min-width: 1400px) {
-  .single_article .breadcrump {
+  .single_article .breadcrumb {
     margin: 40px 0 30px;
   }
 }
 @media (min-width: 1600px) {
-  .single_article .breadcrump {
+  .single_article .breadcrumb {
     margin: 60px 0 30px;
   }
 }

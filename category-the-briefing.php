@@ -50,7 +50,11 @@ $post_all = new WP_Query( $postar_all );
                             <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                     </div>
-                    <h1 class="title"><?php the_title(); ?></h1>
+                    <h1 class="title">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h1>
                     <div class="audio_box">
                         <div class="audio-player audio_<?php echo get_the_ID(); ?>"
                              data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">

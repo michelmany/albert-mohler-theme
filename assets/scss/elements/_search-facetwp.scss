@@ -1,0 +1,126 @@
+.search_text {
+    .facet-label {
+        display: none;
+    }
+
+    .facetwp-facet {
+        margin-bottom: 0;
+    }
+
+    .facetwp-search {
+        border: 0;
+    }
+}
+
+.facet-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--navy-05);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: freight-text-pro, serif;
+    text-transform: uppercase;
+}
+
+.facetwp-checkbox {
+    background: url(../images/checkbox.png) 0 50% no-repeat !important;
+    background-size: 18px 18px !important;
+    padding-left: 28px !important;
+    display: flex;
+    justify-content: space-between;
+
+    &.checked {
+        background-image: url(../images/checkbox-on.png) !important;
+    }
+
+    .facetwp-display-value {
+        font-family: freight-text-pro, serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: var(--navy-05);
+    }
+
+    .facetwp-counter {
+        font-size: 21px;
+        background-color: var(--navy-06);
+        padding: 0 6px;
+    }
+}
+
+.facetwp-selections {
+    ul {
+        margin: 20px 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .facetwp-selection-label {
+        display: none;
+    }
+
+    .facetwp-selection-value {
+        padding: 12px 34px 12px 15px !important;
+        display: inline-block;
+        margin-right: 6px !important;
+        color: white;
+        border-radius: 2px;
+        background-color: var(--gold);
+        font-weight: bold;
+        cursor: pointer;
+        background-image: url(../images/icon-close.png) !important;
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+        background-position: calc(100% + -12px) center !important;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.facetwp-facet input.facetwp-search {
+    padding-right: 0 !important;
+    padding-left: 42px !important;
+    min-width: 240px;
+    color: var(--navy-02);
+
+    &::placeholder {
+        font-weight: normal;
+        color: #dedfdf;
+        opacity: 1;
+    }
+
+    &::-ms-input-placeholder {
+        font-weight: normal;
+        color: #dedfdf;
+    }
+}
+
+.facetwp-icon {
+    left: 0 !important;
+    right: unset !important;
+    opacity: 0.9 !important;
+
+    &:before {
+        width: 30px;
+        height: 100%;
+        background: url(../images/icon-search.png) no-repeat 5px 50% !important;
+        background-size: 22px 22px !important;
+    }
+
+    &.f-loading:before {
+        background-image: url(../images/loading.png) !important;
+        animation: spin 700ms infinite linear;
+    }
+}

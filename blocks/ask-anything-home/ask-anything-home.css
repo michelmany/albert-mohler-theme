@@ -2,12 +2,6 @@
   overflow: hidden;
   margin: 60px 0;
 }
-.ask-anything .col {
-  width: 100%;
-}
-.ask-anything .col:first-child {
-  margin-bottom: 80px;
-}
 @media (min-width: 992px) {
   .ask-anything {
     margin: 160px 0 120px;
@@ -31,9 +25,12 @@
     width: 50%;
   }
 }
+.ask-anything .col:first-child {
+  margin-bottom: 80px;
+}
 @media (min-width: 992px) {
   .ask-anything .col:first-child {
-    margin-bottom: 80px;
+    margin-bottom: 0;
   }
 }
 .ask-anything .col:first-child::after {

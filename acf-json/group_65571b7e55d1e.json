@@ -387,7 +387,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "© 2023, The Souther Baptist Theological Seminary. All rights reserved.",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -666,5 +666,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701706310
+    "modified": 1701819684
 }

@@ -1,4 +1,11 @@
-<?php get_header() ?>
+<?php
+
+get_header();
+
+$media_file = get_field( 'media_file', get_the_ID() );
+$media_youtube = get_field( 'media_youtube', get_the_ID() );
+?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <main>
         <section class="single_article">
@@ -24,9 +31,16 @@
                                 <h1 class="title">
 									<?php the_title(); ?>
                                 </h1>
+
                                 <div class="top">
                                     <div class="social-media-pages ms-lg-auto">
-                                        <a href="">
+										<?php if ( ! empty( $media_file ) ) : ?>
+                                            <div class="download-mp3-btn-wrapper ms-lg-auto me-4">
+                                                <a class="btn dark_border btn_sm" href="<?php echo $media_file; ?>"
+                                                   download target="_blank">Download MP3</a>
+                                            </div>
+										<?php endif; ?>
+                                        <a href="#" class="btn-transform-hover">
                                             <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -34,7 +48,7 @@
                                                         fill="#022A42"/>
                                             </svg>
                                         </a>
-                                        <a href="">
+                                        <a href="#" class="btn-transform-hover">
                                             <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -44,7 +58,14 @@
                                         </a>
                                     </div>
                                 </div>
-								<?php if ( get_field( 'media_youtube', get_the_ID() ) ): ?>
+								<?php if ( ! empty( $media_file ) ) : ?>
+                                    <div class="audio_box mb-3">
+                                        <div class="audio-player audio_<?php echo get_the_ID(); ?>"
+                                             data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
+                                        </div>
+                                    </div>
+								<?php endif; ?>
+								<?php if ( ! empty( $media_youtube ) ) : ?>
                                     <div class="mb-4">
                                         <iframe
                                                 class="video"

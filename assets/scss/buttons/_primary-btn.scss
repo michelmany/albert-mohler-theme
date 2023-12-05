@@ -31,6 +31,7 @@
 
     &.dark_border {
         outline: 1px solid var(--base-color);
+        color: var(--base-color) !important;
 
         &:hover {
             background-color: rgb(235, 235, 235);
@@ -41,5 +42,13 @@
         font-size: 12px;
         font-weight: 700;
         padding: 10px 15px;
+    }
+}
+
+.btn-transform-hover {
+    &:hover {
+        transition: 0.15s;
+        transform: scale(1.09);
+        opacity: 0.9;
     }
 }

@@ -264,7 +264,7 @@ function my_acf_json_load_point( $paths )
 /**
  * SETUP ACF OPTIONS
  */
-function am_theme_options_page_func()
+function amt_theme_options_page_func(): void
 {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page( array(
@@ -279,14 +279,14 @@ function am_theme_options_page_func()
 	}
 }
 
-add_action( 'init', 'am_theme_options_page_func' );
+add_action( 'init', 'amt_theme_options_page_func' );
 
 
 /**
  * Enqueue Styles properly
  * @return void
  */
-function am_theme_enqueue_styles(): void
+function amt_theme_enqueue_styles(): void
 {
 
 	wp_enqueue_style(
@@ -304,13 +304,13 @@ function am_theme_enqueue_styles(): void
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_styles' );
 
 /**
  * Enqueue Scripts properly
  * @return void
  */
-function am_theme_enqueue_scripts(): void
+function amt_theme_enqueue_scripts(): void
 {
 
 	wp_enqueue_script(
@@ -334,7 +334,7 @@ function am_theme_enqueue_scripts(): void
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_scripts' );
 
 
 /**
@@ -449,10 +449,10 @@ function fwp_add_facet_labels()
         (function($) {
             $(document).on('facetwp-loaded', function() {
                 $('.facetwp-facet').each(function() {
-                    var facet = $(this);
-                    var facet_name = facet.attr('data-name');
-                    var facet_type = facet.attr('data-type');
-                    var facet_label = FWP.settings.labels[facet_name];
+                    const facet = $(this);
+                    const facet_name = facet.attr('data-name');
+                    const facet_type = facet.attr('data-type');
+                    const facet_label = FWP.settings.labels[facet_name];
                     if (facet_type !== 'pager' && facet_type !== 'sort') {
                         if (facet.closest('.facet-wrap').length < 1 && facet.closest('.facetwp-flyout').length < 1) {
                             facet.wrap('<div class="facet-wrap"></div>');
@@ -472,11 +472,7 @@ add_action( 'wp_head', function () { ?>
     <script>
         (function($) {
             $(document).on('facetwp-refresh', function() {
-                if (FWP.soft_refresh === true) {
-                    FWP.enable_scroll = true;
-                } else {
-                    FWP.enable_scroll = false;
-                }
+                FWP.enable_scroll = FWP.soft_refresh === true;
             });
             $(document).on('facetwp-loaded', function() {
                 if (FWP.enable_scroll === true) {

@@ -5,10 +5,10 @@
  * @param  array  $block  The block settings and attributes.
  */
 
-$featured_post_id             = get_field( 'main_featured_post_category_id' );
+$featured_post_id = get_field( 'main_featured_post_category_id' );
 $selected_briefing_article_id = get_field( 'main_featured_post_featured_briefing_article_id' );
 
-$secondary_post_id       = get_field( 'secondary_featured_post_category_id' );
+$secondary_post_id = get_field( 'secondary_featured_post_category_id' );
 $selected_tip_article_id = get_field( 'secondary_featured_post_featured_tip_article_id' );
 
 $selected_hero_article_id = get_field( 'secondary_featured_post_article_id' );
@@ -27,7 +27,7 @@ $home_article = array(
 
 $home_article_query = new WP_Query( $home_article );
 
-$thinking_in_public       = array(
+$thinking_in_public = array(
 	'post_type'      => 'post',
 	'post_status'    => 'publish',
 	'orderby'        => 'date',
@@ -38,7 +38,7 @@ $thinking_in_public       = array(
 );
 $thinking_in_public_query = new WP_Query( $thinking_in_public );
 
-$hero_article       = array(
+$hero_article = array(
 	'post_type'      => 'post',
 	'post_status'    => 'publish',
 	'p'              => $selected_hero_article_id,
@@ -48,15 +48,15 @@ $hero_article       = array(
 $hero_article_query = new WP_Query( $hero_article );
 
 // Hero Article - Right Book
-$book       = array(
+$book = array(
 	'posts_per_page' => 1,
 	'cat'            => $book_id,
 );
 $book_query = new WP_Query( $book );
 
 $sermons_and_speeches_id = 31; // sermons-and-speeches ID
-$aboutPage_id            = 4586; // About Page ID
-$ask_anything_id         = 162;
+$aboutPage_id = 4586; // About Page ID
+$ask_anything_id = 162;
 
 $video_id = 90;
 $audio_id = 11;
@@ -196,9 +196,8 @@ $audio_id = 11;
 					wp_reset_query(); ?>
                 </div>
 
-
 				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
-                    <div class="book_item">
+                    <div class="book-item">
                         <div class="image">
                             <a href="#">
                                 <img
@@ -208,7 +207,7 @@ $audio_id = 11;
                         </div>
                         <div class="details">
                             <h3>BOOKS</h3>
-                            <p> In Tell Me the Stories of Jesus, pastor and theologian R. Albert Mohler Jr.
+                            <p class="mb-0"> In Tell Me the Stories of Jesus, pastor and theologian R. Albert Mohler Jr.
                                 reveals
                                 the unique power of Jesus' parables for today's readers, showing how they
                                 announce

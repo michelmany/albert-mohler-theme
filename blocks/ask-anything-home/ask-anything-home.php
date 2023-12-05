@@ -6,19 +6,19 @@
  */
 
 $ask_anything_category_id = get_field( 'show_latest_articles_from' );
-$section_title            = get_field( 'section_title' );
-$view_all_label           = get_field( 'view_all_button_label' );
+$section_title = get_field( 'section_title' );
+$view_all_label = get_field( 'view_all_button_label' );
 
 $book_id = 4;
 
 // Article Section - Left
-$ask_anything       = array(
+$ask_anything = array(
 	'posts_per_page' => 1,
 	'cat'            => $ask_anything_category_id,
 );
 $ask_anything_query = new WP_Query( $ask_anything );
 
-$book       = array(
+$book = array(
 	'posts_per_page' => 1,
 	'cat'            => $book_id,
 );
@@ -26,7 +26,7 @@ $book_query = new WP_Query( $book );
 
 ?>
 
-<section class="ask_anything">
+<section class="ask-anything">
     <div class="container">
         <div class="wrapper">
             <div class="col col-12 col-lg-6">
@@ -85,29 +85,35 @@ $book_query = new WP_Query( $book );
                     </div>
                 </div>
 				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
-                    <div class="book_item">
-                        <div class="image">
-                            <a href="<?php the_permalink(); ?>" class="image">
-                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
-                                     alt="<?php the_title(); ?>">
-                            </a>
+                    <div class="book-item row align-items-center">
+
+                            <div class="col-6 col-md-5">
+                                <div class="image">
+                                    <a href="<?php the_permalink(); ?>" class="image">
+                                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
+                                             alt="<?php the_title(); ?>">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-7">
+                                <div class="details">
+                                    <h3>
+                                        <a href="#">
+                                            Tell Me the Stories of Jesus
+                                        </a>
+                                    </h3>
+                                    <p> The explosive power of Jesus’ parables</p>
+                                    <a href="<?php the_permalink(); ?>" class="btn red">Purchase
+                                        <svg width="16" viewBox="0 0 468 268" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M434 34L234 234L34 34" stroke="white" stroke-width="66.6667"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="details">
-                            <h3>
-                                <a href="#">
-                                    Tell Me the Stories of Jesus
-                                </a>
-                            </h3>
-                            <p> The explosive power of Jesus’ parables</p>
-                            <a href="<?php the_permalink(); ?>" class="btn red">Purchase
-                                <svg width="16" viewBox="0 0 468 268" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M434 34L234 234L34 34" stroke="white" stroke-width="66.6667"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+
 				<?php endwhile ?>
 				<?php endif ?>
             </div>

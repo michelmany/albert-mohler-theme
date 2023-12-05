@@ -98,7 +98,7 @@ $post_all = new WP_Query( $postar_all );
     </section>
 
     <section class="last_articles article_archives">
-        <div class="container container-1500">
+        <div class="container">
             <div class="sec_title">
                 <div class="flex">
                     <h1><?php single_cat_title(); ?> Archives</h1>

@@ -2,14 +2,6 @@
     overflow: hidden;
     margin: 60px 0;
 
-    .col {
-        width: 100%;
-
-        &:first-child {
-            margin-bottom: 80px;
-        }
-    }
-
     @media (min-width: 992px) {
         margin: 160px 0 120px;
     }
@@ -34,9 +26,10 @@
         }
 
         &:first-child {
+            margin-bottom: 80px;
 
             @media (min-width: 992px) {
-                margin-bottom: 80px;
+                margin-bottom: 0;
             }
 
             &::after {

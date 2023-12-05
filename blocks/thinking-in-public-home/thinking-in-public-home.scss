@@ -1,6 +1,10 @@
 .thinking-in-public {
     &.blogs_list {
-        margin-top: 100px;
+        margin-top: 40px;
+
+        @media (min-width: 768px) {
+             margin-top: 100px;
+        }
 
         .sec_title {
             margin-bottom: 34px;

@@ -2176,16 +2176,39 @@ html .opened, body .opened {
   }
 }
 .last_articles {
-  margin: 40px 0;
   overflow: hidden;
+  margin: 40px 0;
 }
 @media (min-width: 992px) {
   .last_articles {
-    margin: 100px 0 0;
+    margin: 100px 0;
   }
 }
 @media (min-width: 1920px) {
   .last_articles {
+    margin: 160px 0;
+  }
+}
+@media (min-width: 1920px) {
+  .last_articles {
+    margin: 160px 0;
+  }
+}
+.last_articles.article_archives {
+  margin: 40px 0;
+}
+@media (min-width: 992px) {
+  .last_articles.article_archives {
+    margin: 100px 0 0;
+  }
+}
+@media (min-width: 1920px) {
+  .last_articles.article_archives {
+    margin: 160px 0 0;
+  }
+}
+@media (min-width: 1920px) {
+  .last_articles.article_archives {
     margin: 160px 0 0;
   }
 }

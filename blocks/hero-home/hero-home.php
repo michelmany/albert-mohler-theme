@@ -90,8 +90,8 @@ $audio_id = 11;
                                 </svg>
                             </div>
                         </a>
-                        <div class="details">
 
+                        <div class="details pb-lg-0">
                             <h1>
                                 <a href="<?php the_permalink(); ?>" class="title">
 									<?php the_title(); ?>

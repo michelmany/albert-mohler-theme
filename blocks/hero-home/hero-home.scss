@@ -1,5 +1,13 @@
 
 .hero {
+    @media (min-width: 768px) {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: 992px) {
+        margin-bottom: 100px;
+    }
+
     .left {
         width: 66.5%;
         display: flex;

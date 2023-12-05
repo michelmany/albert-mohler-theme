@@ -9,6 +9,8 @@
 
 <div class="google-ads">
     <div class="container">
-        <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/MDiv_800x100.jpg" alt="">
+        <div class="google-ads-image-wrapper">
+            <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/MDiv_800x100.jpg" alt="">
+        </div>
     </div>
 </div>

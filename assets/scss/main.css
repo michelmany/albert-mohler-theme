@@ -1570,10 +1570,6 @@ html .opened, body .opened {
   .site_footer .foot_bottom p {
     font-size: 18px;
   }
-  .site_footer .social-media svg {
-    width: 24px;
-    height: auto;
-  }
 }
 @media (max-width: 767px) {
   .site_footer .foot_main .footer-navigation {

@@ -286,7 +286,7 @@
         },
         {
             "key": "field_655721d067dfc",
-            "label": "",
+            "label": "Social Icons",
             "name": "social",
             "aria-label": "",
             "type": "group",
@@ -302,10 +302,10 @@
             "sub_fields": [
                 {
                     "key": "field_655721e467dfd",
-                    "label": "Social Accounts",
-                    "name": "social_account",
+                    "label": "X (Twitter) URL",
+                    "name": "x_twitter_url",
                     "aria-label": "",
-                    "type": "repeater",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -314,62 +314,51 @@
                         "class": "",
                         "id": ""
                     },
-                    "layout": "row",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Social Account",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_655721f967dfe",
-                            "label": "Social Icon",
-                            "name": "social_icon",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "preview_size": "thumbnail",
-                            "parent_repeater": "field_655721e467dfd"
-                        },
-                        {
-                            "key": "field_6557220d67dff",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_655721e467dfd"
-                        }
-                    ]
+                    "default_value": "#",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_656fb85f58869",
+                    "label": "Facebook URL",
+                    "name": "facebook_url",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_656fb8695886a",
+                    "label": "Instagram URL",
+                    "name": "instagram_url",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -666,5 +655,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701819684
+    "modified": 1701820556
 }

@@ -466,47 +466,6 @@ function fwp_add_facet_labels() {
 add_action( 'wp_head', 'fwp_add_facet_labels', 100 );
 
 
-add_action( 'wp_footer', function() {
-  ?>
-  <style>
-
-      .facetwp-selections ul {
-          margin: 20px 0;
-      }
-
-      .facetwp-selections li {
-          display: inline-block;
-          margin: 0 6px 6px 0;
-          padding: 8px 10px;
-          list-style-type: none;
-          border-radius: 1px;
-          background-color: var(--gold);
-      }
-
-      .facetwp-selections .facetwp-selection-label {
-          display: none;
-      }
-
-      .facetwp-selections .facetwp-selection-value {
-          color: white;
-      }
-
-      .facetwp-selections .facetwp-selection-value:hover {
-          text-decoration: underline;
-      }
-
-      .facetwp-selections .facetwp-selection-label + .facetwp-selection-value {
-          margin-left: 4px;
-      }
-
-      .facetwp-selections .facetwp-selection-value:last-child {
-          margin-right: 0;
-      }
-
-  </style>
-  <?php
-}, 100 );
-
 add_action( 'wp_head', function() { ?>
   <script>
     (function($) {

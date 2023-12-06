@@ -1,6 +1,10 @@
-.ask_anything {
+.ask-anything {
     overflow: hidden;
-    margin: 160px 0 120px;
+    margin: 60px 0;
+
+    @media (min-width: 992px) {
+        margin: 160px 0 120px;
+    }
 
     .wrapper {
         margin: 0 -60px;
@@ -13,11 +17,21 @@
     }
 
     .col {
-        width: 50%;
+        width: 100%;
         padding: 0 60px;
         position: relative;
 
+        @media (min-width: 992px) {
+            width: 50%;
+        }
+
         &:first-child {
+            margin-bottom: 80px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 0;
+            }
+
             &::after {
                 position: absolute;
                 right: 0;
@@ -52,6 +66,16 @@
             h2 {
                 line-height: 1.1;
                 margin-bottom: 0;
+
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
+            }
+
+            h4 {
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -78,12 +102,18 @@
         text-align: right;
     }
 
-    .book_item {
+    .book-item {
         align-items: center;
         padding: 0;
 
-        > * {
-            width: 50%;
+        @media (max-width: 991px) {
+            align-items: flex-start;
+        }
+
+        .image {
+            img {
+                max-height: 470px;
+            }
         }
 
         .details {
@@ -95,29 +125,6 @@
 
             p {
                 margin-bottom: 10px;
-            }
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .ask_anything {
-        margin: 60px 0;
-
-        .col {
-            width: 100%;
-
-            &:first-child {
-                margin-bottom: 80px;
-            }
-        }
-
-        .book_item {
-            align-items: flex-start;
-
-            > * {
-                width: 100%;
-                max-width: 280px;
             }
         }
     }

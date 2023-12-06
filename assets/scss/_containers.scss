@@ -5,6 +5,12 @@
     }
 }
 
+.container-1500 {
+    @media (min-width: 1600px) {
+        max-width: 1500px !important;
+    }
+}
+
 @media (min-width: 992px) {
     .container {
         max-width: 960px;

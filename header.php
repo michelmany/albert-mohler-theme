@@ -65,8 +65,8 @@
                                 </div>
                             </button>
                             <div class="bar">
-                              <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-                                <input type="text" name="s" id="s" placeholder="Search..." required>
+                              <form role="search" method="get" id="searchform" class="searchform" action="/site-search/" >
+                                <input type="search" name="_keywords" id="s" placeholder="Search..." required>
                               </form>
                             </div>
                         </div>
@@ -160,7 +160,26 @@
                       'menu_class' => 'menu menus',
                     )
                   ); 
-                ?>                
+                ?>
+               <?php
+                    wp_nav_menu(
+                      array(
+                        'container' => 'ul',
+                        'theme_location'=>'top_menu',
+                        'menu_id' => 'menu',
+                        'menu_class' => 'menu menus',
+                      )
+                    );
+                  ?>
+                  <?php
+                    wp_nav_menu(
+                      array(
+                        'container' => 'ul',
+                        'theme_location'=>'donate_menu',
+                        'menu_class' =>'action_list',
+                      )
+                    );
+                  ?>
             </div>
         </div>
     </div>

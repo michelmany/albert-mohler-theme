@@ -1,11 +1,15 @@
-.google-ads {
-  padding: 30px 0;
-}
-.google-ads img {
-  margin: 0 auto;
+.google-ads-image-wrapper {
+  padding: 40px 0;
+  border-top: 1px solid var(--base-color);
+  border-bottom: 1px solid var(--base-color);
 }
 @media (min-width: 992px) {
-  .google-ads {
+  .google-ads-image-wrapper {
     padding: 65px 0;
   }
 }
+.google-ads-image-wrapper img {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=ads-banner.css.map */

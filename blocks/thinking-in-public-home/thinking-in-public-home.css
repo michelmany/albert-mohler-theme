@@ -1,5 +1,10 @@
 .thinking-in-public.blogs_list {
-  margin-top: 100px;
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .thinking-in-public.blogs_list {
+    margin-top: 100px;
+  }
 }
 .thinking-in-public.blogs_list .sec_title {
   margin-bottom: 34px;
@@ -26,16 +31,29 @@
   }
 }
 .thinking-in-public.blogs_list .blog_items {
-  padding: 70px 0;
-  max-width: calc(100% - 122px);
+  padding: 30px 0;
+  max-width: 100%;
 }
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
+  .thinking-in-public.blogs_list .blog_items {
+    padding: 70px 0;
+  }
+}
+@media (min-width: 992px) {
   .thinking-in-public.blogs_list .blog_items {
     max-width: calc(100% - 122px);
   }
 }
 .thinking-in-public.blogs_list .blog_items .item h4 {
   margin-bottom: 0;
+}
+.thinking-in-public.blogs_list .blog_items .item p {
+  font-size: 20px;
+}
+@media (min-width: 576px) {
+  .thinking-in-public.blogs_list .blog_items .item p {
+    font-size: 26px;
+  }
 }
 .thinking-in-public.blogs_list .blog_items .item:not(:last-child) {
   margin-bottom: 54px;
@@ -57,6 +75,16 @@
 .thinking-in-public.blogs_list .article_item .details h2 {
   line-height: 1.1;
 }
+@media (max-width: 767px) {
+  .thinking-in-public.blogs_list .article_item .details h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .thinking-in-public.blogs_list .article_item .details h4 {
+    font-size: 16px;
+  }
+}
 .thinking-in-public.blogs_list .audio_box {
   color: var(--base-color);
 }
@@ -68,3 +96,5 @@
 .thinking-in-public.blogs_list .audio_box .audio-player .playhead {
   background: var(--base-color);
 }
+
+/*# sourceMappingURL=thinking-in-public-home.css.map */

@@ -1,19 +1,19 @@
 <?php
 
-$the_briefing_id         = 43; // the-briefing ID
-$thinking_in_public_id   = 71; // thinking-in-public ID
-$book_id                 = 4; // books-topics ID
-$articles_id             = 1; //articles ID
+$the_briefing_id = 43; // the-briefing ID
+$thinking_in_public_id = 71; // thinking-in-public ID
+$book_id = 4; // books-topics ID
+$articles_id = 1; //articles ID
 $sermons_and_speeches_id = 31; // sermons-and-speeches ID
-$aboutPage_id            = 4586; // About Page ID
-$ask_anything_id         = 162;
+$aboutPage_id = 4586; // About Page ID
+$ask_anything_id = 162;
 
 $video_id = 90;
 $audio_id = 11;
 
 
 // Hero Article - Right Book
-$book       = array(
+$book = array(
 	'posts_per_page' => 1,
 	'cat'            => $book_id,
 );
@@ -29,7 +29,7 @@ function gorselImage( $id )
 
 function ConverToRoman( $num )
 {
-	$n   = intval( $num );
+	$n = intval( $num );
 	$res = '';
 
 	//array of roman numbers
@@ -104,8 +104,8 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 add_filter( 'wp_handle_upload_prefilter', 'dosya_tr_karakter_degistir' );
 function dosya_tr_karakter_degistir( $file )
 {
-	$bul          = array( 'İ', 'Ü', 'Ğ', 'Ö', 'Ç', 'Ş', 'ş', 'ç', 'ö', 'ğ', 'ü', 'ı', ' ' );
-	$degistir     = array( 'I', 'U', 'G', 'O', 'C', 'S', 's', 'c', 'o', 'g', 'u', 'i', '-' );
+	$bul = array( 'İ', 'Ü', 'Ğ', 'Ö', 'Ç', 'Ş', 'ş', 'ç', 'ö', 'ğ', 'ü', 'ı', ' ' );
+	$degistir = array( 'I', 'U', 'G', 'O', 'C', 'S', 's', 'c', 'o', 'g', 'u', 'i', '-' );
 	$file['name'] = strtolower( str_replace( $bul, $degistir, $file['name'] ) );
 
 	return $file;
@@ -128,9 +128,9 @@ function filter_wp_title( $title )
 		return $title;
 	}
 	$site_description = get_bloginfo( 'description' );
-	$filtered_title   = $title . get_bloginfo( 'name' );
-	$filtered_title   .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description : '';
-	$filtered_title   .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) ) : '';
+	$filtered_title = $title . get_bloginfo( 'name' );
+	$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description : '';
+	$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) ) : '';
 
 	return $filtered_title;
 }
@@ -264,7 +264,7 @@ function my_acf_json_load_point( $paths )
 /**
  * SETUP ACF OPTIONS
  */
-function am_theme_options_page_func()
+function amt_theme_options_page_func(): void
 {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page( array(
@@ -279,14 +279,14 @@ function am_theme_options_page_func()
 	}
 }
 
-add_action( 'init', 'am_theme_options_page_func' );
+add_action( 'init', 'amt_theme_options_page_func' );
 
 
 /**
  * Enqueue Styles properly
  * @return void
  */
-function am_theme_enqueue_styles(): void
+function amt_theme_enqueue_styles(): void
 {
 
 	wp_enqueue_style(
@@ -299,18 +299,18 @@ function am_theme_enqueue_styles(): void
 	wp_enqueue_style(
 		'albert-mohler-style',
 		get_template_directory_uri() . '/assets/scss/main.css',
-		array('bootstrap-style'),
+		array( 'bootstrap-style' ),
 		wp_get_theme()->get( 'Version' ),
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_styles' );
 
 /**
  * Enqueue Scripts properly
  * @return void
  */
-function am_theme_enqueue_scripts(): void
+function amt_theme_enqueue_scripts(): void
 {
 
 	wp_enqueue_script(
@@ -334,7 +334,7 @@ function am_theme_enqueue_scripts(): void
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'am_theme_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_scripts' );
 
 
 /**
@@ -423,12 +423,75 @@ add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
 /**
  * Fix pagination on archive pages
  */
-function remove_page_from_query_string($query_string)
+function remove_page_from_query_string( $query_string )
 {
-    if ( isset($query_string['name']) && $query_string['name'] === 'page' && isset($query_string['page'])) {
-        unset($query_string['name']);
-        $query_string['paged'] = $query_string['page'];
-    }
-    return $query_string;
+	if ( isset( $query_string['name'] ) && $query_string['name'] === 'page' && isset( $query_string['page'] ) ) {
+		unset( $query_string['name'] );
+		$query_string['paged'] = $query_string['page'];
+	}
+
+	return $query_string;
 }
-add_filter('request', 'remove_page_from_query_string');
+
+add_filter( 'request', 'remove_page_from_query_string' );
+
+
+if ( wp_get_environment_type() === 'production' ) {
+
+	// Only allow fields to be edited on development
+	add_filter( 'acf/settings/show_admin', '__return_false' );
+}
+
+function fwp_add_facet_labels()
+{
+	?>
+    <script>
+        (function($) {
+            $(document).on('facetwp-loaded', function() {
+                $('.facetwp-facet').each(function() {
+                    const facet = $(this);
+                    const facet_name = facet.attr('data-name');
+                    const facet_type = facet.attr('data-type');
+                    const facet_label = FWP.settings.labels[facet_name];
+                    if (facet_type !== 'pager' && facet_type !== 'sort') {
+                        if (facet.closest('.facet-wrap').length < 1 && facet.closest('.facetwp-flyout').length < 1) {
+                            facet.wrap('<div class="facet-wrap"></div>');
+                            facet.before('<h3 class="facet-label">' + facet_label + '</h3>');
+                        }
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+	<?php
+}
+
+add_action( 'wp_head', 'fwp_add_facet_labels', 100 );
+
+add_action( 'wp_head', function () { ?>
+    <script>
+        (function($) {
+            $(document).on('facetwp-refresh', function() {
+                FWP.enable_scroll = FWP.soft_refresh === true;
+            });
+            $(document).on('facetwp-loaded', function() {
+                if (FWP.enable_scroll === true) {
+                    $('html, body').animate({
+                        scrollTop: 0, // Scroll to the top of the page
+                    }, 500);
+                }
+            });
+        })(jQuery);
+    </script>
+<?php } );
+
+add_filter( 'facetwp_facet_html', static function ( $output, $params ) {
+	if ( 'resources' === $params['facet']['name']
+	     || 'topics' === $params['facet']['name']
+	     || 'bible' === $params['facet']['name']
+	     || 'format' === $params['facet']['name'] ) {
+		$output = preg_replace( '/\(([0-9]+)\)/', '$1', $output );
+	}
+
+	return $output;
+}, 10, 2 );

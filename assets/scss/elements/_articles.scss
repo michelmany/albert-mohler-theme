@@ -56,7 +56,7 @@
         }
     }
 
-    .breadcrump {
+    .breadcrumb {
         font-size: 14px;
         font-weight: 700;
         color: var(--navy-05);
@@ -84,7 +84,7 @@
 
         .title {
             border-bottom: 1px solid var(--navy-05);
-            padding-bottom: 32px;
+            padding-bottom: 4px;
             margin-bottom: 40px;
         }
 
@@ -104,6 +104,11 @@
     }
 
     .main_content {
+
+        @media (min-width: 1400px) and (max-width: 1599px) {
+            padding-left: 30px;
+        }
+
         > .top {
             display: flex;
             align-items: center;
@@ -124,7 +129,7 @@
         }
     }
 
-    .socialMeda {
+    .social-media-pages {
         display: inline-flex;
         align-items: center;
         gap: 10px;

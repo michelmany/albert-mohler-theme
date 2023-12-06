@@ -13,7 +13,7 @@
 
 <style>
     .pagi {
-        padding: 35px 0;
+        padding: 0;
         margin: auto;
         display: table;
     }
@@ -46,5 +46,22 @@
     .pagination {
         display: table !important;
         margin: 0 auto 55px;
+    }
+
+    @media (max-width: 767px) {
+        .page-numbers {
+            width: 42px !important;
+            height: 42px !important;
+            text-align: center;
+            line-height: 42px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .pagi {
+            padding: 35px 0;
+            margin: auto;
+            display: table;
+        }
     }
 </style>

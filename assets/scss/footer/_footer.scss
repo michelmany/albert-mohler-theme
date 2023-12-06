@@ -221,13 +221,6 @@
                 font-size: 18px;
             }
         }
-
-        .social-media {
-            svg {
-                width: 24px;
-                height: auto;
-            }
-        }
     }
 }
 
@@ -248,8 +241,12 @@
 }
 
 .sub-footer {
-    padding: 60px 0;
+    padding: 35px 0;
     overflow: hidden;
+
+    @media (min-width: 992px) {
+        padding: 60px 0;
+    }
 
     .row {
         &.mt-5 {

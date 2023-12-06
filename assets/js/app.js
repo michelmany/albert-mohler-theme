@@ -4,7 +4,7 @@
 
         $('.site_header .toggle, .mobile_menu .close_btn').click(function() {
             $('.mobile_menu').toggleClass('opened');
-            $('.nav_menu').toggleClass('opened');
+            $('.nav_menu, body, html').toggleClass('opened');
             $('.site_header .toggle').toggleClass('opened');
         });
 

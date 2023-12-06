@@ -9,6 +9,7 @@ $ask_anything_category_id = get_field( 'show_latest_articles_from' );
 $section_title = get_field( 'section_title' );
 $view_all_label = get_field( 'view_all_button_label' );
 $featured_book_button_label = get_field( 'featured_book_button_label' );
+$featured_book_button_link = get_field( 'featured_book_button_link' );
 
 $book_id = 4;
 
@@ -87,7 +88,6 @@ $book_query = new WP_Query( $book );
                 </div>
 				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
                     <div class="book-item row align-items-center">
-
                         <div class="col-6 col-md-5">
                             <div class="image">
                                 <a href="<?php the_permalink(); ?>" class="image">
@@ -104,13 +104,12 @@ $book_query = new WP_Query( $book );
                                     </a>
                                 </h3>
                                 <p> The explosive power of Jesus’ parables</p>
-                                <a href="<?php the_permalink(); ?>" class="btn red">
+                                <a href="<?php echo $featured_book_button_link; ?>" class="btn red">
 									<?php echo $featured_book_button_label; ?>
                                 </a>
                             </div>
                         </div>
                     </div>
-
 				<?php endwhile ?>
 				<?php endif ?>
             </div>

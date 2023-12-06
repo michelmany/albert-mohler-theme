@@ -2657,3 +2657,8 @@ html .opened, body .opened {
   background-image: url(../images/loading.png) !important;
   animation: spin 700ms infinite linear;
 }
+
+.facetwp-toggle {
+  color: var(--brick-red);
+  font-size: 26px;
+}

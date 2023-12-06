@@ -1,6 +1,6 @@
 {
     "key": "group_6564ba3cbd157",
-    "title": "Ask Anything Block",
+    "title": "Ask Anything & Featured Book Block",
     "fields": [
         {
             "key": "field_6564ba3cca5f1",
@@ -82,7 +82,7 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "book-detail"
             ],
             "post_status": [
                 "publish"
@@ -157,7 +157,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "",
+    "description": "Home Section Block",
     "show_in_rest": 0,
-    "modified": 1701875262
+    "modified": 1701885892
 }

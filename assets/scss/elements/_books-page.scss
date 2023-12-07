@@ -1,0 +1,11 @@
+.books-page {
+    .featured-book-cover {
+        @media (min-width: 1600px) {
+            max-width: 260px;
+        }
+    }
+
+    .books-items {
+        border-top: 1px solid var(--navy-05);
+    }
+}

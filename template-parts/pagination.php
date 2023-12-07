@@ -11,6 +11,12 @@
     </div>
 </section>
 
+<script>
+    jQuery('a.page-numbers').map(function(_, link) {
+        jQuery(link).attr('href', jQuery(link).attr('href') + '#archives-cards-section');
+    });
+</script>
+
 <style>
     .pagi {
         padding: 0;

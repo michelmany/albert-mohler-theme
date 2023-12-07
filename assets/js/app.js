@@ -32,6 +32,20 @@
             $(this).toggleClass('active');
             $(this).parent().find('.bar').toggleClass('opened');
         });
+
+        const headerNavbar = document.querySelector('.header-nav');
+        const scrollWatcher = document.createElement('div');
+
+        scrollWatcher.setAttribute('data-scroll-watcher', '');
+        headerNavbar.before(scrollWatcher);
+
+        const navObserver = new IntersectionObserver((entries) => {
+
+            headerNavbar.classList.toggle('sticking', !entries[0].isIntersecting);
+        });
+
+        navObserver.observe(scrollWatcher);
     });
 
 })(window.jQuery);
+

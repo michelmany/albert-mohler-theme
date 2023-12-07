@@ -40,7 +40,7 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
                                                    download target="_blank">Download MP3</a>
                                             </div>
 										<?php endif; ?>
-                                        <?php get_template_part( 'template-parts/share-social-icons' ) ?>
+										<?php get_template_part( 'template-parts/share-social-icons' ) ?>
                                     </div>
                                 </div>
 								<?php if ( ! empty( $media_file ) ) : ?>
@@ -108,14 +108,9 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
 								<?php the_content(); ?>
 
                                 <div class="bottom">
-                                    <div class="sign">
-                                        <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/sign.png"
-                                             width="376" alt="">
-                                    </div>
-                                    <p>I am always glad to hear from readers. Write me using the contact form.
-                                        Follow regular updates on Twitter at @albertmohler.
-                                        Subscribe via email for daily Briefings and more (unsubscribe at any time).
-                                    </p>
+									<?php if ( in_category( [ 'the-briefing', 'articles' ] ) ) : ?>
+										<?php get_template_part( 'template-parts/article-sign' ) ?>
+									<?php endif; ?>
                                 </div>
                             </div>
                         </div>

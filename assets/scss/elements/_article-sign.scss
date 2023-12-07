@@ -1,0 +1,21 @@
+.article-sign {
+    img {
+        margin-bottom: -12px;
+        margin-top: 48px;
+    }
+
+    hr {
+        border-top: 1px var(--base-color) solid;
+        margin: 0;
+        opacity: 1;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        padding: 3px 0;
+        font-family: freight-sans-pro, sans-serif;
+        text-transform: uppercase;
+    }
+}

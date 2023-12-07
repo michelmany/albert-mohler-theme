@@ -169,7 +169,7 @@ if ( have_posts() ) :
     ?>
     <div class="article_item single">
         <a href="<?php the_permalink();?>" class="image">
-            <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+            <img src="<?php echo get_image_or_fallback(get_the_ID()); ?>" alt="<?php the_title(); ?>">
         </a>
         <div class="details">
             <h4 class="country"><?php if ( ! empty( $categories ) ) {
@@ -243,7 +243,7 @@ endif;
 													
 				                    <div class="article_item single">
 				                        <a href="<?php the_permalink();?>" class="image">
-				                            <img src="<?php echo gorselImage(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+				                            <img src="<?php echo get_image_or_fallback(get_the_ID()); ?>" alt="<?php the_title(); ?>">
 				                        </a>
 				                        <div class="details">
 				                            <h4 class="country"><?php if ( ! empty( $categories ) ) {

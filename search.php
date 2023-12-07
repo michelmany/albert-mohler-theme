@@ -59,7 +59,7 @@ $my_query = new WP_Query( $args );
 									?>
                                     <div class="article_item single">
                                         <a href="<?php the_permalink(); ?>" class="image">
-                                            <img src="<?php echo gorselImage( get_the_ID() ); ?>"
+                                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>"
                                                  alt="<?php the_title(); ?>">
                                         </a>
                                         <div class="details">

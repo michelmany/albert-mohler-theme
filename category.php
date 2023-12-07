@@ -48,7 +48,7 @@ $post_all = new WP_Query( $postar_all );
                     <div class="col-6">
                         <div class="image">
                             <a href="<?php the_permalink(); ?>">
-                                <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                                <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                             </a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ $post_all = new WP_Query( $postar_all );
 				<?php if ( $post_3->have_posts() ) : while ( $post_3->have_posts() ) : $post_3->the_post(); ?>
                     <li class="article_item">
                         <a href="<?php the_permalink(); ?>" class="image">
-                            <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                         <div class="details">
                             <h2>
@@ -112,7 +112,7 @@ $post_all = new WP_Query( $postar_all );
                             <div class="col-lg-5">
                                 <div class="image">
                                     <a href="<?php the_permalink(); ?>">
-                                        <img src="<?php echo gorselImage( get_the_ID() ); ?>"
+                                        <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>"
                                              alt="<?php the_title(); ?>">
                                     </a>
                                 </div>

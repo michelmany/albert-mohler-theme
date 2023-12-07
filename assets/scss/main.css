@@ -2384,9 +2384,6 @@ html .opened, body .opened {
 }
 .briefing .main_image img {
   width: 100%;
-  aspect-ratio: 18/6;
-  object-fit: cover;
-  object-position: top;
 }
 .briefing .bottom .btn {
   padding: 0;

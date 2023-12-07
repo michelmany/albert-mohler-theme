@@ -74,7 +74,7 @@ $audio_id = 11;
 					?>
                     <div class="article_item">
                         <a href="<?php the_permalink(); ?>" class="image">
-                            <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                             <div class="icon">
                                 <svg viewBox="0 0 1079 1488" fill="none" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -152,7 +152,7 @@ $audio_id = 11;
 					?>
                     <div class="article_item">
                         <a href="<?php the_permalink(); ?>" class="image">
-                            <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                         <div class="details">
                             <h3><?php echo get_term( $secondary_post_id )->name; ?></h3>

@@ -11,7 +11,7 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
         <section class="single_article">
             <div class="container">
                 <div class="article_image">
-                    <img src="<?php echo gorselImage( get_the_ID() ); ?>">
+                    <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>">
                 </div>
 
                 <div class="breadcrumb">Home / <?php the_title(); ?></div>

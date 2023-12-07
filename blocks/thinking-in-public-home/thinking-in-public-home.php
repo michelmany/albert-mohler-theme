@@ -47,7 +47,7 @@ $thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
 				<?php if ( $thinking_in_public_query->have_posts() ) : while ( $thinking_in_public_query->have_posts() ) : $thinking_in_public_query->the_post(); ?>
                     <div class="article_item">
                         <a href="<?php the_permalink(); ?>" class="image">
-                            <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                         </a>
                         <div class="details">
                             <h2>

@@ -46,7 +46,7 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
 		<?php if ( $articles_query->have_posts() ) : while ( $articles_query->have_posts() ) : $articles_query->the_post(); ?>
             <div class="article_item single">
                 <a href="<?php the_permalink(); ?>" class="image">
-                    <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                    <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                 </a>
                 <div class="details">
 
@@ -65,7 +65,7 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
 			<?php if ( $articles_query_3->have_posts() ) : while ( $articles_query_3->have_posts() ) : $articles_query_3->the_post(); ?>
                 <li class="article_item">
                     <a href="<?php the_permalink(); ?>" class="image">
-                        <img src="<?php echo gorselImage( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                        <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
                     </a>
                     <div class="details">
 

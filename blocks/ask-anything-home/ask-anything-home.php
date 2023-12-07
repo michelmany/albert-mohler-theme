@@ -78,29 +78,31 @@ $ask_anything_query = new WP_Query( $ask_anything );
                     </div>
                 </div>
 
-                <div class="book-item row align-items-center">
-                    <div class="col-6 col-md-5">
-                        <div class="image">
-                            <a href="<?php echo get_permalink( $featured_book_obj->ID ) ?>" class="image">
-                                <img src="<?php echo get_field( 'book_cover', $featured_book_obj->ID ) ?>"
-                                     alt="Featured Book: <?php echo $featured_book_obj->post_title; ?>">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-7">
-                        <div class="details">
-                            <h3>
-                                <a href="<?php echo get_permalink( $featured_book_obj->ID ) ?>">
-									<?php echo $featured_book_obj->post_title; ?>
+				<?php if ( ! empty( $featured_book_obj ) ) : ?>
+                    <div class="book-item row align-items-center">
+                        <div class="col-6 col-md-5">
+                            <div class="image">
+                                <a href="<?php echo $featured_book_button_link; ?>" class="image">
+                                    <img src="<?php echo get_field( 'book_cover', $featured_book_obj->ID ) ?>"
+                                         alt="Featured Book: <?php echo $featured_book_obj->post_title; ?>">
                                 </a>
-                            </h3>
-                            <p> <?php echo get_field( 'book_subtitle', $featured_book_obj->ID ) ?></p>
-                            <a href="<?php echo $featured_book_button_link; ?>" class="btn red">
-								<?php echo $featured_book_button_label; ?>
-                            </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-7">
+                            <div class="details">
+                                <h3>
+                                    <a href="<?php echo $featured_book_button_link; ?>">
+										<?php echo $featured_book_obj->post_title; ?>
+                                    </a>
+                                </h3>
+                                <p> <?php echo get_field( 'book_subtitle', $featured_book_obj->ID ) ?></p>
+                                <a href="<?php echo $featured_book_button_link; ?>" class="btn red">
+									<?php echo $featured_book_button_label; ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+				<?php endif; ?>
             </div>
         </div>
     </div>

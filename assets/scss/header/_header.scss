@@ -283,8 +283,9 @@
 
         .inner {
             overflow-x: hidden;
-            overflow-y: scroll;
+            overflow-y: scroll !important;
             transform: translateX(0%);
+            max-height: 100vh;
         }
     }
 
@@ -454,7 +455,8 @@ html, body {
 
 #menu-donatemenu-1 {
     &.action_list {
-        position: absolute;
+        margin-top: 30px;
+        position: relative;
         bottom: 10px;
     }
 }

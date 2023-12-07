@@ -33,7 +33,11 @@
 
 
     .sec_title {
-        margin-bottom: 34px;
+        margin-bottom: 30px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 60px;
+        }
 
         .flex {
             border-color: #022a42;

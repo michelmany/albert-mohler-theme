@@ -105,5 +105,6 @@ $ask_anything_query = new WP_Query( $ask_anything );
 				<?php endif; ?>
             </div>
         </div>
+        <hr>
     </div>
 </section>

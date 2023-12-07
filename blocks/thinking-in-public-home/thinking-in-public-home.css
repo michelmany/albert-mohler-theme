@@ -1,5 +1,5 @@
 .thinking-in-public.blogs_list {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 @media (min-width: 768px) {
   .thinking-in-public.blogs_list {
@@ -96,5 +96,3 @@
 .thinking-in-public.blogs_list .audio_box .audio-player .playhead {
   background: var(--base-color);
 }
-
-/*# sourceMappingURL=thinking-in-public-home.css.map */

@@ -91,7 +91,8 @@ $post_all = new WP_Query( $postar_all );
                 </div>
 			<?php endwhile ?>
 			<?php endif ?>
-            <div class="past_episodes">
+
+            <div id="archives-cards-section"class="past_episodes">
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Past Episodes</h1>

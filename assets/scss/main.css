@@ -2157,11 +2157,6 @@ html .opened, body .opened {
     margin: 160px 0;
   }
 }
-@media (min-width: 1920px) {
-  .last_articles {
-    margin: 160px 0;
-  }
-}
 .last_articles.article_archives {
   margin: 40px 0;
 }

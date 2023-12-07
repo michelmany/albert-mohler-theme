@@ -112,7 +112,7 @@ $post_all = new WP_Query( $postar_all );
         </div>
     </section>
 
-    <section class="last_articles article_archives">
+    <section id="archives-cards-section" class="last_articles article_archives">
         <div class="container">
             <div class="sec_title">
                 <div class="flex">

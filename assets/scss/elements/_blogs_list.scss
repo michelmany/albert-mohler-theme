@@ -2,6 +2,10 @@
     .sec_title {
         color: var(--base-color);
         margin-bottom: 30px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 60px;
+        }
     }
 
     .left {

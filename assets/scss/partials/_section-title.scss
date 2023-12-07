@@ -1,6 +1,10 @@
 .sec_title {
     margin-bottom: 30px;
 
+    @media (min-width: 992px) {
+        margin-bottom: 60px;
+    }
+
     h1 {
         font-size: 28px;
         margin-bottom: 0;

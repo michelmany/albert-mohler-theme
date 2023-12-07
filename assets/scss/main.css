@@ -1013,6 +1013,11 @@ button.swiper-pagination-bullet {
 .sec_title {
   margin-bottom: 30px;
 }
+@media (min-width: 992px) {
+  .sec_title {
+    margin-bottom: 60px;
+  }
+}
 .sec_title h1 {
   font-size: 28px;
   margin-bottom: 0;
@@ -1599,6 +1604,11 @@ html .opened, body .opened {
   color: var(--base-color);
   margin-bottom: 30px;
 }
+@media (min-width: 992px) {
+  .blogs_list .sec_title {
+    margin-bottom: 60px;
+  }
+}
 .blogs_list .left {
   width: calc(50% + 120px);
 }
@@ -2171,7 +2181,12 @@ html .opened, body .opened {
   }
 }
 .last_articles .sec_title {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .last_articles .sec_title {
+    margin-bottom: 60px;
+  }
 }
 .last_articles .sec_title .flex {
   border-color: #022a42;

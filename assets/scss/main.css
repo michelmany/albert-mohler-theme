@@ -167,6 +167,8 @@ a span:hover {
 @media (min-width: 1600px) {
   .container-1500 {
     max-width: 1500px !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2656,4 +2658,18 @@ html .opened, body .opened {
 .facetwp-icon.f-loading:before {
   background-image: url(../images/loading.png) !important;
   animation: spin 700ms infinite linear;
+}
+
+.facetwp-toggle {
+  color: var(--brick-red);
+  font-size: 26px;
+}
+
+@media (min-width: 1600px) {
+  .books-page .featured-book-cover {
+    max-width: 260px;
+  }
+}
+.books-page .books-items {
+  border-top: 1px solid var(--navy-05);
 }

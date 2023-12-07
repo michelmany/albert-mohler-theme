@@ -1,6 +1,6 @@
 {
     "key": "group_6564ba3cbd157",
-    "title": "Ask Anything Block",
+    "title": "Ask Anything & Featured Book Block",
     "fields": [
         {
             "key": "field_6564ba3cca5f1",
@@ -82,7 +82,7 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "book-detail"
             ],
             "post_status": [
                 "publish"
@@ -114,6 +114,31 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_65708dc9ad795",
+            "label": "Featured Book Button Link",
+            "name": "featured_book_button_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "allow_archives": 1,
+            "multiple": 0,
+            "allow_null": 0
         }
     ],
     "location": [
@@ -132,7 +157,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "",
+    "description": "Home Section Block",
     "show_in_rest": 0,
-    "modified": 1701813177
+    "modified": 1701885892
 }

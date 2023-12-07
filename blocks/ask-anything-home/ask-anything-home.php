@@ -9,22 +9,14 @@ $ask_anything_category_id = get_field( 'show_latest_articles_from' );
 $section_title = get_field( 'section_title' );
 $view_all_label = get_field( 'view_all_button_label' );
 $featured_book_button_label = get_field( 'featured_book_button_label' );
+$featured_book_button_link = get_field( 'featured_book_button_link' );
+$featured_book_obj = get_field( 'featured_book_obj' );
 
-$book_id = 4;
-
-// Article Section - Left
 $ask_anything = array(
 	'posts_per_page' => 1,
 	'cat'            => $ask_anything_category_id,
 );
 $ask_anything_query = new WP_Query( $ask_anything );
-
-$book = array(
-	'posts_per_page' => 1,
-	'cat'            => $book_id,
-);
-$book_query = new WP_Query( $book );
-
 ?>
 
 <section class="ask-anything">
@@ -72,7 +64,7 @@ $book_query = new WP_Query( $book );
                 <div class="sec_title">
                     <div class="flex">
                         <h1>Featured Book</h1>
-                        <a href="<?php echo get_term_link( $book_id ) ?>" class="btn view-all-btn">
+                        <a href="<?php echo $featured_book_button_link; ?>" class="btn view-all-btn">
                             <span>View All</span>
                             <svg width="24" viewBox="0 0 700 400"
                                  fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,34 +77,32 @@ $book_query = new WP_Query( $book );
                         </a>
                     </div>
                 </div>
-				<?php if ( $book_query->have_posts() ) : while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
-                    <div class="book-item row align-items-center">
 
+				<?php if ( ! empty( $featured_book_obj ) ) : ?>
+                    <div class="book-item row align-items-center">
                         <div class="col-6 col-md-5">
                             <div class="image">
-                                <a href="<?php the_permalink(); ?>" class="image">
-                                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-6.png'; ?>"
-                                         alt="<?php the_title(); ?>">
+                                <a href="<?php echo $featured_book_button_link; ?>" class="image">
+                                    <img src="<?php echo get_field( 'book_cover', $featured_book_obj->ID ) ?>"
+                                         alt="Featured Book: <?php echo $featured_book_obj->post_title; ?>">
                                 </a>
                             </div>
                         </div>
                         <div class="col-6 col-md-7">
                             <div class="details">
                                 <h3>
-                                    <a href="#">
-                                        Tell Me the Stories of Jesus
+                                    <a href="<?php echo $featured_book_button_link; ?>">
+										<?php echo $featured_book_obj->post_title; ?>
                                     </a>
                                 </h3>
-                                <p> The explosive power of Jesus’ parables</p>
-                                <a href="<?php the_permalink(); ?>" class="btn red">
+                                <p> <?php echo get_field( 'book_subtitle', $featured_book_obj->ID ) ?></p>
+                                <a href="<?php echo $featured_book_button_link; ?>" class="btn red">
 									<?php echo $featured_book_button_label; ?>
                                 </a>
                             </div>
                         </div>
                     </div>
-
-				<?php endwhile ?>
-				<?php endif ?>
+				<?php endif; ?>
             </div>
         </div>
     </div>

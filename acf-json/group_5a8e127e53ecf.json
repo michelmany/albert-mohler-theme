@@ -1,0 +1,252 @@
+{
+    "key": "group_5a8e127e53ecf",
+    "title": "Book Details",
+    "fields": [
+        {
+            "key": "field_6570e3edebedf",
+            "label": "Subtitle",
+            "name": "book_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_560c42cb20975",
+            "label": "Amazon Link",
+            "name": "amazon_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The full URL to the book's page on Amazon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "none",
+            "maxlength": ""
+        },
+        {
+            "key": "field_560c42e320976",
+            "label": "Barnes & Noble Link",
+            "name": "barnes_noble_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The full URL to the book's page on Barnes & Noble.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "none",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fa9a351ae397",
+            "label": "Bookstore at Southern Link",
+            "name": "southern_bookstore_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The full URL to the book's page on The Bookstore at Southern.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_560c430120977",
+            "label": "Review Praise",
+            "name": "review_praise",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter the quote without any quote marks, those are added automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_560c434a20978",
+            "label": "Review Praise Source",
+            "name": "review_praise_source",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Just enter the full name, everything else is added automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_560c437120979",
+            "label": "Review Praise Source Title",
+            "name": "review_praise_source_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the title of the person (e.g. President, Focus on the Family)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_560c43972097a",
+            "label": "Book Thumbnail",
+            "name": "book_thumbnail",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "This is the small version of the book. The width should be 350px.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_560d1f723059d",
+            "label": "Book Cover",
+            "name": "book_cover",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "The main cover image for the book. Image should be at least 800px wide.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_6571032863546",
+            "label": "Featured Book",
+            "name": "featured_book",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "book-detail"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "book-detail"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "discussion",
+        "comments",
+        "slug",
+        "author",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701905260
+}

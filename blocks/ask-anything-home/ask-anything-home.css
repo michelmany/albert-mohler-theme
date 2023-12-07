@@ -2,13 +2,19 @@
   overflow: hidden;
   margin: 60px 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .ask-anything {
-    margin: 160px 0 120px;
+    margin: 160px 0 100px;
   }
 }
 .ask-anything .wrapper {
   margin: 0 -60px;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .ask-anything .wrapper {
+    padding-bottom: 60px;
+  }
 }
 @media (min-width: 1400px) {
   .ask-anything .col-lg--left {
@@ -110,5 +116,3 @@
 .ask-anything .book-item .details p {
   margin-bottom: 10px;
 }
-
-/*# sourceMappingURL=ask-anything-home.css.map */

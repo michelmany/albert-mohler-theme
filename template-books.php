@@ -92,9 +92,7 @@ $books_query = new WP_Query( $books );
                                     <div class="col-7 col-md-9 pt-md-2">
                                         <div class="book-item-details">
                                             <h2 class="fs-3 fw-bold mb-1">
-                                                <a href="<?php echo get_permalink(); ?>">
-													<?php the_title(); ?>
-                                                </a>
+                                                <?php the_title(); ?>
                                             </h2>
                                             <h4 class="fs-6 fst-normal">
 												<?php echo get_field( 'book_subtitle', get_the_ID() ); ?>

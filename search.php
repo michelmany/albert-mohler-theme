@@ -77,7 +77,7 @@ $my_query = new WP_Query( $args );
 											<?php if ( get_post_field( 'post_content', get_the_ID() ) ) : ?>
                                                 <p>
 													<?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-														get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...
+														get_the_ID() ) ), 0, 300, 'UTF-8' ); ?>...
                                                 </p>
 											<?php endif; ?>
                                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>

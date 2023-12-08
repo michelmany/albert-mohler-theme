@@ -495,3 +495,58 @@ add_filter( 'facetwp_facet_html', static function ( $output, $params ) {
 
 	return $output;
 }, 10, 2 );
+
+// Add search weight to more recently published entries in SearchWP.
+// @link https://searchwp.com/documentation/knowledge-base/add-relevance-weight-date/
+add_filter( 'searchwp\query\mods', function ( $mods ) {
+	global $wpdb;
+
+	$mod = new \SearchWP\Mod();
+	$mod->set_local_table( $wpdb->posts );
+	$mod->on( 'ID', [ 'column' => 'id' ] );
+	$mod->relevance( function ( $runtime ) use ( $wpdb ) {
+		return "
+			COALESCE( ROUND( ( (
+				UNIX_TIMESTAMP( {$runtime->get_local_table_alias()}.post_date )
+				- (
+					SELECT UNIX_TIMESTAMP( {$wpdb->posts}.post_date )
+					FROM {$wpdb->posts}
+					WHERE {$wpdb->posts}.post_status = 'publish'
+					ORDER BY {$wpdb->posts}.post_date ASC
+					LIMIT 1
+				)
+			) / 86400 ), 0 ), 0 )";
+	} );
+
+	$mods[] = $mod;
+
+	return $mods;
+} );
+
+
+// Add Relevance Weight to ACF True/False Checkbox Fields in SearchWP.
+// @link https://searchwp.com/documentation/knowledge-base/add-relevance-acf-checkbox/
+add_filter( 'searchwp\query\mods', function ( $mods ) {
+
+	global $wpdb;
+
+	$my_meta_key = 'boost_relevance'; // ACF True/False name.
+	$bonus_weight = 1000;
+
+	$mod = new \SearchWP\Mod();
+	$mod->set_local_table( $wpdb->postmeta );
+	$mod->on( 'post_id', [ 'column' => 'id' ] );
+	$mod->on( 'meta_key', [ 'value' => $my_meta_key ] );
+
+//	mm_log_it( $my_meta_key );
+
+	$mod->weight( function ( $runtime_mod ) use ( $bonus_weight ) {
+		$local_alias = $runtime_mod->get_local_table_alias();
+
+		return "IF({$local_alias}.meta_value+0 = 1, {$bonus_weight}, 0)";
+	} );
+
+	$mods[] = $mod;
+
+	return $mods;
+} );

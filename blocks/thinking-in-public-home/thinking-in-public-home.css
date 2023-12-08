@@ -7,11 +7,16 @@
   }
 }
 .thinking-in-public.blogs_list .sec_title {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 .thinking-in-public.blogs_list .sec_title h1 {
   color: var(--base-color);
   line-height: 1;
+}
+@media (min-width: 992px) {
+  .thinking-in-public.blogs_list .sec_title {
+    margin-bottom: 60px;
+  }
 }
 .thinking-in-public.blogs_list .left {
   width: 45%;
@@ -36,7 +41,7 @@
 }
 @media (min-width: 768px) {
   .thinking-in-public.blogs_list .blog_items {
-    padding: 70px 0;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {

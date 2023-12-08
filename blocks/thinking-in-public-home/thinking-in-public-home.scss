@@ -7,11 +7,15 @@
         }
 
         .sec_title {
-            margin-bottom: 34px;
+            margin-bottom: 30px;
 
             h1 {
                 color: var(--base-color);
                 line-height: 1;
+            }
+
+            @media (min-width: 992px) {
+                margin-bottom: 60px;
             }
         }
 
@@ -37,7 +41,7 @@
             max-width: 100%;
 
             @media (min-width: 768px) {
-                padding: 70px 0;
+                padding: 0;
             }
 
             @media (min-width: 992px) {

@@ -2441,6 +2441,12 @@ html .opened, body .opened {
 .briefing .past_episodes .blog_items .blog_item p:last-of-type {
   margin-bottom: 0;
 }
+.briefing .past_episodes .blog_items .blog_item p .part-number {
+  color: var(--brick-red);
+  text-decoration: underline;
+  font-size: 26px;
+  margin-right: 5px;
+}
 .briefing .past_episodes .blog_items .blog_item .tag {
   color: var(--navy-05);
 }

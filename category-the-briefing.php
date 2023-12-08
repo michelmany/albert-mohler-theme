@@ -79,7 +79,7 @@ $post_all = new WP_Query( $postar_all );
                                                             <h3>PART <?php echo ConverToRoman( $x ); ?> </h3>
                                                             <p><?php the_sub_field( 'title' ); ?></p>
                                                         </a>
-														<?php $x ++; endwhile; ?>
+														<?php $x++; endwhile; ?>
                                                 </div>
                                             </div>
 										<?php endif; ?>
@@ -111,22 +111,28 @@ $post_all = new WP_Query( $postar_all );
                         </div>
                     </div>
                     <div class="blog_items">
-						<?php if ( $post_brif->have_posts() ) : while ( $post_brif->have_posts() ) : $post_brif->the_post(); ?>
-                            <div class="blog_item">
-                                <div class="details">
-                                    <h2 class="breafing-post-title">
-                                        <a href="<?php the_permalink(); ?>">
-											<?php the_title(); ?>
-                                        </a>
-                                    </h2>
-									<?php if ( have_rows( 'briefing_segments' ) ): ?>
-										<?php while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
-                                            <p><?php the_sub_field( 'title' ); ?></p>
-										<?php endwhile; ?>
-									<?php endif; ?>
+						<?php
+						if ( $post_brif->have_posts() ) :
+
+							while ( $post_brif->have_posts() ) : $post_brif->the_post();
+								?>
+                                <div class="blog_item">
+                                    <div class="details">
+                                        <h2 class="breafing-post-title">
+                                            <a href="<?php the_permalink(); ?>">
+												<?php the_title(); ?>
+                                            </a>
+                                        </h2>
+										<?php if ( have_rows( 'briefing_segments' ) ): ?>
+											<?php $x = 1; while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
+                                                <p>
+                                                    <span class="part-number">Part <?php echo ConverToRoman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
+                                                </p>
+											<?php $x++; endwhile; ?>
+										<?php endif; ?>
+                                    </div>
                                 </div>
-                            </div>
-						<?php endwhile ?>
+							<?php endwhile ?>
 						<?php endif ?>
                     </div>
                 </div>

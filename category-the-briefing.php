@@ -57,15 +57,15 @@ $post_all = new WP_Query( $postar_all );
 											<?php the_title(); ?>
                                         </a>
                                     </h1>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="content px-xl-4">
                                     <div class="audio_box mb-4 mt-0">
                                         <div class="audio-player audio_<?php echo get_the_ID(); ?>"
                                              data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content px-xl-4">
 
                                     <div class="article_parts" class="tm_audio_<?php echo get_the_ID(); ?>">
 										<?php if ( have_rows( 'briefing_segments' ) ): ?>
@@ -98,8 +98,6 @@ $post_all = new WP_Query( $postar_all );
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 				<?php endwhile ?>
 				<?php endif ?>

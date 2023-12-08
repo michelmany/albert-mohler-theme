@@ -126,7 +126,7 @@ $post_all = new WP_Query( $postar_all );
 										<?php if ( have_rows( 'briefing_segments' ) ): ?>
 											<?php $x = 1; while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                 <p>
-                                                    <span class="part-number">Part <?php echo ConverToRoman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
+                                                    <span class="part-number">PART <?php echo ConverToRoman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
                                                 </p>
 											<?php $x++; endwhile; ?>
 										<?php endif; ?>

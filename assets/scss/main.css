@@ -2735,6 +2735,20 @@ html .opened, body .opened {
   font-size: 26px;
 }
 
+.facetwp-facet.facetwp-facet-published_date {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 575px) {
+  .facetwp-facet.facetwp-facet-published_date {
+    flex-wrap: wrap;
+  }
+}
+.facetwp-facet.facetwp-facet-published_date .fdate-input {
+  width: 100%;
+}
+
 @media (min-width: 1600px) {
   .books-page .featured-book-cover {
     max-width: 260px;

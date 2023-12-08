@@ -35,6 +35,7 @@ $my_query = new WP_Query( $args );
                         </div>
 
                         <div class="block">
+							<?php echo do_shortcode( '[facetwp facet="published_date"]' ); ?>
 							<?php echo do_shortcode( '[facetwp facet="resources"]' ); ?>
 							<?php echo do_shortcode( '[facetwp facet="topics"]' ); ?>
 							<?php echo do_shortcode( '[facetwp facet="bible"]' ); ?>

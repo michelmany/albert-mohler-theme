@@ -49,7 +49,10 @@ $my_query = new WP_Query( $args );
                             <div class="search_text">
 								<?php echo do_shortcode( '[facetwp facet="keywords"]' ); ?>
                             </div>
-							<?php echo facetwp_display( 'selections' ); ?>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <?php echo facetwp_display( 'selections' ); ?>
+                                <?php echo do_shortcode( '[facetwp facet="sort_by"]' ); ?>
+                            </div>
                         </div>
 
                         <div class="facetwp-template">

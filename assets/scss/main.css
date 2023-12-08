@@ -2668,12 +2668,6 @@ html .opened, body .opened {
   padding: 0 6px;
 }
 
-.facetwp-selections ul {
-  margin: 20px 0;
-}
-.facetwp-selections li {
-  margin-bottom: 5px;
-}
 .facetwp-selections .facetwp-selection-label {
   display: none;
 }
@@ -2747,6 +2741,17 @@ html .opened, body .opened {
 }
 .facetwp-facet.facetwp-facet-published_date .fdate-input {
   width: 100%;
+  height: 43px;
+  padding-left: 14px;
+  border: 1px solid var(--base-color);
+}
+.facetwp-facet.facetwp-facet-sort_by {
+  margin-bottom: 0;
+}
+.facetwp-facet.facetwp-facet-sort_by select {
+  padding: 8px;
+  border: 1px solid var(--base-color);
+  border-radius: 0;
 }
 
 @media (min-width: 1600px) {

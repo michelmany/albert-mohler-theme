@@ -550,3 +550,13 @@ add_filter( 'searchwp\query\mods', function ( $mods ) {
 
 	return $mods;
 } );
+
+add_filter( 'facetwp_render_output', function ( $output, $params ) {
+//	$output['settings']['published_date']['range']['min']['minDate'] = '2000-01-01';
+	$output['settings']['published_date']['range']['min']['maxDate'] = date( 'Y-m-d' );
+//	$output['settings']['published_date']['range']['max']['minDate'] = date( 'Y-m-d' ); // Today
+	$output['settings']['published_date']['range']['max']['maxDate'] = date( 'Y-m-d' ); // Today
+
+	return $output;
+}, 10, 2 );
+

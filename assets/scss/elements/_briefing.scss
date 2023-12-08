@@ -83,6 +83,15 @@
                     &:last-of-type {
                         margin-bottom: 0;
                     }
+
+                    .part-number {
+                        color: var(--brick-red);
+                        text-decoration: underline;
+                        font-size: 26px;
+                        //font-weight: 600;
+                        //font-family: freight-sans-pro, sans-serif;
+                        margin-right: 5px;
+                    }
                 }
 
                 .tag {

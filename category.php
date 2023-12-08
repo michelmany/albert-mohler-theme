@@ -6,7 +6,7 @@ $cat_id = $category->cat_ID;
 $sticky = get_option( 'sticky_posts' );
 $paged = ( get_query_var( 'paged' ) ) ?: 1;
 $offset = 4;
-$archives_posts_per_page = (int)get_field('pagination_archives_posts_per_page', 'option');
+$archives_posts_per_page = (int) get_field( 'pagination_archives_posts_per_page', 'option' );
 $ppp = $archives_posts_per_page;
 $page_offset = $offset + ( ( $paged - 1 ) * $ppp );
 
@@ -48,7 +48,8 @@ $post_all = new WP_Query( $postar_all );
                     <div class="col-6">
                         <div class="image">
                             <a href="<?php the_permalink(); ?>">
-                                <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>" alt="<?php the_title(); ?>">
+                                <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>"
+                                     alt="<?php the_title(); ?>">
                             </a>
                         </div>
                     </div>
@@ -56,8 +57,11 @@ $post_all = new WP_Query( $postar_all );
                         <div class="content p-xl-4">
                             <h4><?php single_cat_title(); ?></h4>
                             <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                            <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-									get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+							<?php if ( ! empty( get_post_field( 'post_content',
+								get_the_ID() ) ) ) : ?>
+                                <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
+										get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+							<?php endif; ?>
                             <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </div>

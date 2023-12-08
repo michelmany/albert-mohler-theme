@@ -562,7 +562,7 @@ add_filter( 'facetwp_render_output', function ( $output, $params ) {
 
 
 add_filter( 'facetwp_preload_url_vars', function( $url_vars ) {
-  if ( 'site-search' == FWP()->helper->get_uri() ) { // Replace 'demo/cars' with the URI of your page (everything after the domain name, excluding any slashes at the beginning and end)
+  if ( 'site-search' === FWP()->helper->get_uri() ) { // Replace 'demo/cars' with the URI of your page (everything after the domain name, excluding any slashes at the beginning and end)
     if ( empty( $url_vars['sort_by'] ) ) { // Replace 'make' with the name of your facet
       $url_vars['sort_by'] = [ 'relevance' ]; // Replace 'audi' with the facet choice that needs to be pre-selected. Use the technical name/slug as it appears in the URL when filtering
     }

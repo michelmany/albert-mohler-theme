@@ -2696,6 +2696,7 @@ html .opened, body .opened {
   padding-right: 0 !important;
   padding-left: 42px !important;
   min-width: 240px;
+  width: 100%;
   color: var(--navy-02);
 }
 .facetwp-facet input.facetwp-search::placeholder {
@@ -2743,14 +2744,14 @@ html .opened, body .opened {
   width: 100%;
   height: 43px;
   padding-left: 14px;
-  border: 1px solid var(--base-color);
+  border: 1px solid var(--navy-05);
 }
 .facetwp-facet.facetwp-facet-sort_by {
   margin-bottom: 0;
 }
 .facetwp-facet.facetwp-facet-sort_by select {
   padding: 8px;
-  border: 1px solid var(--base-color);
+  border: 1px solid var(--navy-05);
   border-radius: 0;
 }
 
@@ -2785,4 +2786,58 @@ html .opened, body .opened {
   padding: 3px 0;
   font-family: freight-sans-pro, sans-serif;
   text-transform: uppercase;
+}
+
+.pagi {
+  padding: 0;
+  margin: auto;
+  display: table;
+}
+
+.page-numbers:hover {
+  opacity: 1;
+}
+
+.page-numbers.current,
+.facetwp-page.active {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.page-numbers,
+.facetwp-page {
+  display: block !important;
+  float: left;
+  margin: 0 5px 10px !important;
+  background: #eee;
+  padding: 0;
+  color: #880202;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.5;
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  line-height: 50px;
+}
+
+.pagination {
+  display: table !important;
+  margin: 0 auto 55px;
+}
+
+@media (max-width: 767px) {
+  .page-numbers {
+    width: 42px !important;
+    height: 42px !important;
+    text-align: center;
+    line-height: 42px;
+  }
+}
+@media (min-width: 992px) {
+  .pagi {
+    padding: 35px 0;
+    margin: auto;
+    display: table;
+  }
 }

@@ -27,6 +27,7 @@ $my_query = new WP_Query( $args );
                             <div class="head"
                                  style="display: flex; align-items: center; justify-content: space-between;">
                                 <h4>Filter</h4>
+
                                 <div class="block butons">
                                     <a class="btn dark_border"
                                        href="/site-search/">Clear</a>
@@ -46,8 +47,9 @@ $my_query = new WP_Query( $args );
 
                     <div class="main_content">
                         <div class="head">
-                            <div class="search_text">
+                            <div class="search_text d-flex justify-content-between">
 								<?php echo do_shortcode( '[facetwp facet="keywords"]' ); ?>
+
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <?php echo facetwp_display( 'selections' ); ?>
@@ -62,10 +64,10 @@ $my_query = new WP_Query( $args );
 									$my_query->the_post();
 									?>
                                     <div class="article_item single">
-                                        <a href="<?php the_permalink(); ?>" class="image">
-                                            <img src="<?php echo get_image_or_fallback( get_the_ID() ); ?>"
-                                                 alt="<?php the_title(); ?>">
-                                        </a>
+<!--                                        <a href="--><?php //the_permalink(); ?><!--" class="image">-->
+<!--                                            <img src="--><?php //echo get_image_or_fallback( get_the_ID() ); ?><!--"-->
+<!--                                                 alt="--><?php //the_title(); ?><!--">-->
+<!--                                        </a>-->
                                         <div class="details">
                                             <h2>
                                                 <a href="<?php the_permalink(); ?>" class="title">

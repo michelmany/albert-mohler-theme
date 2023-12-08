@@ -37,6 +37,13 @@ $books_query = new WP_Query( $books );
                                                 >
                                             </div>
                                             <div class="book-external-links d-flex flex-column gap-3">
+												<?php if ( ! empty( get_field( 'southern_bookstore_link',
+													$featured_book->ID ) ) ) : ?>
+                                                    <a href="<?php echo get_field( 'southern_bookstore_link',
+														$featured_book->ID ) ?>" class="btn dark_border btn_sm">The
+                                                        Bookstore
+                                                        at Southern</a>
+												<?php endif; ?>
 												<?php if ( ! empty( get_field( 'amazon_link',
 													$featured_book->ID ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'amazon_link',
@@ -48,13 +55,6 @@ $books_query = new WP_Query( $books );
                                                     <a href="<?php echo get_field( 'barnes_noble_link',
 														$featured_book->ID ) ?>"
                                                        class="btn dark_border btn_sm">Barnes & Noble</a>
-												<?php endif; ?>
-												<?php if ( ! empty( get_field( 'southern_bookstore_link',
-													$featured_book->ID ) ) ) : ?>
-                                                    <a href="<?php echo get_field( 'southern_bookstore_link',
-														$featured_book->ID ) ?>" class="btn dark_border btn_sm">The
-                                                        Bookstore
-                                                        at Southern</a>
 												<?php endif; ?>
                                             </div>
                                         </div>
@@ -98,6 +98,12 @@ $books_query = new WP_Query( $books );
 												<?php echo get_field( 'book_subtitle', get_the_ID() ); ?>
                                             </h4>
                                             <div class="book-external-links d-flex flex-column flex-md-row gap-3 mt-4">
+												<?php if ( ! empty( get_field( 'southern_bookstore_link',
+													get_the_ID() ) ) ) : ?>
+                                                    <a href="<?php echo get_field( 'southern_bookstore_link',
+														get_the_ID() ) ?>" class="btn dark_border btn_sm">The Bookstore
+                                                        at Southern</a>
+												<?php endif; ?>
 												<?php if ( ! empty( get_field( 'amazon_link', get_the_ID() ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'amazon_link', get_the_ID() ) ?>"
                                                        class="btn dark_border btn_sm">Amazon</a>
@@ -107,12 +113,6 @@ $books_query = new WP_Query( $books );
                                                     <a href="<?php echo get_field( 'barnes_noble_link',
 														get_the_ID() ) ?>"
                                                        class="btn dark_border btn_sm">Barnes & Noble</a>
-												<?php endif; ?>
-												<?php if ( ! empty( get_field( 'southern_bookstore_link',
-													get_the_ID() ) ) ) : ?>
-                                                    <a href="<?php echo get_field( 'southern_bookstore_link',
-														get_the_ID() ) ?>" class="btn dark_border btn_sm">The Bookstore
-                                                        at Southern</a>
 												<?php endif; ?>
                                             </div>
                                         </div>

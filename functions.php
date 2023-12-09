@@ -8,7 +8,7 @@ function get_image_or_fallback( $id )
 		: get_bloginfo( 'stylesheet_directory' ) . '/assets/images/brief-image.png';
 }
 
-function ConverToRoman( $num )
+function convert_to_roman( $num ): string
 {
 	$n = intval( $num );
 	$res = '';
@@ -211,7 +211,6 @@ register_sidebar(
 		'after_title'   => '</h2>',
 	)
 );
-
 
 /*
   wd - 11/17/2023

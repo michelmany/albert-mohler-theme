@@ -76,7 +76,7 @@ $post_all = new WP_Query( $postar_all );
 													while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                         <a class="item time-<?php echo $x; ?>"
                                                            data-time-<?php echo $x; ?>="<?php the_sub_field( 'startTime' ); ?>">
-                                                            <h3>PART <?php echo ConverToRoman( $x ); ?> </h3>
+                                                            <h3>PART <?php echo convert_to_roman( $x ); ?> </h3>
                                                             <p><?php the_sub_field( 'title' ); ?></p>
                                                         </a>
 														<?php $x++; endwhile; ?>
@@ -124,7 +124,7 @@ $post_all = new WP_Query( $postar_all );
 										<?php if ( have_rows( 'briefing_segments' ) ): ?>
 											<?php $x = 1; while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                 <p>
-                                                    <span class="part-number">PART <?php echo ConverToRoman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
+                                                    <span class="part-number">PART <?php echo convert_to_roman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
                                                 </p>
 											<?php $x++; endwhile; ?>
 										<?php endif; ?>

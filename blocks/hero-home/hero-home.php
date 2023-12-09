@@ -112,7 +112,7 @@ $audio_id = 11;
 											while ( have_rows( 'briefing_segments', get_the_ID() ) ): the_row(); ?>
                                                 <a class="item time-<?php echo $x; ?>"
                                                    data-time-<?php echo $x; ?>="<?php the_sub_field( 'startTime' ); ?>">
-                                                    <h3>PART <?php echo ConverToRoman( $x ); ?> </h3>
+                                                    <h3>PART <?php echo convert_to_roman( $x ); ?> </h3>
                                                     <p><?php the_sub_field( 'title' ); ?></p>
                                                 </a>
 												<?php $x ++; endwhile; ?>

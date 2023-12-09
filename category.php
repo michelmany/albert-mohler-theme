@@ -78,7 +78,7 @@ $post_all = new WP_Query( $postar_all );
                     <h1>Latest <?php single_cat_title(); ?></h1>
                 </div>
             </div>
-            <ul class="items_list" style="padding-top: 0;">
+            <ul class="items_list pt-0">
 				<?php if ( $post_3->have_posts() ) : while ( $post_3->have_posts() ) : $post_3->the_post(); ?>
                     <li class="article_item">
                         <a href="<?php the_permalink(); ?>" class="image">

@@ -2841,3 +2841,26 @@ html .opened, body .opened {
     display: table;
   }
 }
+.the-briefing-citations-sidebar h1, .the-briefing-citations-sidebar h2 {
+  font-size: 24px;
+  font-family: freight-text-pro, serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--grey-400);
+}
+.the-briefing-citations-sidebar p {
+  font-size: 16px;
+}
+.the-briefing-citations-sidebar .publication {
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
+.the-briefing-citations-sidebar .citation-link {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.the-briefing-citations-sidebar .citation-link:hover {
+  color: white !important;
+  opacity: 0.8;
+}

@@ -20,7 +20,18 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
                     <div class="row w-100">
                         <div class="col-lg-4 col-xl-3 pe-lg-3 pe-xxl-0">
                             <div class="sidebar-widgets-wrapper d-none d-lg-block">
-								<?php get_template_part( 'template-parts/about-the-author-widget', '' ); ?>
+								<?php
+								if ( ! in_category( 'the-briefing' ) ) {
+									get_template_part( 'template-parts/about-the-author-widget' );
+								}
+								?>
+
+								<?php
+								if ( in_category( 'the-briefing' ) ) {
+									get_template_part( 'template-parts/the-briefing-citations-sidebar' );
+								}
+								?>
+
 								<?php if ( is_active_sidebar( 'internal-pages-left-sidebar' ) ) {
 									dynamic_sidebar( 'internal-pages-left-sidebar' );
 								} ?>
@@ -69,7 +80,7 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
 											while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                 <a class="item time-<?php echo $x; ?>"
                                                    data-time-<?php echo $x; ?>="<?php the_sub_field( 'startTime' ); ?>">
-                                                    <h3>PART <?php echo ConverToRoman( $x ); ?> </h3>
+                                                    <h3>PART <?php echo convert_to_roman( $x ); ?> </h3>
                                                     <p><?php the_sub_field( 'title' ); ?></p>
                                                 </a>
 												<?php $x ++; endwhile; ?>
@@ -83,7 +94,7 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
 											$x = 1;
 											while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                 <h3 style="padding: 0 0 10px 0">
-                                                    PART <?php echo ConverToRoman( $x ); ?></h3>
+                                                    PART <?php echo convert_to_roman( $x ); ?></h3>
                                                 <hr>
                                                 <h1 style="padding: 10px 0">
                                                     <strong><?php the_sub_field( 'title' ); ?></strong>

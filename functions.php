@@ -1,24 +1,5 @@
 <?php
 
-$the_briefing_id = 43; // the-briefing ID
-$thinking_in_public_id = 71; // thinking-in-public ID
-$book_id = 4; // books-topics ID
-$articles_id = 1; //articles ID
-$sermons_and_speeches_id = 31; // sermons-and-speeches ID
-$aboutPage_id = 4586; // About Page ID
-$ask_anything_id = 162;
-
-$video_id = 90;
-$audio_id = 11;
-
-
-// Hero Article - Right Book
-$book = array(
-	'posts_per_page' => 1,
-	'cat'            => $book_id,
-);
-$book_query = new WP_Query( $book );
-
 
 function get_image_or_fallback( $id )
 {
@@ -312,7 +293,7 @@ add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_styles' );
  */
 function amt_theme_enqueue_scripts(): void
 {
-
+/* Not sure why swiper is being used.
 	wp_enqueue_script(
 		'swiper-bundle',
 		get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
@@ -322,11 +303,22 @@ function amt_theme_enqueue_scripts(): void
 			'footer' => true,
 		)
 	);
+*/
 
 	wp_enqueue_script(
 		'theme-app',
 		get_template_directory_uri() . '/assets/js/app-min.js',
 		array( 'jquery' ),
+		wp_get_theme()->get( 'Version' ),
+		array(
+			'footer' => true,
+		)
+	);
+
+	wp_enqueue_script(
+		'sharer-js',
+		'https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js',
+		array(),
 		wp_get_theme()->get( 'Version' ),
 		array(
 			'footer' => true,
@@ -538,8 +530,6 @@ add_filter( 'searchwp\query\mods', function ( $mods ) {
 	$mod->on( 'post_id', [ 'column' => 'id' ] );
 	$mod->on( 'meta_key', [ 'value' => $my_meta_key ] );
 
-//	mm_log_it( $my_meta_key );
-
 	$mod->weight( function ( $runtime_mod ) use ( $bonus_weight ) {
 		$local_alias = $runtime_mod->get_local_table_alias();
 
@@ -561,11 +551,12 @@ add_filter( 'facetwp_render_output', function ( $output, $params ) {
 }, 10, 2 );
 
 
-add_filter( 'facetwp_preload_url_vars', function( $url_vars ) {
-  if ( 'site-search' === FWP()->helper->get_uri() ) { // Replace 'demo/cars' with the URI of your page (everything after the domain name, excluding any slashes at the beginning and end)
-    if ( empty( $url_vars['sort_by'] ) ) { // Replace 'make' with the name of your facet
-      $url_vars['sort_by'] = [ 'relevance' ]; // Replace 'audi' with the facet choice that needs to be pre-selected. Use the technical name/slug as it appears in the URL when filtering
-    }
-  }
-  return $url_vars;
+add_filter( 'facetwp_preload_url_vars', function ( $url_vars ) {
+	if ( 'site-search' === FWP()->helper->get_uri() ) { // Replace 'demo/cars' with the URI of your page (everything after the domain name, excluding any slashes at the beginning and end)
+		if ( empty( $url_vars['sort_by'] ) ) { // Replace 'make' with the name of your facet
+			$url_vars['sort_by'] = [ 'relevance' ]; // Replace 'audi' with the facet choice that needs to be pre-selected. Use the technical name/slug as it appears in the URL when filtering
+		}
+	}
+
+	return $url_vars;
 } );

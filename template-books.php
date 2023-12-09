@@ -33,14 +33,14 @@ $books_query = new WP_Query( $books );
                                             <div class="mb-4">
                                                 <img src="<?php echo get_field( 'book_cover', $featured_book->ID ); ?>"
                                                      alt="<?php echo get_the_title( $featured_book->ID ); ?>"
-                                                     class="featured-book-cover"
-                                                >
+                                                     class="featured-book-cover">
                                             </div>
                                             <div class="book-external-links d-flex flex-column gap-3">
 												<?php if ( ! empty( get_field( 'southern_bookstore_link',
 													$featured_book->ID ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'southern_bookstore_link',
-														$featured_book->ID ) ?>" class="btn dark_border btn_sm">The
+														$featured_book->ID ) ?>" class="btn dark_border btn_sm"
+                                                       target="_blank">The
                                                         Bookstore
                                                         at Southern</a>
 												<?php endif; ?>
@@ -48,26 +48,26 @@ $books_query = new WP_Query( $books );
 													$featured_book->ID ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'amazon_link',
 														$featured_book->ID ) ?>"
-                                                       class="btn dark_border btn_sm">Amazon</a>
+                                                       class="btn dark_border btn_sm" target="_blank">Amazon</a>
 												<?php endif; ?>
 												<?php if ( ! empty( get_field( 'barnes_noble_link',
 													$featured_book->ID ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'barnes_noble_link',
 														$featured_book->ID ) ?>"
-                                                       class="btn dark_border btn_sm">Barnes & Noble</a>
+                                                       class="btn dark_border btn_sm" target="_blank">Barnes & Noble</a>
 												<?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="col-md-9">
                                             <div class="mt-5 mt-md-0">
                                                 <h2 class="fs-2 fw-bold">
-                                                    <?php echo get_the_title( $featured_book->ID ); ?>
+													<?php echo get_the_title( $featured_book->ID ); ?>
                                                 </h2>
                                                 <h4 class="fs-5 fst-normal">
-                                                    <?php echo get_field( 'book_subtitle', $featured_book->ID ); ?>
+													<?php echo get_field( 'book_subtitle', $featured_book->ID ); ?>
                                                 </h4>
                                                 <div class="mt-5">
-                                                    <?php echo get_the_content( null, false, $featured_book ); ?>
+													<?php echo get_the_content( null, false, $featured_book ); ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,7 +92,7 @@ $books_query = new WP_Query( $books );
                                     <div class="col-7 col-md-9 pt-md-2">
                                         <div class="book-item-details">
                                             <h2 class="fs-3 fw-bold mb-1">
-                                                <?php the_title(); ?>
+												<?php the_title(); ?>
                                             </h2>
                                             <h4 class="fs-6 fst-normal">
 												<?php echo get_field( 'book_subtitle', get_the_ID() ); ?>
@@ -101,18 +101,19 @@ $books_query = new WP_Query( $books );
 												<?php if ( ! empty( get_field( 'southern_bookstore_link',
 													get_the_ID() ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'southern_bookstore_link',
-														get_the_ID() ) ?>" class="btn dark_border btn_sm">The Bookstore
+														get_the_ID() ) ?>" class="btn dark_border btn_sm"
+                                                       target="_blank">The Bookstore
                                                         at Southern</a>
 												<?php endif; ?>
 												<?php if ( ! empty( get_field( 'amazon_link', get_the_ID() ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'amazon_link', get_the_ID() ) ?>"
-                                                       class="btn dark_border btn_sm">Amazon</a>
+                                                       class="btn dark_border btn_sm" target="_blank">Amazon</a>
 												<?php endif; ?>
 												<?php if ( ! empty( get_field( 'barnes_noble_link',
 													get_the_ID() ) ) ) : ?>
                                                     <a href="<?php echo get_field( 'barnes_noble_link',
 														get_the_ID() ) ?>"
-                                                       class="btn dark_border btn_sm">Barnes & Noble</a>
+                                                       class="btn dark_border btn_sm" target="_blank">Barnes & Noble</a>
 												<?php endif; ?>
                                             </div>
                                         </div>

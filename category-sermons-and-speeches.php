@@ -66,12 +66,6 @@ $post_all = new WP_Query( $postar_all );
                             <h4>
 								<?php echo get_the_date( 'F j, Y' ); ?>
                             </h4>
-                            <!--                            <div class="audio_box">-->
-                            <!--                                <div class="audio-player"-->
-                            <!--                                     data-file="-->
-							<?php //echo get_field( 'enclosure', get_the_ID() ) ?><!--">-->
-                            <!--                                </div>-->
-                            <!--                            </div>-->
                         </div>
                     </div>
                 </div>

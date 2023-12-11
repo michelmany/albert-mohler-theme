@@ -122,8 +122,6 @@ register_sidebar(
 		'id'            => 'footer-1',
 		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
 	)
 );
 register_sidebar(
@@ -132,8 +130,6 @@ register_sidebar(
 		'id'            => 'footer-2',
 		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
 	)
 );
 register_sidebar(
@@ -142,8 +138,6 @@ register_sidebar(
 		'id'            => 'footer-3',
 		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
 	)
 );
 register_sidebar(
@@ -152,8 +146,6 @@ register_sidebar(
 		'id'            => 'footer-4',
 		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
 	)
 );
 

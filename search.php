@@ -23,14 +23,8 @@ $my_query = new WP_Query( $args );
             <div class="container">
                 <div class="wrapper">
 
-                    <div class="facetwp-flyout-tpl">
-                        <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
-                        {content}
-                    </div>
-
                     <div class="mb-4 w-100">
                         <button class="facetwp-flyout-open btn dark_border d-lg-none w-100 w-lg-auto">Select Filters</button>
-
                     </div>
 
                     <div class="aside d-none d-lg-block">

@@ -32,6 +32,7 @@
 
         &[data-plyr="rewind"] {
             padding: 4px;
+
             svg {
                 width: 36px;
                 height: 36px;
@@ -48,11 +49,18 @@
         }
 
         &.plyr__time {
-            font-size: 26px;
-            padding-left: 12px !important;
-            padding-right: 12px !important;
-            min-width: 88px;
+            font-size: 16px;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+            min-width: 55px;
             color: var(--base-color);
+
+            @media (min-width: 576px) {
+                font-size: 26px;
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+                min-width: 88px;
+            }
         }
     }
 
@@ -150,7 +158,6 @@
         position: absolute;
         box-sizing: border-box;
         top: 0;
-        width: 0%;
         height: 16px;
         border-radius: 3px;
         z-index: 25;
@@ -188,7 +195,7 @@
             text-decoration: underline;
 
             &:hover {
-                 color: var(--base-color);
+                color: var(--base-color);
             }
         }
 
@@ -200,7 +207,7 @@
             }
 
             &:hover {
-                 color: var(--brick-red);
+                color: var(--brick-red);
             }
         }
     }

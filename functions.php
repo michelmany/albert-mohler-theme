@@ -3,7 +3,7 @@
 
 function get_image_or_fallback( $id )
 {
-	return has_post_thumbnail( $id )
+	return has_post_thumbnail( $id ) && ! empty( get_the_post_thumbnail_url( $id ) )
 		? get_the_post_thumbnail_url( $id )
 		: get_bloginfo( 'stylesheet_directory' ) . '/assets/images/brief-image.png';
 }

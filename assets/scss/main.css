@@ -1792,11 +1792,19 @@ html .opened, body .opened {
   color: #fff;
 }
 .audio_box .plyr__controls__item.plyr__time {
-  font-size: 26px;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-  min-width: 88px;
+  font-size: 16px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  min-width: 55px;
   color: var(--base-color);
+}
+@media (min-width: 576px) {
+  .audio_box .plyr__controls__item.plyr__time {
+    font-size: 26px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    min-width: 88px;
+  }
 }
 @media (min-width: 1400px) {
   .audio_box {
@@ -1871,7 +1879,6 @@ html .opened, body .opened {
   position: absolute;
   box-sizing: border-box;
   top: 0;
-  width: 0%;
   height: 16px;
   border-radius: 3px;
   z-index: 25;

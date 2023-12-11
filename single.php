@@ -126,7 +126,17 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
                     </div>
 
                     <div class="sidebar-widgets-wrapper d-block d-lg-none">
-						<?php get_template_part( 'template-parts/about-the-author-widget', '' ); ?>
+	                    <?php
+	                    if ( ! in_category( 'the-briefing' ) ) {
+		                    get_template_part( 'template-parts/about-the-author-widget' );
+	                    }
+	                    ?>
+
+	                    <?php
+	                    if ( in_category( 'the-briefing' ) ) {
+		                    get_template_part( 'template-parts/the-briefing-citations-sidebar' );
+	                    }
+	                    ?>
 						<?php if ( is_active_sidebar( 'internal-pages-left-sidebar' ) ) {
 							dynamic_sidebar( 'internal-pages-left-sidebar' );
 						} ?>

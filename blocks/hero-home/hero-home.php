@@ -68,7 +68,6 @@ $audio_id = 11;
         <div class="wrapper">
             <div class="left">
 				<?php if ( $home_article_query->have_posts() ) : while ( $home_article_query->have_posts() ) :
-
 					$home_article_query->the_post();
 					$category = get_the_terms( get_the_ID(), 'category' );
 					?>
@@ -97,11 +96,9 @@ $audio_id = 11;
 									<?php the_title(); ?>
                                 </a>
                             </h1>
-                            <div class="audio_box">
-                                <div class="audio-player audio_<?php echo get_the_ID(); ?>"
-                                     data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
-                                </div>
-                            </div>
+
+							<?php get_template_part( 'template-parts/audio-box-plyr' ); ?>
+
                             <div class="article_parts tm_audio_<?php echo get_the_ID(); ?>">
 
 								<?php if ( have_rows( 'briefing_segments', get_the_ID() ) ): ?>
@@ -110,8 +107,10 @@ $audio_id = 11;
 											<?php
 											$x = 1;
 											while ( have_rows( 'briefing_segments', get_the_ID() ) ): the_row(); ?>
-                                                <a class="item time-<?php echo $x; ?>"
-                                                   data-time-<?php echo $x; ?>="<?php the_sub_field( 'startTime' ); ?>">
+                                                <a
+                                                        class="item"
+                                                        data-seek-to="<?php the_sub_field( 'startTime' ); ?>"
+                                                >
                                                     <h3>PART <?php echo convert_to_roman( $x ); ?> </h3>
                                                     <p><?php the_sub_field( 'title' ); ?></p>
                                                 </a>

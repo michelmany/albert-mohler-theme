@@ -57,10 +57,8 @@ $post_all = new WP_Query( $postar_all );
 											<?php the_title(); ?>
                                         </a>
                                     </h1>
-                                    <div class="audio_box mb-4 mt-0">
-                                        <div class="audio-player audio_<?php echo get_the_ID(); ?>"
-                                             data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
-                                        </div>
+                                    <div class="mb-4 mt-0">
+										<?php get_template_part( 'template-parts/audio-box-plyr' ); ?>
                                     </div>
                                 </div>
                             </div>
@@ -74,12 +72,14 @@ $post_all = new WP_Query( $postar_all );
 													<?php
 													$x = 1;
 													while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
-                                                        <a class="item time-<?php echo $x; ?>"
-                                                           data-time-<?php echo $x; ?>="<?php the_sub_field( 'startTime' ); ?>">
+                                                        <a
+                                                                class="item"
+                                                                data-seek-to="<?php the_sub_field( 'startTime' ); ?>"
+                                                        >
                                                             <h3>PART <?php echo convert_to_roman( $x ); ?> </h3>
                                                             <p><?php the_sub_field( 'title' ); ?></p>
                                                         </a>
-														<?php $x++; endwhile; ?>
+														<?php $x ++; endwhile; ?>
                                                 </div>
                                             </div>
 										<?php endif; ?>
@@ -122,11 +122,12 @@ $post_all = new WP_Query( $postar_all );
                                             </a>
                                         </h2>
 										<?php if ( have_rows( 'briefing_segments' ) ): ?>
-											<?php $x = 1; while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
+											<?php $x = 1;
+											while ( have_rows( 'briefing_segments' ) ): the_row(); ?>
                                                 <p>
                                                     <span class="part-number">PART <?php echo convert_to_roman( $x ); ?></span> <?php the_sub_field( 'title' ); ?>
                                                 </p>
-											<?php $x++; endwhile; ?>
+												<?php $x ++; endwhile; ?>
 										<?php endif; ?>
                                     </div>
                                 </div>

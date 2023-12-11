@@ -276,6 +276,13 @@ function amt_theme_enqueue_styles(): void
 		'5.3.2',
 	);
 
+//	wp_enqueue_style(
+//		'plyr-css',
+//		get_template_directory_uri() . '/assets/vendor/plyr.min.css',
+//		array(),
+//		wp_get_theme()->get( 'Version' ),
+//	);
+
 	wp_enqueue_style(
 		'albert-mohler-style',
 		get_template_directory_uri() . '/assets/scss/main.css',
@@ -292,17 +299,17 @@ add_action( 'wp_enqueue_scripts', 'amt_theme_enqueue_styles' );
  */
 function amt_theme_enqueue_scripts(): void
 {
-/* Not sure why swiper is being used.
-	wp_enqueue_script(
-		'swiper-bundle',
-		get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
-		array( 'jquery' ),
-		wp_get_theme()->get( 'Version' ),
-		array(
-			'footer' => true,
-		)
-	);
-*/
+	/*
+		wp_enqueue_script(
+			'swiper-bundle',
+			get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
+			array( 'jquery' ),
+			wp_get_theme()->get( 'Version' ),
+			array(
+				'footer' => true,
+			)
+		);
+	*/
 
 	wp_enqueue_script(
 		'theme-app',
@@ -316,12 +323,33 @@ function amt_theme_enqueue_scripts(): void
 
 	wp_enqueue_script(
 		'sharer-js',
-		'https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js',
+		get_template_directory_uri() . '/assets/vendor/sharer.min.js',
 		array(),
 		wp_get_theme()->get( 'Version' ),
 		array(
 			'footer' => true,
 		)
+	);
+
+	wp_enqueue_script(
+		'plyr-polyfilled',
+		get_template_directory_uri() . '/assets/vendor/plyr.polyfilled.min.js',
+		array(),
+		'3.7.8',
+		array(
+			'footer' => true,
+		)
+	);
+
+	$translation_array = array(
+		'templateUrl' => get_stylesheet_directory_uri(),
+	);
+
+	//after wp_enqueue_script
+	wp_localize_script(
+		'theme-app',
+		'variables',
+		$translation_array
 	);
 }
 

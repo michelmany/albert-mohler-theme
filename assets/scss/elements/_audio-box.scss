@@ -1,5 +1,62 @@
 
 .audio_box {
+    --plyr-color-main: var(--base-color);
+    --plyr-control-radius: 50px;
+    --plyr-range-track-height: 13px;
+    --plyr-range-thumb-background: var(--brick-red);
+    --plyr-range-thumb-height: 24px;
+    --plyr-range-fill-background: var(--grey-400);
+    --plyr-audio-progress-buffered-background: #fff;
+    --plyr-range-thumb-shadow: 0;
+    --plyr-range-thumb-active-shadow-width: 0;
+
+    .plyr__controls__item {
+        &.plyr__control {
+
+            &[data-plyr="play"] {
+                background-color: var(--base-color);
+                padding: 11px;
+
+                &:hover {
+                    scale: 1.09;
+                }
+
+                svg {
+                    fill: #fff !important;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: relative;
+                }
+            }
+        }
+
+        &[data-plyr="rewind"] {
+            padding: 4px;
+            svg {
+                width: 36px;
+                height: 36px;
+                color: var(--base-color);
+                fill: var(--base-color);
+            }
+
+            &:hover {
+                svg {
+                    fill: #fff !important;
+                    color: #fff;
+                }
+            }
+        }
+
+        &.plyr__time {
+            font-size: 26px;
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+            min-width: 88px;
+            color: var(--base-color);
+        }
+    }
+
+
     color: var(--base-color);
     border-top: 1px solid #677f8e;
     border-bottom: 1px solid #677f8e;

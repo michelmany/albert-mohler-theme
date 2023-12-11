@@ -1,6 +1,7 @@
 (function($) {
 
     $(document).ready(function() {
+        console.log('variables', window.variables.templateUrl);
 
         $('.site_header .toggle, .mobile_menu .close_btn').click(function() {
             $('.mobile_menu').toggleClass('opened');
@@ -40,12 +41,39 @@
         headerNavbar.before(scrollWatcher);
 
         const navObserver = new IntersectionObserver((entries) => {
-
             headerNavbar.classList.toggle('sticking', !entries[0].isIntersecting);
         });
 
         navObserver.observe(scrollWatcher);
+
+        const controls = [
+            'play',
+            'current-time',
+            'progress',
+            'duration',
+            'rewind',
+        ];
+
+        const options = {
+            controls,
+            iconUrl: `${window.variables.templateUrl}/assets/vendor/plyr.svg`,
+        };
+
+        const players = Array.from(document.querySelectorAll('.js-player')).map((p) => {
+            const plyrId = p.dataset.plyrId;
+            const player = new Plyr(p, options);
+
+            player.on('ready', (event) => {
+                const instance = event.detail.plyr;
+
+                $(`.tm_audio_${plyrId} .item`).click(function() {
+                    instance.currentTime = $(this).data('seekTo');
+                    instance.play();
+                });
+            });
+        });
     });
 
 })(window.jQuery);
+
 

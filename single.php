@@ -55,10 +55,8 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
                                     </div>
                                 </div>
 								<?php if ( ! empty( $media_file ) ) : ?>
-                                    <div class="audio_box mb-3">
-                                        <div class="audio-player audio_<?php echo get_the_ID(); ?>"
-                                             data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
-                                        </div>
+                                    <div class="mb-3">
+										<?php get_template_part( 'template-parts/audio-box-plyr' ); ?>
                                     </div>
 								<?php endif; ?>
 								<?php if ( ! empty( $media_youtube ) ) : ?>

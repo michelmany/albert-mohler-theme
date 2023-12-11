@@ -58,11 +58,6 @@ $thinking_in_public_query_4 = new WP_Query( $thinking_in_public_4 );
                             <h4><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </div>
-                    <div class="audio_box">
-                        <div class="audio-player"
-                             data-file="<?php echo get_field( 'media_file', get_the_ID() ); ?>">
-                        </div>
-                    </div>
 				<?php endwhile ?>
 				<?php endif ?>
             </div>

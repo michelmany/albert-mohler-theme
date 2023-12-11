@@ -1,5 +1,31 @@
 <?php
 
+function get_post_categories_obj( $post_id ): array
+{
+	$post_categories = wp_get_post_categories(
+		$post_id,
+		array(
+			'fields'  => 'all',
+			'exclude' => [ 1, 43, 71, 31, 162, 5573, 98 ], // Exclude resources categories from array.
+			'number'  => 10,
+		)
+	);
+	$cats = array();
+
+	if ( $post_categories ) { // Always Check before loop!
+		foreach ( $post_categories as $c ) {
+			$cat = get_category( $c );
+			$cats[] = array(
+				'name' => $cat->name,
+				'slug' => $cat->slug,
+				'url'  => get_category_link( $c->term_id ),
+			);
+		}
+	}
+
+	return $cats;
+}
+
 
 function get_image_or_fallback( $id )
 {
@@ -579,3 +605,36 @@ add_filter( 'facetwp_preload_url_vars', function ( $url_vars ) {
 
 	return $url_vars;
 } );
+
+add_action( 'wp_head', function () {
+	?>
+    <script>
+        (function($) {
+            $(function() {
+                if ('object' != typeof FWP) return;
+                FWP.hooks.addFilter('facetwp/flyout/facets', function(facets) {
+                    return ['keywords', 'published_date', 'sort_by', 'resources', 'topics', 'bible', 'format']; /* Choose which facets to display in the flyout, and/or change the facet display order */
+                });
+            });
+        })(jQuery);
+    </script>
+	<?php
+}, 100 );
+
+add_action( 'wp_head', function () {
+	?>
+    <script>
+        (function($) {
+            $(function() {
+                if ('object' != typeof FWP) return;
+
+                /* Modify the flyout wrapper HTML */
+                FWP.hooks.addFilter('facetwp/flyout/flyout_html', function(flyout_html) {
+                    return flyout_html.replace(' <div class="facetwp-flyout-close">x</div>', ' <div class="facetwp-flyout-close"><a><div class="close_btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="none"> <g id="Menu / Close_LG"> <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </svg> </div></a></div>'); // Replace "Close" with your desired text
+                });
+
+            });
+        })(jQuery);
+    </script>
+	<?php
+}, 100 );

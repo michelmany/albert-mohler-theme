@@ -2,7 +2,6 @@
     <div class="foot_top">
         <div class="container">
             <div class="social-media">
-
                 <div class="social-media">
                     <ul>
                         <li>

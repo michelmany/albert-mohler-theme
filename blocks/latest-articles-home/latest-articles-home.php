@@ -6,15 +6,15 @@
  */
 
 $articles_category_id = get_field( 'show_latest_articles_from' );
-$section_title        = get_field( 'section_title' );
-$view_all_label       = get_field( 'view_all_button_label' );
+$section_title = get_field( 'section_title' );
+$view_all_label = get_field( 'view_all_button_label' );
 
 // Article Section - Left
 $articles_public = array(
 	'posts_per_page' => 1,
 	'cat'            => $articles_category_id,
 );
-$articles_query  = new WP_Query( $articles_public );
+$articles_query = new WP_Query( $articles_public );
 
 // Article Section - Right
 $articles_public_3 = array(
@@ -22,9 +22,7 @@ $articles_public_3 = array(
 	'offset'         => 1,
 	'cat'            => $articles_category_id,
 );
-$articles_query_3  = new WP_Query( $articles_public_3 );
-
-
+$articles_query_3 = new WP_Query( $articles_public_3 );
 ?>
 
 <section class="last_articles">
@@ -53,9 +51,10 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
                     <h2>
                         <a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a>
                     </h2>
-
-                    <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-							get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+					<?php if ( ! empty( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
+                        <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
+								get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+					<?php endif; ?>
                     <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                 </div>
             </div>
@@ -74,8 +73,10 @@ $articles_query_3  = new WP_Query( $articles_public_3 );
                             </a>
                         </h2>
 
-                        <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-								get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+						<?php if ( ! empty( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
+                            <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
+									get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+						<?php endif; ?>
                         <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                     </div>
                 </li>

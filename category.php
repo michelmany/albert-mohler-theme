@@ -90,8 +90,11 @@ $post_all = new WP_Query( $postar_all );
 									<?php the_title(); ?>
                                 </a>
                             </h2>
-                            <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
-									get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+							<?php if ( ! empty( get_post_field( 'post_content',
+								get_the_ID() ) ) ) : ?>
+                                <p><?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
+										get_the_ID() ) ), 0, 150, 'UTF-8' ); ?>...</p>
+							<?php endif; ?>
                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
                         </div>
                     </li>

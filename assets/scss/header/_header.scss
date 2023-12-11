@@ -350,7 +350,7 @@
             padding: 12px;
             font-size: 15px;
             border-radius: 4px;
-            font-family: Gotham;
+            font-family: freight-text-pro, serif;
             border: 1px solid var(--base-color);
         }
     }
@@ -365,7 +365,8 @@
             font-size: 21px;
             font-weight: 500;
             padding: 12px 15px;
-            font-family: Gotham, sans-serif;
+            font-family: freight-text-pro, serif;
+            text-transform: uppercase;
 
             .arrow_right {
                 width: 19px;

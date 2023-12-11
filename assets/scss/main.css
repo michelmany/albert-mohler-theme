@@ -158,6 +158,10 @@ a span:hover {
   background: var(--gold-hover);
 }
 
+body.admin-bar .mobile_menu {
+  top: 46px;
+}
+
 @media (max-width: 767px) {
   .container {
     padding-left: 20px !important;
@@ -1374,7 +1378,7 @@ button.swiper-pagination-bullet {
   padding: 12px;
   font-size: 15px;
   border-radius: 4px;
-  font-family: Gotham;
+  font-family: freight-text-pro, serif;
   border: 1px solid var(--base-color);
 }
 .mobile_menu .menu {
@@ -1387,7 +1391,8 @@ button.swiper-pagination-bullet {
   font-size: 21px;
   font-weight: 500;
   padding: 12px 15px;
-  font-family: Gotham, sans-serif;
+  font-family: freight-text-pro, serif;
+  text-transform: uppercase;
 }
 .mobile_menu .menu .menu-item a .arrow_right {
   width: 19px;
@@ -2803,6 +2808,42 @@ html .opened, body .opened {
   padding: 8px;
   border: 1px solid var(--navy-05);
   border-radius: 0;
+}
+
+.facetwp-flyout .facetwp-display-value,
+.facetwp-flyout .facetwp-toggle {
+  font-size: 21px;
+}
+.facetwp-flyout .facetwp-counter {
+  font-size: 16px;
+}
+.facetwp-flyout h3 {
+  border-bottom: 1px solid var(--navy-05);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: freight-text-pro, serif;
+  text-transform: uppercase;
+}
+.facetwp-flyout .facetwp-type-sort {
+  margin-bottom: 40px;
+  width: 100%;
+}
+.facetwp-flyout .facetwp-type-sort select {
+  min-width: 100%;
+}
+.facetwp-flyout .facetwp-search {
+  width: 100%;
+  min-width: 280px !important;
+  height: 43px;
+  padding-left: 14px;
+  border: 1px solid var(--navy-05);
+}
+.facetwp-flyout .name-keywords h3 {
+  display: none;
 }
 
 @media (min-width: 1600px) {

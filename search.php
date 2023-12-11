@@ -22,10 +22,20 @@ $my_query = new WP_Query( $args );
         <section class="result">
             <div class="container">
                 <div class="wrapper">
-                    <div class="aside">
+
+                    <div class="facetwp-flyout-tpl">
+                        <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
+                        {content}
+                    </div>
+
+                    <div class="mb-4 w-100">
+                        <button class="facetwp-flyout-open btn dark_border d-lg-none w-100 w-lg-auto">Select Filters</button>
+
+                    </div>
+
+                    <div class="aside d-none d-lg-block">
                         <div class="block filter-head">
-                            <div class="head"
-                                 style="display: flex; align-items: center; justify-content: space-between;">
+                            <div class="head d-flex align-items-center justify-content-between">
                                 <h4>Filter</h4>
 
                                 <div class="block butons">
@@ -51,9 +61,9 @@ $my_query = new WP_Query( $args );
 								<?php echo do_shortcode( '[facetwp facet="keywords"]' ); ?>
 
                             </div>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <?php echo facetwp_display( 'selections' ); ?>
-                                <?php echo do_shortcode( '[facetwp facet="sort_by"]' ); ?>
+                            <div class="d-flex align-items-center justify-content-between d-none d-lg-flex">
+								<?php echo facetwp_display( 'selections' ); ?>
+								<?php echo do_shortcode( '[facetwp facet="sort_by"]' ); ?>
                             </div>
                         </div>
 
@@ -64,23 +74,46 @@ $my_query = new WP_Query( $args );
 									$my_query->the_post();
 									?>
                                     <div class="article_item single">
-<!--                                        <a href="--><?php //the_permalink(); ?><!--" class="image">-->
-<!--                                            <img src="--><?php //echo get_image_or_fallback( get_the_ID() ); ?><!--"-->
-<!--                                                 alt="--><?php //the_title(); ?><!--">-->
-<!--                                        </a>-->
                                         <div class="details">
                                             <h2>
                                                 <a href="<?php the_permalink(); ?>" class="title">
 													<?php the_title(); ?>
                                                 </a>
                                             </h2>
-											<?php if ( get_post_field( 'post_content', get_the_ID() ) ) : ?>
+											<?php if ( ! empty( get_post_field( 'post_content', get_the_ID() ) ) ) : ?>
                                                 <p>
 													<?php echo mb_substr( wp_strip_all_tags( get_post_field( 'post_content',
 														get_the_ID() ) ), 0, 300, 'UTF-8' ); ?>...
                                                 </p>
 											<?php endif; ?>
+
+											<?php if ( in_category( 'the-briefing' ) ) : ?>
+                                                <p>
+													<?php
+                                                        $transcript = get_field('briefing_segments')[0];
+
+                                                    echo mb_substr( wp_strip_all_tags( $transcript['transcript'] ), 0, 302, 'UTF-8' ); ?>...
+                                                </p>
+											<?php endif; ?>
+
+
                                             <h4 class="date"><?php echo get_the_date( 'F j, Y' ); ?></h4>
+
+											<?php
+											$cats = get_post_categories_obj( get_the_ID() );
+
+											if ( $cats ) : ?>
+                                            <div class="d-flex gap-2 flex-wrap align-items-center mt-5">
+                                                <p class="fs-6 me-2 mb-0 fw-bold">Topics:</p>
+												<?php foreach ( $cats as $index => $cat ) : ?>
+                                                    <a
+                                                            href="<?php echo $cat['url']; ?>"
+                                                            class="btn dark_border btn_sm me-2">
+														<?php echo $cat['name']; ?>
+                                                    </a>
+												<?php endforeach; ?>
+												<?php endif; ?>
+                                            </div>
                                         </div>
                                     </div>
 								<?php
@@ -99,7 +132,7 @@ $my_query = new WP_Query( $args );
         <section>
             <div class="container">
                 <div class="pagi">
-                    <?php echo do_shortcode('[facetwp facet="pager_"]') ?>
+					<?php echo do_shortcode( '[facetwp facet="pager_"]' ) ?>
                 </div>
             </div>
         </section>

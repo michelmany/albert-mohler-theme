@@ -170,9 +170,9 @@ $logo_image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
         <div class="center">
             <div class="search_bar">
                 <form role="search" method="get" id="searchform" class="searchform"
-                      action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                      action="<?php echo esc_url( home_url( '/site-search/' ) ); ?>">
                     <div class="form_wrap">
-                        <input type="text" name="s" id="s" placeholder="Search..." required>
+                        <input type="text" name="_keywords" id="s" placeholder="Search..." required>
                         <button type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                  width="20" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" class="">

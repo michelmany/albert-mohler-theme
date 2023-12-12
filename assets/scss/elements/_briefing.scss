@@ -23,6 +23,12 @@
         }
     }
 
+    .article_parts {
+        @media (min-width: 992px) {
+            padding: 0 !important;
+        }
+    }
+
     .past_episodes {
         padding-top: 100px;
 

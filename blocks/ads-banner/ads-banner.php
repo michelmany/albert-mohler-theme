@@ -4,13 +4,12 @@
  *
  * @param  array  $block  The block settings and attributes.
  */
-
 ?>
 
-<div class="google-ads">
+<div class="ads-banner">
     <div class="container">
-        <div class="google-ads-image-wrapper">
-            <img src="<?php bloginfo( 'template_url' ) ?>/assets/images/MDiv_800x100.jpg" alt="">
+        <div class="ads-banner-image-wrapper d-flex justify-content-center">
+			<?php echo do_shortcode( '[adrotate group="1"]' ) ?>
         </div>
     </div>
 </div>

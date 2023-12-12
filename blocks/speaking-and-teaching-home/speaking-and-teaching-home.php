@@ -48,9 +48,11 @@ $sermons_and_speeches_query_4  = new WP_Query( $sermons_and_speeches_public_4 );
                             <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
 								        get_the_ID() ) ?>"
-                                    title="<?php the_title(); ?>" frameborder="0"
+                                    title="<?php the_title(); ?>"
+                                    loading="lazy"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
+                                    allowfullscreen>
+                            </iframe>
                         </a>
                         <div class="details">
 
@@ -74,7 +76,7 @@ $sermons_and_speeches_query_4  = new WP_Query( $sermons_and_speeches_public_4 );
                                 <iframe width="560" height="315"
                                         src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
 									        get_the_ID() ) ?>"
-                                        title="<?php the_title(); ?>" frameborder="0"
+                                        title="<?php the_title(); ?>" loading="lazy"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                             </a>

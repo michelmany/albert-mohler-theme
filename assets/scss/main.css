@@ -2447,6 +2447,11 @@ html .opened, body .opened {
 .briefing .bottom .btn:hover {
   color: var(--base-color);
 }
+@media (min-width: 992px) {
+  .briefing .article_parts {
+    padding: 0 !important;
+  }
+}
 .briefing .past_episodes {
   padding-top: 100px;
 }

@@ -65,7 +65,7 @@ $media_youtube = get_field( 'media_youtube', get_the_ID() );
                                                 class="video"
                                                 src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
 													get_the_ID() ) ?>"
-                                                title="<?php the_title(); ?>" frameborder="0"
+                                                title="<?php the_title(); ?>" loading="lazy"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                 allowfullscreen></iframe>
                                     </div>

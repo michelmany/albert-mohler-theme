@@ -43,9 +43,11 @@ $ask_anything_query = new WP_Query( $ask_anything );
                             <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/<?php echo get_field( 'media_youtube',
 								        get_the_ID() ) ?>"
-                                    title="YouTube video player" frameborder="0"
+                                    title="YouTube video player"
+                                    loading="lazy"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
+                                    allowfullscreen>
+                            </iframe>
                         </a>
                         <div class="details">
                             <h2>

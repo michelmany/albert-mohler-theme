@@ -16,7 +16,7 @@ $args = [
 		"date" => "DESC",
 	],
 ];
-$my_query = new WP_Query( $args );
+$search_query = new WP_Query( $args );
 ?>
     <main>
         <section class="result">
@@ -24,7 +24,8 @@ $my_query = new WP_Query( $args );
                 <div class="wrapper">
 
                     <div class="mb-4 w-100">
-                        <button class="facetwp-flyout-open btn dark_border d-lg-none w-100 w-lg-auto">Select Filters</button>
+                        <button class="facetwp-flyout-open btn dark_border d-lg-none w-100 w-lg-auto">Select Filters
+                        </button>
                     </div>
 
                     <div class="aside d-none d-lg-block">
@@ -63,9 +64,9 @@ $my_query = new WP_Query( $args );
 
                         <div class="facetwp-template">
 							<?php
-							if ( $my_query->have_posts() ) :
-								while ( $my_query->have_posts() ) :
-									$my_query->the_post();
+							if ( $search_query->have_posts() ) :
+								while ( $search_query->have_posts() ) :
+									$search_query->the_post();
 									?>
                                     <div class="article_item single">
                                         <div class="details">
@@ -84,9 +85,10 @@ $my_query = new WP_Query( $args );
 											<?php if ( in_category( 'the-briefing' ) ) : ?>
                                                 <p>
 													<?php
-                                                        $transcript = get_field('briefing_segments')[0];
+													$transcript = get_field( 'briefing_segments' )[0];
 
-                                                    echo mb_substr( wp_strip_all_tags( $transcript['transcript'] ), 0, 302, 'UTF-8' ); ?>...
+													echo mb_substr( wp_strip_all_tags( $transcript['transcript'] ), 0,
+														302, 'UTF-8' ); ?>...
                                                 </p>
 											<?php endif; ?>
 
@@ -97,17 +99,17 @@ $my_query = new WP_Query( $args );
 											$cats = get_post_categories_obj( get_the_ID() );
 
 											if ( $cats ) : ?>
-                                            <div class="d-flex gap-2 flex-wrap align-items-center mt-5">
-                                                <p class="fs-6 me-2 mb-0 fw-bold">Topics:</p>
-												<?php foreach ( $cats as $index => $cat ) : ?>
-                                                    <a
-                                                            href="<?php echo $cat['url']; ?>"
-                                                            class="btn dark_border btn_sm me-2">
-														<?php echo $cat['name']; ?>
-                                                    </a>
-												<?php endforeach; ?>
-												<?php endif; ?>
-                                            </div>
+                                                <div class="d-flex gap-2 flex-wrap align-items-center mt-5">
+                                                    <p class="fs-6 me-2 mb-0 fw-bold">Topics:</p>
+													<?php foreach ( $cats as $index => $cat ) : ?>
+                                                        <a
+                                                                href="<?php echo $cat['url']; ?>"
+                                                                class="btn dark_border btn_sm me-2">
+															<?php echo $cat['name']; ?>
+                                                        </a>
+													<?php endforeach; ?>
+                                                </div>
+											<?php endif; ?>
                                         </div>
                                     </div>
 								<?php
@@ -117,7 +119,6 @@ $my_query = new WP_Query( $args );
 							endif;
 							wp_reset_postdata();
 							?>
-
                         </div>
                     </div>
                 </div>
